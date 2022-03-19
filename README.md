@@ -7,8 +7,7 @@ Teresa Wehmeier, Sebastian Scholl, Fernando Porras, Mindy Collmeyer
 ### Background on our Topic
 Teresa works in a small rural county in Kansas (Seward). The pandemic in 2020 highlighted poor internet access in Seward. Schools were closed, and emergency remote instruction became the method to address educational delivery moving into fall 2020. However, it became clear when the college she worked for attempted to distribute Federal CARES ACT funds that not all internet is created equal. Many in the community had only cellular data service, or the internet access they did have was at such low download rates (often below 25mb) that many were unable to participate in online class activities.
 
-Our group decided to dive into this topic, and research the connection between internet access and population density. 
-** Maybe be more specific about what we're researching? **
+Our group decided to dive into this topic, and research internet availability and quality in the state of Kansas.
 
 
 ### Source of our Data
@@ -29,12 +28,19 @@ Our group decided to dive into this topic, and research the connection between i
 - Team has shared phone numbers and email addresses
 
 
+### Tools Used on our Project
+- GitHub
+- Pandas
+- Python
+- QuickDBD
+- GeoJSON
+- Tableau
+
+
 ### Machine Learning Model
--
--
+- See diagram
 
 
-### Database 
--
--
+### Database
+- See schema doc
 
