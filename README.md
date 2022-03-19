@@ -28,8 +28,9 @@ Quick DBD https://www.quickdatabasediagrams.com/
 MAPBOX
 
 ### Data Sources
-FCC Open Data https://opendata.fcc.gov/Wireline/Fixed-Broadband-Deployment-Data-December-2020/hicn-aujz
-Kansas State Library Data Sources https://kslib.info/423/State-Data-Center
+FCC Open Data <a href="https://opendata.fcc.gov/Wireline/Fixed-Broadband-Deployment-Data-December-2020/hicn-aujz"></a>
+
+Kansas State Library Data Sources <a href="https://kslib.info/423/State-Data-Center"></a>
 
 ## Planned Project
 Null Hypthosis: Geographic location in the state of Kansas has no impact on the quality of internet access.
