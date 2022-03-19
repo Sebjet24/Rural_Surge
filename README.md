@@ -12,7 +12,7 @@ Our group decided to dive into this topic, and research internet availability an
 
 ### Source of our Data
 - State Library of Kansas (https://kslib.info/423/State-Data-Center)
-- FCC Fixed Broadband Deployment (https://broadbandmap.fcc.gov/#/location-summary?version=dec2020&lat=37.137281&lon=-100.774247&tech=acfosw&speed=25_3&vlat=37.127826252809484&vlon=-100.77869986832957&vzoom=13.798767741854112)
+- FCC Fixed Broadband Deployment (https://opendata.fcc.gov/Wireline/Fixed-Broadband-Deployment-Data-December-2020/hicn-aujz)
 
 
 ### Questions we hope to answer with the data
