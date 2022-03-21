@@ -1,11 +1,37 @@
 -- Create location table for Rural Surge Project
 -- FCC data https://broadbandmap.fcc.gov/#/data-download
 CREATE TABLE location_coord (
-	lng FLOAT(20) NOT NULL,
-    lat FLOAT(20) NOT NULL,
+	lng VARCHAR(20) NOT NULL,
+    lat VARCHAR(20) NOT NULL,
 	zip_code VARCHAR(9) NOT NULL,
     state_code VARCHAR(2) NOT NULL,
     PRIMARY KEY (zip_code)
+);
+
+-- Create Area Table from FCC site
+-- type = Type of area (national, state, county,
+--congressional district, census designated place, tribal area, CBSA)
+-- Urban = U; Rural = R
+
+CREATE TABLE area_table (
+	type VARCHAR(20) NOT NULL,
+    id VARCHAR(20) NOT NULL,
+	tech VARCHAR(6) NOT NULL,
+    urban_rural VARCHAR(1) NOT NULL,
+	tribal_non VARCHAR(5) NOT NULL,
+	speed FLOAT,
+	has_zero INT,
+	has_one INT,
+	has_two INT,
+	has_three_plus INT,
+	FOREIGN KEY (tech) REFERENCES (tech_type),
+    PRIMARY KEY (id)
+);
+-- Create Validation Table for Area Table tech column from FCC site
+CREATE TABLE tech_type (
+	tech_type_code VARCHAR(1) NOT NULL,
+    tech_type_desc VARCHAR(20) NOT NULL,
+	PRIMARY KEY (tech_type_code)
 );
 
 -- Create county table for Rural Surge Project
