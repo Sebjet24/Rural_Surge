@@ -44,5 +44,5 @@ Our group decided to dive into this topic, and research internet availability an
 - See <a href="resources/schema.sql">schema doc</a>
 
 #### ERD FCC Tables
-<img src="Images/ERD_FCC_tables.png">
+<img src="Images/ERD_FCC_tables.png" width="50%" height="30%">
 
