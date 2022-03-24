@@ -43,3 +43,6 @@ Our group decided to dive into this topic, and research internet availability an
 ### Database
 - See <a href="resources/schema.sql">schema doc</a>
 
+#### ERD
+<img src="Images/ERD_FCC_tables.png">
+
