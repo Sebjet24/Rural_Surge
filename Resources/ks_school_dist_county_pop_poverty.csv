@@ -2,10 +2,10 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 413,ALLEN,   Chanute Public Schools ,10635,1860,315,16.9
 479,ALLEN,   Crest ,1304,234,29,12.4
 258,ALLEN,   Humboldt ,2619,468,67,14.3
-257,ALLEN,   Iola ,8050,1294,272,21.0
+257,ALLEN,   Iola ,8050,1294,272,21
 256,ALLEN,   Marmaton Valley ,1604,291,50,17.2
 479,ANDERSON,   Crest ,1304,234,29,12.4
-365,ANDERSON,   Garnett ,6767,1296,182,14.0
+365,ANDERSON,   Garnett ,6767,1296,182,14
 287,ANDERSON,   West Franklin ,4819,820,100,12.2
 377,ATCHISON,   Atchison County Community Schools ,4099,788,77,9.8
 409,ATCHISON,   Atchison Public Schools ,11813,1938,327,16.9
@@ -13,13 +13,13 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 339,ATCHISON,   Jefferson County North ,2275,397,34,8.6
 335,ATCHISON,   North Jackson ,1849,326,43,13.2
 430,ATCHISON,   South Brown County ,3299,665,143,21.5
-338,ATCHISON,   Valley Falls ,2305,430,30,7.0
+338,ATCHISON,   Valley Falls ,2305,430,30,7
 254,BARBER,   Barber County North ,3014,527,96,18.2
 438,BARBER,   Skyline Schools ,1099,228,38,16.7
-255,BARBER,   South Barber ,1433,231,44,19.0
+255,BARBER,   South Barber ,1433,231,44,19
 112,BARTON,   Central Plains,3514,570,56,9.8
 355,BARTON,   Ellinwood Public Schools ,2688,435,38,8.7
-495,BARTON,   Fort Larned ,6219,749,97,13.0
+495,BARTON,   Fort Larned ,6219,749,97,13
 428,BARTON,   Great Bend ,17906,3185,512,16.1
 431,BARTON,   Hoisington ,3318,603,80,13.3
 351,BARTON,   Macksville ,1261,250,47,18.8
@@ -27,14 +27,14 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 234,BOURBON,   Fort Scott ,12125,2245,453,20.2
 248,BOURBON,   Girard ,5438,1039,180,17.3
 346,BOURBON,   Jayhawk ,3385,517,103,19.9
-235,BOURBON,   Uniontown ,2168,462,88,19.0
+235,BOURBON,   Uniontown ,2168,462,88,19
 111,BROWN,   Doniphan West ,2500,323,37,11.5
 415,BROWN,   Hiawatha ,5579,990,147,14.8
 335,BROWN,   North Jackson ,1849,326,43,13.2
 113,BROWN,   Prairie Hills,6678,1350,134,9.9
 430,BROWN,   South Brown County ,3299,665,143,21.5
 385,BUTLER,   Andover ,23714,5764,236,4.1
-402,BUTLER,   Augusta ,12401,2344,187,8.0
+402,BUTLER,   Augusta ,12401,2344,187,8
 205,BUTLER,   Bluestem ,3904,661,61,9.2
 462,BUTLER,   Central ,1816,341,61,17.9
 375,BUTLER,   Circle ,9278,1747,160,9.2
@@ -43,7 +43,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 389,BUTLER,   Eureka ,4058,642,107,16.7
 492,BUTLER,   Flinthills ,1450,263,22,8.4
 398,BUTLER,   Peabody-Burns ,2270,396,47,11.9
-206,BUTLER,   Remington-Whitewater ,3705,746,60,8.0
+206,BUTLER,   Remington-Whitewater ,3705,746,60,8
 394,BUTLER,   Rose Hill Public Schools ,8147,1767,117,6.6
 397,CHASE,   Centre ,1460,288,40,13.9
 284,CHASE,   Chase County ,2659,400,55,13.8
@@ -57,7 +57,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 282,CHAUTAUQUA,   West Elk ,2184,316,91,28.8
 508,CHEROKEE,   Baxter Springs ,4456,803,160,19.9
 247,CHEROKEE,   Cherokee ,4412,787,139,17.7
-505,CHEROKEE,   Chetopa-St. Paul ,2470,448,85,19.0
+505,CHEROKEE,   Chetopa-St. Paul ,2470,448,85,19
 493,CHEROKEE,   Columbus ,6984,1146,181,15.8
 499,CHEROKEE,   Galena ,3373,573,118,20.6
 504,CHEROKEE,   Oswego ,2027,339,49,14.5
@@ -81,7 +81,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 109,CLOUD,   Republic County-Hillcrest Rural Schools ,3563,534,106,19.9
 334,CLOUD,   Southern Cloud ,1375,249,44,17.7
 244,COFFEY,   Burlington ,3947,624,78,12.5
-365,COFFEY,   Garnett ,6767,1296,182,14.0
+365,COFFEY,   Garnett ,6767,1296,182,14
 243,COFFEY,   Lebo-Waverly ,2636,444,36,8.1
 245,COFFEY,   LeRoy-Gridley ,1582,245,30,12.2
 252,COFFEY,   Southern Lyon County ,2847,539,53,9.8
@@ -96,13 +96,13 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 463,COWLEY,   Udall ,1946,363,46,12.7
 465,COWLEY,   Winfield ,14585,2403,359,14.9
 247,CRAWFORD,   Cherokee ,4412,787,139,17.7
-505,CRAWFORD,   Chetopa-St. Paul ,2470,448,85,19.0
+505,CRAWFORD,   Chetopa-St. Paul ,2470,448,85,19
 101,CRAWFORD,   Erie ,3516,642,164,25.5
 249,CRAWFORD,   Frontenac Public Schools ,3908,717,67,9.3
 248,CRAWFORD,   Girard ,5438,1039,180,17.3
 246,CRAWFORD,   Northeast ,4055,700,151,21.6
 250,CRAWFORD,   Pittsburg ,22631,3163,636,20.1
-235,CRAWFORD,   Uniontown ,2168,462,88,19.0
+235,CRAWFORD,   Uniontown ,2168,462,88,19
 316,DECATUR,   Golden Plains ,781,162,22,13.6
 412,DECATUR,   Hoxie Community Schools ,2099,347,43,12.4
 211,DECATUR,   Norton Community Schools ,4728,629,76,12.1
@@ -111,7 +111,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 397,DICKINSON,   Centre ,1460,288,40,13.9
 473,DICKINSON,   Chapman ,5790,1010,119,11.8
 487,DICKINSON,   Herington ,2820,455,90,19.8
-481,DICKINSON,   Rural Vista ,2112,341,58,17.0
+481,DICKINSON,   Rural Vista ,2112,341,58,17
 393,DICKINSON,   Solomon ,1921,352,31,8.8
 306,DICKINSON,   Southeast of Saline ,3004,586,56,9.6
 377,DONIPHAN,   Atchison County Community Schools ,4099,788,77,9.8
@@ -137,7 +137,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 484,ELK,   Fredonia ,4270,722,121,16.8
 282,ELK,   West Elk ,2184,316,91,28.8
 388,ELLIS,   Ellis ,2585,504,50,9.9
-489,ELLIS,   Hays ,24076,3588,395,11.0
+489,ELLIS,   Hays ,24076,3588,395,11
 395,ELLIS,   LaCrosse ,2109,311,50,16.1
 403,ELLIS,   Otis-Bison ,1332,217,30,13.8
 269,ELLIS,   Palco ,779,139,24,17.3
@@ -152,7 +152,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 400,ELLSWORTH,   Smoky Valley ,6259,1007,86,8.5
 102,FINNEY,   Cimarron-Ensign ,3280,709,48,6.8
 457,FINNEY,   Garden City ,33416,7084,1094,15.4
-363,FINNEY,   Holcomb ,2936,765,84,11.0
+363,FINNEY,   Holcomb ,2936,765,84,11
 459,FORD,   Bucklin ,1364,265,39,14.7
 102,FORD,   Cimarron-Ensign ,3280,709,48,6.8
 443,FORD,   Dodge City ,30780,6600,1200,18.2
@@ -162,7 +162,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 381,FORD,   Spearville ,1146,239,32,13.4
 348,FRANKLIN,   Baldwin City ,8958,1655,108,6.5
 288,FRANKLIN,   Central Heights ,2788,487,53,10.9
-365,FRANKLIN,   Garnett ,6767,1296,182,14.0
+365,FRANKLIN,   Garnett ,6767,1296,182,14
 243,FRANKLIN,   Lebo-Waverly ,2636,444,36,8.1
 456,FRANKLIN,   Marais des Cygnes Valley ,1514,285,34,11.9
 290,FRANKLIN,   Ottawa ,14359,2494,315,12.6
@@ -172,11 +172,11 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 287,FRANKLIN,   West Franklin ,4819,820,100,12.2
 473,GEARY,   Chapman ,5790,1010,119,11.8
 475,GEARY,   Geary County Schools ,39682,7334,1167,15.9
-383,GEARY,   Manhattan ,63014,6400,770,12.0
+383,GEARY,   Manhattan ,63014,6400,770,12
 329,GEARY,   Mill Creek Valley ,3522,624,46,7.4
 417,GEARY,   Morris County ,4898,703,105,14.9
 378,GEARY,   Riley County ,4708,808,77,9.5
-481,GEARY,   Rural Vista ,2112,341,58,17.0
+481,GEARY,   Rural Vista ,2112,341,58,17
 482,GOVE,   Dighton ,1267,196,27,13.8
 291,GOVE,   Grinnell Public Schools ,565,92,20,21.7
 468,GOVE,   Healy Public Schools ,303,59,10,16.9
@@ -189,7 +189,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 211,GRAHAM,   Norton Community Schools ,4728,629,76,12.1
 269,GRAHAM,   Palco ,779,139,24,17.3
 271,GRAHAM,   Stockton ,1862,274,40,14.6
-208,GRAHAM,   WaKeeney ,2666,361,47,13.0
+208,GRAHAM,   WaKeeney ,2666,361,47,13
 209,GRANT,   Moscow Public Schools ,708,177,11,6.2
 507,GRANT,   Satanta ,1652,343,57,16.6
 452,GRANT,   Stanton County ,2019,428,48,11.2
@@ -197,7 +197,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 102,GRAY,   Cimarron-Ensign ,3280,709,48,6.8
 476,GRAY,   Copeland ,801,186,12,6.5
 225,GRAY,   Fowler ,810,145,12,8.3
-477,GRAY,   Ingalls ,842,156,14,9.0
+477,GRAY,   Ingalls ,842,156,14,9
 371,GRAY,   Montezuma ,1553,304,42,13.8
 200,GREELEY,   Greeley County Schools,1232,238,37,15.5
 205,GREENWOOD,   Bluestem ,3904,661,61,9.2
@@ -214,23 +214,23 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 511,HARPER,   Attica ,762,130,17,13.1
 332,HARPER,   Cunningham ,1231,142,24,16.9
 331,HARPER,   Kingman-Norwich ,5689,994,163,16.4
-255,HARPER,   South Barber ,1433,231,44,19.0
+255,HARPER,   South Barber ,1433,231,44,19
 313,HARVEY,   Buhler ,12488,2232,241,10.8
 369,HARVEY,   Burrton ,1389,268,47,17.5
 411,HARVEY,   Goessel ,1511,255,19,7.5
-440,HARVEY,   Halstead ,4541,919,83,9.0
-312,HARVEY,   Haven Public Schools ,5833,1131,158,14.0
+440,HARVEY,   Halstead ,4541,919,83,9
+312,HARVEY,   Haven Public Schools ,5833,1131,158,14
 460,HARVEY,   Hesston ,4563,817,52,6.4
 423,HARVEY,   Moundridge ,3443,556,36,6.5
 373,HARVEY,   Newton ,22470,3976,419,10.5
 398,HARVEY,   Peabody-Burns ,2270,396,47,11.9
-206,HARVEY,   Remington-Whitewater ,3705,746,60,8.0
+206,HARVEY,   Remington-Whitewater ,3705,746,60,8
 439,HARVEY,   Sedgwick Public Schools ,2186,475,33,6.9
-262,HARVEY,   Valley Center Public Schools ,14462,3083,216,7.0
+262,HARVEY,   Valley Center Public Schools ,14462,3083,216,7
 476,HASKELL,   Copeland ,801,186,12,6.5
-477,HASKELL,   Ingalls ,842,156,14,9.0
+477,HASKELL,   Ingalls ,842,156,14,9
 507,HASKELL,   Satanta ,1652,343,57,16.6
-374,HASKELL,   Sublette ,2234,481,48,10.0
+374,HASKELL,   Sublette ,2234,481,48,10
 102,HODGEMAN,   Cimarron-Ensign ,3280,709,48,6.8
 443,HODGEMAN,   Dodge City ,30780,6600,1200,18.2
 227,HODGEMAN,   Jetmore ,1743,290,30,10.3
@@ -242,11 +242,11 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 340,JACKSON,   Jefferson West ,4979,905,65,7.2
 321,JACKSON,   Kaw Valley ,8199,2179,186,8.5
 335,JACKSON,   North Jackson ,1849,326,43,13.2
-322,JACKSON,   Onaga-Havensville-Wheaton ,2243,435,35,8.0
+322,JACKSON,   Onaga-Havensville-Wheaton ,2243,435,35,8
 113,JACKSON,   Prairie Hills,6678,1350,134,9.9
-337,JACKSON,   Royal Valley ,4414,861,95,11.0
+337,JACKSON,   Royal Valley ,4414,861,95,11
 430,JACKSON,   South Brown County ,3299,665,143,21.5
-338,JACKSON,   Valley Falls ,2305,430,30,7.0
+338,JACKSON,   Valley Falls ,2305,430,30,7
 377,JEFFERSON,   Atchison County Community Schools ,4099,788,77,9.8
 449,JEFFERSON,   Easton ,3703,657,25,3.8
 336,JEFFERSON,   Holton ,5929,992,177,17.8
@@ -257,7 +257,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 341,JEFFERSON,   Oskaloosa Public Schools ,3832,612,75,12.3
 343,JEFFERSON,   Perry Public Schools ,5685,1001,87,8.7
 345,JEFFERSON,   Seaman ,20284,3918,223,5.7
-338,JEFFERSON,   Valley Falls ,2305,430,30,7.0
+338,JEFFERSON,   Valley Falls ,2305,430,30,7
 273,JEWELL,   Beloit ,4748,800,129,16.1
 333,JEWELL,   Concordia ,6446,1074,166,15.5
 426,JEWELL,   Pike Valley ,1100,200,27,13.5
@@ -272,20 +272,20 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 512,JOHNSON,   Shawnee Mission Public Schools ,242609,34650,2314,6.7
 230,JOHNSON,   Spring Hill ,12758,2586,88,3.4
 289,JOHNSON,   Wellsville ,4788,886,46,5.2
-216,KEARNY,   Deerfield ,1031,218,24,11.0
+216,KEARNY,   Deerfield ,1031,218,24,11
 215,KEARNY,   Lakin ,2807,599,64,10.7
-467,KEARNY,   Leoti ,2139,430,60,14.0
+467,KEARNY,   Leoti ,2139,430,60,14
 361,KINGMAN,   Anthony-Harper ,4582,851,150,17.6
 268,KINGMAN,   Cheney ,3604,800,66,8.3
 332,KINGMAN,   Cunningham ,1231,142,24,16.9
 331,KINGMAN,   Kingman-Norwich ,5689,994,163,16.4
 311,KINGMAN,   Pretty Prairie ,1535,252,36,14.3
 300,KIOWA,   Comanche County ,1733,314,37,11.8
-422,KIOWA,   Greensburg ,1597,284,37,13.0
+422,KIOWA,   Greensburg ,1597,284,37,13
 474,KIOWA,   Haviland ,871,133,28,21.1
 247,LABETTE,   Cherokee ,4412,787,139,17.7
-447,LABETTE,   Cherryvale ,3892,774,147,19.0
-505,LABETTE,   Chetopa-St. Paul ,2470,448,85,19.0
+447,LABETTE,   Cherryvale ,3892,774,147,19
+505,LABETTE,   Chetopa-St. Paul ,2470,448,85,19
 506,LABETTE,   Labette County ,7045,1347,241,17.9
 504,LABETTE,   Oswego,2027,339,49,14.5
 503,LABETTE,   Parsons ,9133,1500,302,20.1
@@ -308,11 +308,11 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 298,LINCOLN,   Lincoln,2255,390,50,12.8
 239,LINCOLN,   North Ottawa County,3252,546,62,11.4
 299,LINCOLN,   Sylvan Grove ,1579,235,43,18.3
-365,LINN,   Garnett ,6767,1296,182,14.0
+365,LINN,   Garnett ,6767,1296,182,14
 346,LINN,   Jayhawk ,3385,517,103,19.9
 344,LINN,   Pleasanton ,2000,347,48,13.8
 362,LINN,   Prairie View ,5740,1007,123,12.2
-467,LOGAN,   Leoti ,2139,430,60,14.0
+467,LOGAN,   Leoti ,2139,430,60,14
 274,LOGAN,   Oakley ,2690,444,54,12.2
 466,LOGAN,   Scott County ,4834,981,99,10.1
 275,LOGAN,   Triplains ,470,86,19,22.1
@@ -342,13 +342,13 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 408,MARION,   Marion-Florence ,3324,556,67,12.1
 373,MARION,   Newton ,22470,3976,419,10.5
 398,MARION,   Peabody-Burns ,2270,396,47,11.9
-206,MARION,   Remington-Whitewater ,3705,746,60,8.0
-481,MARION,   Rural Vista ,2112,341,58,17.0
+206,MARION,   Remington-Whitewater ,3705,746,60,8
+481,MARION,   Rural Vista ,2112,341,58,17
 223,MARSHALL,   Barnes ,2412,388,52,13.4
 384,MARSHALL,   Blue Valley ,1788,267,18,6.7
 364,MARSHALL,   Marysville ,5152,880,108,12.3
 115,MARSHALL,   Nemaha Central,3942,722,84,11.6
-322,MARSHALL,   Onaga-Havensville-Wheaton ,2243,435,35,8.0
+322,MARSHALL,   Onaga-Havensville-Wheaton ,2243,435,35,8
 113,MARSHALL,   Prairie Hills,6678,1350,134,9.9
 498,MARSHALL,   Valley Heights ,2168,385,49,12.7
 380,MARSHALL,   Vermillion ,2698,470,41,8.7
@@ -371,7 +371,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 299,MITCHELL,   Sylvan Grove ,1579,235,43,18.3
 272,MITCHELL,   Waconda ,2427,383,59,15.4
 436,MONTGOMERY,   Caney Valley ,3904,749,115,15.4
-447,MONTGOMERY,   Cherryvale ,3892,774,147,19.0
+447,MONTGOMERY,   Cherryvale ,3892,774,147,19
 445,MONTGOMERY,   Coffeyville ,12527,2088,414,19.8
 283,MONTGOMERY,   Elk Valley ,723,164,37,22.6
 484,MONTGOMERY,   Fredonia ,4270,722,121,16.8
@@ -381,26 +381,26 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 284,MORRIS,   Chase County ,2659,400,55,13.8
 487,MORRIS,   Herington ,2820,455,90,19.8
 417,MORRIS,   Morris County ,4898,703,105,14.9
-481,MORRIS,   Rural Vista ,2112,341,58,17.0
+481,MORRIS,   Rural Vista ,2112,341,58,17
 218,MORTON,   Elkhart ,1978,355,43,12.1
 217,MORTON,   Rolla ,609,121,25,20.7
 415,NEMAHA,   Hiawatha ,5579,990,147,14.8
 115,NEMAHA,   Nemaha Central,3942,722,84,11.6
 335,NEMAHA,   North Jackson ,1849,326,43,13.2
-322,NEMAHA,   Onaga-Havensville-Wheaton ,2243,435,35,8.0
+322,NEMAHA,   Onaga-Havensville-Wheaton ,2243,435,35,8
 113,NEMAHA,   Prairie Hills,6678,1350,134,9.9
 380,NEMAHA,   Vermillion ,2698,470,41,8.7
 413,NEOSHO,   Chanute Public Schools ,10635,1860,315,16.9
 247,NEOSHO,   Cherokee ,4412,787,139,17.7
-447,NEOSHO,   Cherryvale ,3892,774,147,19.0
-505,NEOSHO,   Chetopa-St. Paul ,2470,448,85,19.0
+447,NEOSHO,   Cherryvale ,3892,774,147,19
+505,NEOSHO,   Chetopa-St. Paul ,2470,448,85,19
 101,NEOSHO,   Erie ,3516,642,164,25.5
 248,NEOSHO,   Girard ,5438,1039,180,17.3
 395,NESS,   LaCrosse ,2109,311,50,16.1
 303,NESS,   Ness City ,1605,271,25,9.2
 106,NESS,   Western Plains ,1170,174,23,13.2
 326,NORTON,   Logan ,965,189,24,12.7
-212,NORTON,   Northern Valley ,839,147,25,17.0
+212,NORTON,   Northern Valley ,839,147,25,17
 211,NORTON,   Norton Community Schools ,4728,629,76,12.1
 294,NORTON,   Oberlin ,2677,388,85,21.9
 437,OSAGE,   Auburn-Washburn ,33981,6271,386,6.2
@@ -409,7 +409,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 421,OSAGE,   Lyndon ,2556,472,53,11.2
 456,OSAGE,   Marais des Cygnes Valley ,1514,285,34,11.9
 251,OSAGE,   North Lyon County ,3365,605,62,10.2
-420,OSAGE,   Osage City ,3679,655,118,18.0
+420,OSAGE,   Osage City ,3679,655,118,18
 434,OSAGE,   Santa Fe Trail ,6121,1030,152,14.8
 450,OSAGE,   Shawnee Heights ,18981,3548,197,5.6
 330,OSAGE,   Wabaunsee East ,3139,514,39,7.6
@@ -426,17 +426,17 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 393,OTTAWA,   Solomon ,1921,352,31,8.8
 334,OTTAWA,   Southern Cloud ,1375,249,44,17.7
 240,OTTAWA,   Twin Valley ,2432,437,49,11.2
-495,PAWNEE,   Fort Larned ,6219,749,97,13.0
+495,PAWNEE,   Fort Larned ,6219,749,97,13
 351,PAWNEE,   Macksville ,1261,250,47,18.8
 496,PAWNEE,   Pawnee Heights ,596,76,9,11.8
 326,PHILLIPS,   Logan ,965,189,24,12.7
-212,PHILLIPS,   Northern Valley ,839,147,25,17.0
-325,PHILLIPS,   Phillipsburg ,3327,542,76,14.0
+212,PHILLIPS,   Northern Valley ,839,147,25,17
+325,PHILLIPS,   Phillipsburg ,3327,542,76,14
 110,PHILLIPS,   Thunder Ridge ,1566,254,41,16.1
 384,POTTAWATOMIE,   Blue Valley (Randolph-Olsburg),1788,267,18,6.7
 321,POTTAWATOMIE,   Kaw Valley ,8199,2179,186,8.5
-383,POTTAWATOMIE,   Manhattan ,63014,6400,770,12.0
-322,POTTAWATOMIE,   Onaga-Havensville-Wheaton ,2243,435,35,8.0
+383,POTTAWATOMIE,   Manhattan ,63014,6400,770,12
+322,POTTAWATOMIE,   Onaga-Havensville-Wheaton ,2243,435,35,8
 378,POTTAWATOMIE,   Riley County ,4708,808,77,9.5
 323,POTTAWATOMIE,   Rock Creek ,5653,1103,74,6.7
 380,POTTAWATOMIE,   Vermillion ,2698,470,41,8.7
@@ -458,7 +458,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 369,RENO,   Burrton ,1389,268,47,17.5
 401,RENO,   Chase-Raymond ,844,154,32,20.8
 310,RENO,   Fairfield ,2365,413,63,15.3
-312,RENO,   Haven Public Schools ,5833,1131,158,14.0
+312,RENO,   Haven Public Schools ,5833,1131,158,14
 308,RENO,   Hutchinson Public Schools ,33278,5236,789,15.1
 331,RENO,   Kingman-Norwich ,5689,994,163,16.4
 309,RENO,   Nickerson ,7073,1160,166,14.3
@@ -481,7 +481,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 384,RILEY,   Blue Valley (Randolph-Olsburg),1788,267,18,6.7
 379,RILEY,   Clay Center ,7699,1370,190,13.9
 475,RILEY,   Geary County Schools ,39682,7334,1167,15.9
-383,RILEY,   Manhattan ,63014,6400,770,12.0
+383,RILEY,   Manhattan ,63014,6400,770,12
 329,RILEY,   Mill Creek Valley ,3522,624,46,7.4
 378,RILEY,   Riley County ,4708,808,77,9.5
 323,RILEY,   Rock Creek ,5653,1103,74,6.7
@@ -493,7 +493,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 399,ROOKS,   Paradise ,677,123,25,20.3
 270,ROOKS,   Plainville ,2345,404,47,11.6
 271,ROOKS,   Stockton ,1862,274,40,14.6
-489,RUSH,   Hays ,24076,3588,395,11.0
+489,RUSH,   Hays ,24076,3588,395,11
 395,RUSH,   LaCrosse ,2109,311,50,16.1
 403,RUSH,   Otis-Bison ,1332,217,30,13.8
 496,RUSH,   Pawnee Heights ,596,76,9,11.8
@@ -503,7 +503,7 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 407,RUSSELL,   Russell County ,5672,923,165,17.9
 299,RUSSELL,   Sylvan Grove ,1579,235,43,18.3
 307,SALINE,   Ell-Saline ,1743,315,25,7.9
-305,SALINE,   Salina ,48175,8091,1210,15.0
+305,SALINE,   Salina ,48175,8091,1210,15
 400,SALINE,   Smoky Valley ,6259,1007,86,8.5
 393,SALINE,   Solomon ,1921,352,31,8.8
 306,SALINE,   Southeast of Saline ,3004,586,56,9.6
@@ -514,27 +514,27 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 369,SEDGWICK,   Burrton ,1389,268,47,17.5
 268,SEDGWICK,   Cheney ,3604,800,66,8.3
 375,SEDGWICK,   Circle ,9278,1747,160,9.2
-264,SEDGWICK,   Clearwater ,6067,1301,182,14.0
+264,SEDGWICK,   Clearwater ,6067,1301,182,14
 356,SEDGWICK,   Conway Springs ,2547,602,81,13.5
 260,SEDGWICK,   Derby ,35848,7173,707,9.9
 265,SEDGWICK,   Goddard ,28178,6503,269,4.1
-440,SEDGWICK,   Halstead ,4541,919,83,9.0
-312,SEDGWICK,   Haven Public Schools ,5833,1131,158,14.0
+440,SEDGWICK,   Halstead ,4541,919,83,9
+312,SEDGWICK,   Haven Public Schools ,5833,1131,158,14
 261,SEDGWICK,   Haysville ,23472,4895,620,12.7
 331,SEDGWICK,   Kingman-Norwich ,5689,994,163,16.4
 266,SEDGWICK,   Maize ,35140,8074,370,4.6
 263,SEDGWICK,   Mulvane ,10113,2024,207,10.2
-206,SEDGWICK,   Remington-Whitewater ,3705,746,60,8.0
+206,SEDGWICK,   Remington-Whitewater ,3705,746,60,8
 267,SEDGWICK,   Renwick ,8620,2242,124,5.5
 394,SEDGWICK,   Rose Hill Public Schools ,8147,1767,117,6.6
 439,SEDGWICK,   Sedgwick Public Schools ,2186,475,33,6.9
-262,SEDGWICK,   Valley Center Public Schools ,14462,3083,216,7.0
+262,SEDGWICK,   Valley Center Public Schools ,14462,3083,216,7
 259,SEDGWICK,   Wichita ,338113,57264,11606,20.3
 483,SEWARD,   Kismet-Plains ,2886,691,120,17.4
 480,SEWARD,   Liberal ,19646,4424,712,16.1
 209,SEWARD,   Moscow Public Schools ,708,177,11,6.2
 507,SEWARD,   Satanta ,1652,343,57,16.6
-374,SEWARD,   Sublette ,2234,481,48,10.0
+374,SEWARD,   Sublette ,2234,481,48,10
 437,SHAWNEE,   Auburn-Washburn ,33981,6271,386,6.2
 340,SHAWNEE,   Jefferson West ,4979,905,65,7.2
 321,SHAWNEE,   Kaw Valley ,8199,2179,186,8.5
@@ -574,12 +574,12 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 470,SUMNER,   Arkansas City ,16057,2876,498,17.3
 357,SUMNER,   Belle Plaine ,3135,586,64,10.9
 360,SUMNER,   Caldwell ,1388,196,37,18.9
-264,SUMNER,   Clearwater ,6067,1301,182,14.0
+264,SUMNER,   Clearwater ,6067,1301,182,14
 356,SUMNER,   Conway Springs ,2547,602,81,13.5
 331,SUMNER,   Kingman-Norwich ,5689,994,163,16.4
 263,SUMNER,   Mulvane ,10113,2024,207,10.2
 358,SUMNER,   Oxford ,1785,282,30,10.6
-509,SUMNER,   South Haven ,834,163,18,11.0
+509,SUMNER,   South Haven ,834,163,18,11
 463,SUMNER,   Udall ,1946,363,46,12.7
 353,SUMNER,   Wellington ,9143,1668,232,13.9
 314,THOMAS,   Brewster ,586,99,7,7.1
@@ -590,10 +590,10 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 275,THOMAS,   Triplains ,470,86,19,22.1
 388,TREGO,   Ellis ,2585,504,50,9.9
 395,TREGO,   LaCrosse ,2109,311,50,16.1
-208,TREGO,   WaKeeney ,2666,361,47,13.0
+208,TREGO,   WaKeeney ,2666,361,47,13
 106,TREGO,   Western Plains ,1170,174,23,13.2
 321,WABAUNSEE,   Kaw Valley ,8199,2179,186,8.5
-383,WABAUNSEE,   Manhattan ,63014,6400,770,12.0
+383,WABAUNSEE,   Manhattan ,63014,6400,770,12
 329,WABAUNSEE,   Mill Creek Valley ,3522,624,46,7.4
 417,WABAUNSEE,   Morris County ,4898,703,105,14.9
 251,WABAUNSEE,   North Lyon County ,3365,605,62,10.2
@@ -608,10 +608,10 @@ school_dist,county,school_dist_name,total_pop_est,child_pop_5-7,child_5-7_povert
 108,WASHINGTON,   North Central-Washington Schools ,2475,377,41,10.9
 109,WASHINGTON,   Republic County-Hillcrest Rural Schools ,3563,534,106,19.9
 498,WASHINGTON,   Valley Heights ,2168,385,49,12.7
-467,WICHITA,   Leoti ,2139,430,60,14.0
+467,WICHITA,   Leoti ,2139,430,60,14
 466,WICHITA,   Scott County ,4834,981,99,10.1
 387,WILSON,   Altoona-Midway ,1506,238,34,14.3
-447,WILSON,   Cherryvale ,3892,774,147,19.0
+447,WILSON,   Cherryvale ,3892,774,147,19
 484,WILSON,   Fredonia ,4270,722,121,16.8
 461,WILSON,   Neodesha ,3238,629,98,15.6
 387,WOODSON,   Altoona-Midway ,1506,238,34,14.3

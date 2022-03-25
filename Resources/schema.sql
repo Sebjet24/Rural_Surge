@@ -123,3 +123,4 @@ CREATE TABLE ks_school_dist_county_pop_poverty (
 	FOREIGN KEY (county_code) REFERENCES ks_county_lat_long_txt_format (county_code),
 	PRIMARY KEY (school_dist)
 );
+
