@@ -28,13 +28,25 @@ Our group decided to dive into this topic, and research internet availability an
 
 
 ### Tools Used on our Project
-- GitHub
+- GitHub 
+    * The largest and most advanced development platform in the world.
+    * https://github.com/
 - Pandas
+    * A fast, powerful, flexible and easy to use open source data analysis and manipulation tool,
+built on top of the Python programming language.
 - Python
+    * A general-purpose, versatile, and powerful programming language.
+    * https://www.python.org/
 - QuickDBD
-- GeoJSON
-- Tableau
+    * A simple online tool to quickly draw database diagrams.
+    * https://www.quickdatabasediagrams.com/
 
+- GeoJSON
+    * A format for encoding a variety of geographic data structures.
+    * https://geojson.org/
+- Tableau
+    * A visual analytics platform transforming the way we use data to solve problems—empowering people and organizations to make the most of their data.
+    * https://www.tableau.com/
 
 ### Machine Learning Model
 - See <a href="Resources/Machine Learning Work Flowchart.pdf">diagram</a>
