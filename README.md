@@ -32,7 +32,8 @@ Our group decided to dive into this topic, and research internet availability an
     * The largest and most advanced development platform in the world.
     * https://github.com/
 - Pandas
-    * A fast, powerful, flexible and easy to use open source data analysis and manipulation tool,
+    * A fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language
+    * https://pandas.pydata.org/
 built on top of the Python programming language.
 - Python
     * A general-purpose, versatile, and powerful programming language.
