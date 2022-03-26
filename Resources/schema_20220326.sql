@@ -1,4 +1,63 @@
 -- Create tables for Rural Surge Project
+
+-- Create Validation Table for Area Table tech column from FCC site
+DROP TABLE tech_type;
+--
+CREATE TABLE tech_type (
+	tech_type_code VARCHAR(1) NOT NULL,
+    tech_type_desc VARCHAR(20) NOT NULL,
+	PRIMARY KEY (tech_type_code)
+);
+
+-- create ks_school_dist_codes
+DROP TABLE ks_school_dist_codes;
+--
+CREATE TABLE ks_school_dist_codes (
+	school_dist INT NOT NULL,
+    school_dist_name VARCHAR(40) NOT NULL,
+	PRIMARY KEY (school_dist)
+);
+
+-- create ks_county_codes
+DROP TABLE ks_county_codes;
+--
+CREATE TABLE ks_county_codes (
+	county_code VARCHAR(2) NOT NULL,
+    county_desc VARCHAR(40) NOT NULL,
+	desc_upper VARCHAR(40) NOT NULL,
+	PRIMARY KEY (county_code)
+);
+
+-- Create county table for Rural Surge Project
+-- KS Library data https://kslib.info/423/State-Data-Center
+
+DROP TABLE ks_county_lat_long_txt_format;
+--
+CREATE TABLE ks_county_lat_long_txt_format (
+	county_code VARCHAR NOT NULL,
+	county_lat VARCHAR NOT NULL,
+	county_lng	VARCHAR NOT NULL,
+	FOREIGN KEY (county_code) REFERENCES ks_county_codes (county_code),
+    PRIMARY KEY (county_code)
+    
+);
+
+-- Create ks_school_dist_county_pop_poverty table
+
+DROP TABLE ks_school_dist_county_pop_poverty;
+--
+CREATE TABLE ks_school_dist_county_pop_poverty (
+	school_dist INT NOT NULL,
+	county_code VARCHAR NOT NULL,
+    school_dist_name VARCHAR NOT NULL,
+    total_pop_est INT NOT NULL,
+	child_pop_5_17 INT NOT NULL,
+	child_5_17_poverty_numb INT NOT NULL,
+	child_5_17_poverty_percent INT NOT NULL,
+	FOREIGN KEY (county_code) REFERENCES ks_county_lat_long_txt_format (county_code),
+	PRIMARY KEY (school_dist)
+);
+
 -- FCC data https://broadbandmap.fcc.gov/#/data-download
 
 -- Create Area Table from FCC site
@@ -6,6 +65,8 @@
 --congressional district, census designated place, tribal area, CBSA)
 -- Urban = U; Rural = R
 
+DROP TABLE area_table;
+--
 CREATE TABLE area_table (
 	type VARCHAR(20) NOT NULL,
     id VARCHAR(20) NOT NULL,
@@ -13,11 +74,11 @@ CREATE TABLE area_table (
     urban_rural VARCHAR(1) NOT NULL,
 	tribal_non VARCHAR(5) NOT NULL,
 	speed FLOAT,
-	has_zero INT,
-	has_one INT,
-	has_two INT,
-	has_three_plus INT,
-	FOREIGN KEY (tech) REFERENCES (tech_type),
+	has_0 INT,
+	has_1 INT,
+	has_2 INT,
+	has_3more INT,
+	FOREIGN KEY (tech) REFERENCES tech_type (tech_type_code),
 	PRIMARY KEY (id)
 );
 
@@ -30,6 +91,8 @@ CREATE TABLE area_table (
 -- See detailed iformation about GEOID Structure for GEO areas
 -- here https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html
 
+DROP TABLE geo_lookup;
+--
 CREATE TABLE geo_lookup (
 	year VARCHAR(20) NOT NULL,
     geoid VARCHAR(20) NOT NULL,
@@ -50,6 +113,9 @@ CREATE TABLE geo_lookup (
 -- block does not necessarily reflect the number of choices available to any
 -- particular household or business location in that block, and the number of
 -- such providers in the census block does not purport to measure competition.
+
+DROP TABLE bb_providers;
+--
 CREATE TABLE bb_providers (
 	logical_id INT NOT NULL,
     provider_id VARCHAR(20) NOT NULL,
@@ -70,6 +136,8 @@ CREATE TABLE bb_providers (
 	PRIMARY KEY (logical_id)
 );
 
+DROP TABLE provider_detail;
+--
 CREATE TABLE provider_detail (
 	holding_co_no INT NOT NULL,
     num_tech_type INT, -- API field techcode - not same code as tech_code
@@ -91,36 +159,5 @@ CREATE TABLE provider_detail (
 	u_8 INT, -- POPULATION covered by provider with relevant tech upload speed
 	u_9 INT, -- POPULATION covered by provider with relevant tech upload speed
 	PRIMARY KEY (holding_co_no)
-);
--- Create Validation Table for Area Table tech column from FCC site
-CREATE TABLE tech_type (
-	tech_type_code VARCHAR(1) NOT NULL,
-    tech_type_desc VARCHAR(20) NOT NULL,
-	PRIMARY KEY (tech_type_code)
-);
-
--- Create county table for Rural Surge Project
--- KS Library data https://kslib.info/423/State-Data-Center
-CREATE TABLE ks_county_lat_long_txt_format (
-	county_code VARCHAR NOT NULL,-- need to add county codes
-	--county_desc VARCHAR NOT NULL,
-	county_lat VARCHAR NOT NULL,
-	county_lng	VARCHAR NOT NULL,
-    PRIMARY KEY (county_code)
-    
-);
-
-
--- Create ks_school_dist_county_pop_poverty table
-CREATE TABLE ks_school_dist_county_pop_poverty (
-	school_dist INT NOT NULL,
-	county_code VARCHAR NOT NULL,
-    school_dist_name VARCHAR NOT NULL,
-    total_pop_est INT NOT NULL,
-	child_pop_5_17 INT NOT NULL,
-	child_5_17_poverty_numb INT NOT NULL,
-	child_5_17_poverty_percent INT NOT NULL,
-	FOREIGN KEY (county_code) REFERENCES ks_county_lat_long_txt_format (county_code),
-	PRIMARY KEY (school_dist)
 );
 
