@@ -102,10 +102,10 @@ CREATE TABLE tech_type (
 -- Create county table for Rural Surge Project
 -- KS Library data https://kslib.info/423/State-Data-Center
 CREATE TABLE ks_county_lat_long_txt_format (
-	county_code VARCHAR() NOT NULL,-- need to add county codes
+	county_code VARCHAR NOT NULL,-- need to add county codes
 	--county_desc VARCHAR NOT NULL,
-	county_lat VARCHAR() NOT NULL,
-	county_lng	VARCHAR() NOT NULL,
+	county_lat VARCHAR NOT NULL,
+	county_lng	VARCHAR NOT NULL,
     PRIMARY KEY (county_code)
     
 );
@@ -113,13 +113,13 @@ CREATE TABLE ks_county_lat_long_txt_format (
 
 -- Create ks_school_dist_county_pop_poverty table
 CREATE TABLE ks_school_dist_county_pop_poverty (
-	school_dist INT(3) NOT NULL,
-	county_code VARCHAR() NOT NULL,
-    school_dist_name VARCHAR() NOT NULL,
+	school_dist INT NOT NULL,
+	county_code VARCHAR NOT NULL,
+    school_dist_name VARCHAR NOT NULL,
     total_pop_est INT NOT NULL,
-	child_pop_5-7 INT NOT NULL,
-	child_5-7_poverty_numb INT NOT NULL,
-	child_5-7_poverty_percent INT NOT NULL,
+	child_pop_5_17 INT NOT NULL,
+	child_5_17_poverty_numb INT NOT NULL,
+	child_5_17_poverty_percent INT NOT NULL,
 	FOREIGN KEY (county_code) REFERENCES ks_county_lat_long_txt_format (county_code),
 	PRIMARY KEY (school_dist)
 );
