@@ -54,8 +54,8 @@ Our group decided to dive into this topic, and research internet availability an
     * https://www.tableau.com/
 
 ### Machine Learning Model
-- See <a href="Resources/Machine Learning Work Flowchart.pdf">diagram</a>
-- See <a href="Resources/ProjectFlowchart.pdf"> Project Flowchart</a>
+- <a href="Resources/Machine Learning Work Flowchart.pdf">Project Planning diagram</a> - Outlines our plan for collecting data, and presenting it to the class.
+- <a href="Resources/ProjectFlowchart.pdf"> Project Flowchart</a> - Decision Tree model for our project.
 
 
 ### Database
