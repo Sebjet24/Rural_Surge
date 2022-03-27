@@ -166,3 +166,43 @@ CREATE TABLE provider_detail (
 	u_8 INT, -- POPULATION covered by provider with relevant tech upload speed
 	u_9 INT -- POPULATION covered by provider with relevant tech upload speed
 );
+
+-- https://opendata.fcc.gov/Wireline/Provider-Table-December-2020/2ra3-4jd4
+SELECT * FROM provider_detail;
+--
+-- Data source for following table is 2010 Census data
+-- https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural/2010-urban-rural.html
+-- The following data table contains only Kansas, Colorado, Oklahoma, Missori, and Nebraska, which are KS border states
+
+SELECT * FROM pct_urban_rural_county;
+
+DROP TABLE pct_urban_rural_county;
+
+CREATE TABLE pct_urban_rural_county (
+	state_code VARCHAR NOT NULL,
+	county_code VARCHAR NOT NULL,
+	statename VARCHAR NOT NULL,
+	countyname VARCHAR NOT NULL,
+	pop_cou INT NOT NULL,
+	area_cou BIGINT,
+	pop_urban INT,
+	poppct_urban FLOAT,
+	area_urban BIGINT,
+	areapct_urban FLOAT,
+	popden_urban FLOAT(1),
+	pop_ua BIGINT,-- UA = URBAN AREA land mass
+	poppct_ua FLOAT,
+	area_ua BIGINT,
+	areapct_ua FLOAT,
+	popden_ua FLOAT,
+	pop_uc INT, -- UC = URBAN COUNTY
+	poppct_uc FLOAT,
+	area_uc BIGINT,
+	areapct_uc FLOAT,
+	popden_uc FLOAT(1),
+	pop_rural INT,
+	poppct_rural FLOAT,
+	area_rural BIGINT,
+	areapct_rural FLOAT,
+	popden_rural FLOAT(1)
+);
