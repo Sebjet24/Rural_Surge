@@ -34,7 +34,6 @@ Our group decided to dive into this topic, and research internet availability an
 - Pandas
     * A fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language
     * https://pandas.pydata.org/
-built on top of the Python programming language.
 - Python
     * A general-purpose, versatile, and powerful programming language.
     * https://www.python.org/
@@ -51,6 +50,7 @@ built on top of the Python programming language.
 
 ### Machine Learning Model
 - See <a href="Resources/Machine Learning Work Flowchart.pdf">diagram</a>
+- See <a href="Resources/ProjectFlowchart.pdf"> Project Flowchart</a>
 
 
 ### Database
