@@ -1,4 +1,67 @@
 -- Create tables for Rural Surge Project
+
+-- Create Validation Table for Area Table tech column from FCC site
+SELECT * FROM tech_type;
+--
+CREATE TABLE tech_type (
+	tech_type_code VARCHAR(1) NOT NULL,
+    tech_type_desc VARCHAR(20) NOT NULL,
+	PRIMARY KEY (tech_type_code)
+);
+
+-- create ks_school_dist_codes
+SELECT * FROM ks_school_dist_codes;
+
+--DROP TABLE ks_school_dist_codes;
+--
+CREATE TABLE ks_school_dist_codes (
+	school_dist INT NOT NULL,
+    school_dist_name VARCHAR NOT NULL,
+	PRIMARY KEY (school_dist)
+);
+
+-- create ks_county_codes
+SELECT * FROM ks_county_codes;
+--
+CREATE TABLE ks_county_codes (
+	county_code VARCHAR(2) NOT NULL,
+    county_desc VARCHAR(40) NOT NULL,
+	desc_upper VARCHAR(40) NOT NULL,
+	PRIMARY KEY (county_code)
+);
+
+-- Create county table for Rural Surge Project
+-- KS Library data https://kslib.info/423/State-Data-Center
+
+SELECT * FROM ks_county_lat_long_txt_format;
+--
+CREATE TABLE ks_county_lat_long_txt_format (
+	county_code VARCHAR NOT NULL,
+	county_lat VARCHAR NOT NULL,
+	county_lng	VARCHAR NOT NULL,
+	FOREIGN KEY (county_code) REFERENCES ks_county_codes (county_code),
+    PRIMARY KEY (county_code)
+    
+);
+
+-- Create ks_school_dist_county_pop_poverty table
+
+SELECT * FROM ks_school_dist_county_pop_poverty;
+
+--DROP TABLE ks_school_dist_county_pop_poverty;
+--
+CREATE TABLE ks_school_dist_county_pop_poverty (
+	school_dist INT NOT NULL,
+	county_code VARCHAR NOT NULL,
+    total_pop_est INT,
+	child_pop INT,
+	child_poverty_numb INT,
+	child_poverty_percent FLOAT(2),
+	FOREIGN KEY (county_code) REFERENCES ks_county_lat_long_txt_format (county_code),
+	FOREIGN KEY (school_dist) REFERENCES ks_school_dist_codes (school_dist)
+	--PRIMARY KEY (school_dist)
+);
+
 -- FCC data https://broadbandmap.fcc.gov/#/data-download
 
 -- Create Area Table from FCC site
@@ -6,19 +69,19 @@
 --congressional district, census designated place, tribal area, CBSA)
 -- Urban = U; Rural = R
 
+SELECT * FROM area_table;
+--
 CREATE TABLE area_table (
-	type VARCHAR(20) NOT NULL,
-    id VARCHAR(20) NOT NULL,
-	tech VARCHAR(6) NOT NULL,
-    urban_rural VARCHAR(1) NOT NULL,
-	tribal_non VARCHAR(5) NOT NULL,
+	type VARCHAR NOT NULL,
+    id VARCHAR NOT NULL,
+	tech VARCHAR NOT NULL,
+    urban_rural VARCHAR NOT NULL,
+	tribal_non VARCHAR NOT NULL,
 	speed FLOAT,
-	has_zero INT,
-	has_one INT,
-	has_two INT,
-	has_three_plus INT,
-	FOREIGN KEY (tech) REFERENCES (tech_type),
-	PRIMARY KEY (id)
+	has_0 INT,
+	has_1 INT,
+	has_2 INT,
+	has_3more INT
 );
 
 -- Create Geography Lookup Table from FCC site
@@ -30,15 +93,18 @@ CREATE TABLE area_table (
 -- See detailed iformation about GEOID Structure for GEO areas
 -- here https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html
 
+SELECT * FROM geo_lookup;
+
+DROP TABLE geo_lookup;
+--
 CREATE TABLE geo_lookup (
-	year VARCHAR(20) NOT NULL,
-    geoid VARCHAR(20) NOT NULL,
-	type VARCHAR(20) NOT NULL,
-    name VARCHAR(40) NOT NULL,
-	centroid_lng VARCHAR(20) NOT NULL,
-	centroid_lat VARCHAR(20) NOT NULL,
-	bbox_arr VARCHAR,
-    PRIMARY KEY (geoid)
+	year VARCHAR(4) NOT NULL,
+    geoid VARCHAR NOT NULL,
+	type VARCHAR NOT NULL,
+    name VARCHAR NOT NULL,
+	centroid_lng VARCHAR NOT NULL,
+	centroid_lat VARCHAR NOT NULL,
+	bbox_arr VARCHAR-- combines lat and lng
 );
 
 -- create broadband provider summary tables
@@ -50,29 +116,38 @@ CREATE TABLE geo_lookup (
 -- block does not necessarily reflect the number of choices available to any
 -- particular household or business location in that block, and the number of
 -- such providers in the census block does not purport to measure competition.
+-- Summary data of fixed broadband coverage by geographic area
+-- CSV file name is Fixed_Broadband_Deployment_Data__December_2020
+
+SELECT * FROM bb_providers;
+
+--DROP TABLE bb_providers;
+--
 CREATE TABLE bb_providers (
-	logical_id INT NOT NULL,
-    provider_id VARCHAR(20) NOT NULL,
-	frn VARCHAR(20) NOT NULL, -- fcc registration number
-    provider_name VARCHAR(40) NOT NULL,
-	dba_name VARCHAR(40) NOT NULL,
-	holding_co_name VARCHAR(40), -- api field holdingcompanyname
-	holding_co_no INT, -- api field hoconum
-	holding_co_final VARCHAR(40), -- api field hocofinal
-	state_code VARCHAR(2) -- api field stateabbr
-	fips_block_code VARCHAR(2) -- api field blockcode
-	num_tech_type INT, -- API field techcode - not same code as tech_code
+	logrecno INT NOT NULL,
+    provider_id VARCHAR NOT NULL,
+	frn VARCHAR NOT NULL, -- fcc registration number
+    providername VARCHAR NOT NULL,
+	dbaname VARCHAR NOT NULL,
+	holdingcompanyname VARCHAR , -- api field holdingcompanyname
+	hoconum INT, -- api field hoconum
+	hocofinal VARCHAR, -- api field hocofinal
+	stateabbr VARCHAR, -- api field stateabbr
+	blockcode VARCHAR, -- api field blockcode
+	techcode INT, -- API field techcode - not same code as tech_code
 	consumer_offers INT, -- API consumer (0=no, 1=yes offered in block)
-	max_ad_down_speed INT, 
-	max_ad_UP_speed INT, 
-	business_offers INT, -- 1= offers to business/ government service blocks.
-    FOREIGN KEY (holding_co_no) REFERENCES provider_detail (holding_co_no),
-	PRIMARY KEY (logical_id)
+	maxaddown FLOAT, -- highest advertised download speeds
+	maxadup FLOAT, -- highest advertised upload speeds
+	business INT, -- 1= offers to business/ government service blocks.
+	PRIMARY KEY (logrecno)
 );
 
+-- https://opendata.fcc.gov/Wireline/Provider-Table-December-2020/2ra3-4jd4
+SELECT * FROM provider_detail;
+--
 CREATE TABLE provider_detail (
-	holding_co_no INT NOT NULL,
-    num_tech_type INT, -- API field techcode - not same code as tech_code
+	hoconum INT NOT NULL,
+    tech VARCHAR, -- API field techcode - not same code as tech_code
 	d_1 INT, -- POPULATION covered by provider with relevant tech download speed
 	d_2 INT, -- POPULATION covered by provider with relevant tech download speed
 	d_3 INT, -- POPULATION covered by provider with relevant tech download speed
@@ -89,31 +164,5 @@ CREATE TABLE provider_detail (
 	u_6 INT, -- POPULATION covered by provider with relevant tech upload speed
 	u_7 INT, -- POPULATION covered by provider with relevant tech upload speed
 	u_8 INT, -- POPULATION covered by provider with relevant tech upload speed
-	u_9 INT, -- POPULATION covered by provider with relevant tech upload speed
-	PRIMARY KEY (holding_co_no)
-);
--- Create Validation Table for Area Table tech column from FCC site
-CREATE TABLE tech_type (
-	tech_type_code VARCHAR(1) NOT NULL,
-    tech_type_desc VARCHAR(20) NOT NULL,
-	PRIMARY KEY (tech_type_code)
-);
-
--- Create county table for Rural Surge Project
--- KS Library data https://kslib.info/423/State-Data-Center
-CREATE TABLE ks_counties (
-	county_code VARCHAR(2) NOT NULL,
-	county_desc VARCHAR NOT NULL,
-    PRIMARY KEY (county_code)
-    
-);
-
--- Create ks_zip_code table
-CREATE TABLE ks_zip_codes (
-	zip_code VARCHAR(9) NOT NULL,
-	county_code VARCHAR(2) NOT NULL,
-    city    VARCHAR(20) NOT NULL,
-    state_code VARCHAR(2) NOT NULL,
-	FOREIGN KEY (county_code) REFERENCES ks_counties (county_code),
-	PRIMARY KEY (zip_code)
+	u_9 INT -- POPULATION covered by provider with relevant tech upload speed
 );

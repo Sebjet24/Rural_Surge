@@ -166,4 +166,3 @@ CREATE TABLE provider_detail (
 	u_8 INT, -- POPULATION covered by provider with relevant tech upload speed
 	u_9 INT -- POPULATION covered by provider with relevant tech upload speed
 );
-
