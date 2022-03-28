@@ -31,6 +31,7 @@ Our group decided to dive into this topic, and research internet availability an
 - GitHub 
     * The largest and most advanced development platform in the world.
     * https://github.com/
+    * Used to organize our research and documentation.
 - Pandas
     * A fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language
     * https://pandas.pydata.org/
@@ -40,7 +41,11 @@ Our group decided to dive into this topic, and research internet availability an
 - QuickDBD
     * A simple online tool to quickly draw database diagrams.
     * https://www.quickdatabasediagrams.com/
-
+    * Used to create our schema doc.
+- Canva
+    * Online design and publishing tool 
+    * https://www.canva.com/
+    * Used to design the Project Flowchart.
 - GeoJSON
     * A format for encoding a variety of geographic data structures.
     * https://geojson.org/
@@ -49,8 +54,8 @@ Our group decided to dive into this topic, and research internet availability an
     * https://www.tableau.com/
 
 ### Machine Learning Model
-- See <a href="Resources/Machine Learning Work Flowchart.pdf">diagram</a>
-- See <a href="Resources/ProjectFlowchart.pdf"> Project Flowchart</a>
+- <a href="Resources/Machine Learning Work Flowchart.pdf">Project Planning diagram</a> - Outlines our plan for collecting data, and presenting it to the class.
+- <a href="Resources/ProjectFlowchart.pdf"> Project Flowchart</a> - Decision Tree model for our project.
 
 
 ### Database
