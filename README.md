@@ -71,23 +71,26 @@ Our group decided to dive into this topic, and research internet availability an
 
 ### Preparing the data
    - Store csv files on GitHub
-   - [Schema](https://github.com/Sebjet24/Rural_Surge/blob/Mindy/Resources/schema.sql)
-   - ERD - FCC data
+   - Create a [Schema](https://github.com/Sebjet24/Rural_Surge/blob/Mindy/Resources/schema.sql) to show how we organized the data
+   - Create ERDs (Entity Relationship Diagrams)
+    
+     **ERD - FCC data**
    
-   <img src="Images/ERD_FCC_tables.png" width="50%" height="30%">
+      <img src="Images/ERD_FCC_tables.png" width="50%" height="30%">
      
-   - ERD - State of Kansas data
-   
-   <img src="Images/ERD-Kansas_Tables.png" width="50%" height="30%">
+     **ERD - State of Kansas data**
+     
+      <img src="Images/ERD-Kansas_Tables.png" width="50%" height="30%">
    
    - Load data into a database using pgAdmin
 
-### Data Modeling
-**Which machine learning model will work best for our project?**
 
-   - The team discussed the different options, and determined that a **Decision Tree** would be a great fit for our project.
+### Data Modeling
+
+- The team discussed the different machine learning options, and determined that a **Decision Tree** would be a great fit for our project.
       
      ![image](https://user-images.githubusercontent.com/93055450/160937924-93787c01-78f7-4f5c-907b-792a370c80b5.png)
+
 
 ### Visualize the Data
    - Google Slides
