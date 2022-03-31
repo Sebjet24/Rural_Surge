@@ -95,7 +95,7 @@ CREATE TABLE area_table (
 
 SELECT * FROM geo_lookup;
 
-DROP TABLE geo_lookup;
+--DROP TABLE geo_lookup;
 --
 CREATE TABLE geo_lookup (
 	year VARCHAR(4) NOT NULL,
@@ -119,7 +119,8 @@ CREATE TABLE geo_lookup (
 -- Summary data of fixed broadband coverage by geographic area
 -- CSV file name is Fixed_Broadband_Deployment_Data__December_2020
 
-SELECT * FROM bb_providers;
+SELECT * FROM bb_providers 
+LIMIT 50;
 
 --DROP TABLE bb_providers;
 --
