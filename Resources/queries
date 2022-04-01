@@ -1,0 +1,35 @@
+-- Questions to answer with data queries
+-- How does internet access (quality, availability, etc)
+-- compare between rural and urban areas in Kansas?
+-- What Internet Service Providers (ISPs) are available in Kansas?
+-- How does their support vary between rural and urban communities?
+
+SELECT * FROM area_table;
+
+SELECT distinct type from area_table
+WHERE id like '20%';
+
+-- about geoid: https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html
+SELECT * FROM geo_lookup
+where geoid like '20%';
+
+SELECT * FROM pct_urban_rural_county
+WHERE state_code = '20'
+limit 50;
+
+alter table "pct_urban_rural_county" add column "state_county_code" varchar(255);
+update "pct_urban_rural_county"
+    set "state_county_code" = concat(state_code,county_code);
+
+-- from area table join id select type, id, urban_rural, speed, has_0, has_1, has_2, has_3more
+-- from geo_lookup join geoid select geoid, type, name, centroid_lng, centroid_lat, bbox_arr
+-- from pct_urban_rural_county join state_county_code select countyname, pop_cou,
+-- poppct_urban, popden_urban, pop_rural, poppct_rural, popden_rural
+-- join example:
+--SELECT * FROM weather w LEFT OUTER JOIN cities c ON w.city = c.name;
+
+SELECT DISTINCT at.id, gl.geoid, at.type, gl.name, at.urban_rural, at.speed, at.has_0, at.has_1, at.has_2, at.has_3more,
+gl.centroid_lng, gl.centroid_lat
+FROM area_table at LEFT OUTER JOIN geo_lookup gl ON (at.id, at.type) = (gl.geoid, gl.type)
+WHERE at.id like '20%'
+AND at.type = 'county';
