@@ -122,6 +122,8 @@ Our group decided to dive into this topic, and research internet availability an
 
 ### Visualize the Data
    - Google Slides
+     * https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/Rural%20Surge.pptx
    - Tableau
      * Images from Seward county fiber install
      * Maps
+     * TBD
