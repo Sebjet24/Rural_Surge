@@ -43,7 +43,7 @@ Our group decided to dive into this topic, and research internet availability an
     * PySpark is the Python API for Apache Spark, an open source, distributed computing framework and set of libraries for real-time, large-scale data processing.
 - [GeoJSON](https://geojson.org/)
     * A format for encoding a variety of geographic data structures.
-- [Google Slides](https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvPlYY/edit#slide=id.g1205a2ea841_0_1)
+- [Google Slides](https://www.google.com/slides/about/)
     * Used to present our project plan.
 - [Tableau](https://www.tableau.com/)
     * A visual analytics platform transforming the way we use data to solve problems—empowering people and organizations to make the most of their data.
