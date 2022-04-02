@@ -14,7 +14,7 @@ Our group decided to dive into this topic, and research internet availability an
 - Group Slack channel
 - Group Project GitHub, including a branch for each team member
 - Breakout room during class time
-- Saturday Zoom calls (March 19th and 26th)
+- Team Zoom calls (March 19th and 26th, April 1st and 2nd)
 - Team has shared phone numbers and email addresses
 
 
@@ -34,6 +34,13 @@ Our group decided to dive into this topic, and research internet availability an
 - [Canva](https://www.canva.com/)
     * Online design and publishing tool.
     * Used to design the Project Flowchart.
+- [Amazon S3](https://aws.amazon.com/s3/)
+    * Object storage service offering industry-leading scalability, data availability, security, and performance.
+    * Used to store our data on the cloud
+- [pgAdmin](https://www.pgadmin.org/)
+    * The most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world.
+- [PySpark](https://spark.apache.org/docs/latest/api/python/)
+    * PySpark is the Python API for Apache Spark, an open source, distributed computing framework and set of libraries for real-time, large-scale data processing.
 - [GeoJSON](https://geojson.org/)
     * A format for encoding a variety of geographic data structures.
 - [Google Slides](https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvPlYY/edit#slide=id.g1205a2ea841_0_1)
@@ -69,10 +76,14 @@ Our group decided to dive into this topic, and research internet availability an
      * Population density
 
 
-### Preparing the data
-   - Store csv files on GitHub
-   - Create a [Schema](https://github.com/Sebjet24/Rural_Surge/blob/Mindy/Resources/schema.sql) to show how we organized the data
-   - Create ERDs (Entity Relationship Diagrams)
+
+### Machine Learning Modeling
+
+- Description of preliminary data preprocessing
+
+   * Store csv files on GitHub
+   * Create a [Schema](https://github.com/Sebjet24/Rural_Surge/blob/Mindy/Resources/schema.sql) to show how we organized the data
+   * Create ERDs (Entity Relationship Diagrams)
     
      **ERD - FCC data**
    
@@ -82,14 +93,31 @@ Our group decided to dive into this topic, and research internet availability an
      
       <img src="Images/ERD-Kansas_Tables.png" width="50%" height="30%">
    
-   - Load data into a database using pgAdmin
+   * Load data into a database in AWS
+   * Connect database from AWS into pgAdmin
+   * Discuss what data we need for our Dataset
+   * Process (format, clean and sample) our data using PySpark
+   * Transform our data using _______
 
+- Description of preliminary feature engineering and preliminary feature selection, including their decision-making process
 
-### Data Modeling
+- Description of how data was split into training and testing sets
 
-- The team discussed the different machine learning options, and determined that a **Decision Tree** would be a great fit for our project.
+- Explanation of model choice, including limitations and benefits
+  
+  * The team discussed the different machine learning options, and initially thought that a **Decision Tree** would be a good fit for our project.
       
      ![image](https://user-images.githubusercontent.com/93055450/160937924-93787c01-78f7-4f5c-907b-792a370c80b5.png)
+     
+- After learning more about the data, we decided that an **Unsupervised Learning** model would be a better fit. 
+
+  * Using the K-means clustering algorithm, we could demonstrate how population density in each Kansas county correlated with internet speed, as well as number of Internet Service Providers
+  
+     ![image](https://user-images.githubusercontent.com/93055450/161391844-aba47a4e-2b92-4b5a-b7ef-41ea67fba502.png)
+
+
+
+
 
 
 ### Visualize the Data
