@@ -70,6 +70,8 @@ CREATE TABLE ks_school_dist_county_pop_poverty (
 -- Urban = U; Rural = R
 
 SELECT * FROM area_table;
+
+DROP TABLE area_table;
 --
 CREATE TABLE area_table (
 	type VARCHAR NOT NULL,
@@ -84,6 +86,19 @@ CREATE TABLE area_table (
 	has_3more INT
 );
 
+CREATE TABLE area_mod (
+	type VARCHAR NOT NULL,
+    id VARCHAR NOT NULL,
+	tech VARCHAR NOT NULL,
+    urban_rural VARCHAR NOT NULL,
+	tribal_non VARCHAR NOT NULL,
+	speed FLOAT,
+	has_0 INT,
+	has_1 INT,
+	has_2 INT,
+	has_3more INT,
+	tech_options INT
+);
 -- Create Geography Lookup Table from FCC site
 -- type = Type of area (national, state, county,
 --congressional district, census designated place, tribal area, CBSA)
