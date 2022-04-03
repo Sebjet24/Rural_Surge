@@ -48,7 +48,7 @@ Our group decided to dive into this topic, and research internet availability an
 - [Tableau](https://www.tableau.com/)
     * A visual analytics platform transforming the way we use data to solve problems—empowering people and organizations to make the most of their data.
 - [Microsoft Word](https://www.microsoft.com/en-us/microsoft-365/word)
-    * Used to create the Rural Surge flowchart
+    * Used to create our project plan
 
 
 ## Project Outline
@@ -94,16 +94,23 @@ Our group decided to dive into this topic, and research internet availability an
      **ERD - State of Kansas data**
      
       <img src="Images/ERD-Kansas_Tables.png" width="50%" height="30%">
+      
    
    * Load data into a database in AWS
    * Connect database from AWS into pgAdmin
    * Discuss what data we need for our Dataset
    * Process (format, clean and sample) our data using PySpark
-   * Developed usable DataFrames through Jupyter Notebook and return DataFrames as CSV files
+   * Develop usable DataFrames through Jupyter Notebook and return DataFrames as CSV files
 
 - Description of preliminary feature engineering and preliminary feature selection, including their decision-making process
 
+  * Rural and urban % per KS county
+  * Number of ISP options per KS county
+  * Highest internet speed per KS county
+
 - Description of how data was split into training and testing sets
+
+  * TBD
 
 - Explanation of model choice, including limitations and benefits
   
@@ -123,9 +130,6 @@ Our group decided to dive into this topic, and research internet availability an
 
 
 ### Visualize the Data
-   - Google Slides
-     * https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/Rural%20Surge.pptx
+   - [Google Slides](https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/Rural%20Surge.pptx)
    - Tableau
-     * Images from Seward county fiber install
-     * Maps
-     * TBD
+      * [Storyboard](https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/Story%20board.pptx)
