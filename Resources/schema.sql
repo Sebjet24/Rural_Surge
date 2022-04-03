@@ -124,7 +124,7 @@ CREATE TABLE area_mod (
 
 SELECT * FROM geo_lookup;
 
-DROP TABLE geo_lookup;
+--DROP TABLE geo_lookup;
 --
 CREATE TABLE geo_lookup (
 	year VARCHAR(4) NOT NULL,
@@ -148,7 +148,8 @@ CREATE TABLE geo_lookup (
 -- Summary data of fixed broadband coverage by geographic area
 -- CSV file name is Fixed_Broadband_Deployment_Data__December_2020
 
-SELECT * FROM bb_providers;
+SELECT * FROM bb_providers 
+LIMIT 50;
 
 --DROP TABLE bb_providers;
 --
@@ -235,10 +236,3 @@ CREATE TABLE pct_urban_rural_county (
 	areapct_rural FLOAT,
 	popden_rural FLOAT(1)
 );
-
-CREATE TABLE ks_code_counties 
-as
-select distinct state_county_code, countyname
-from pct_urban_rural_county
-where state_code = '20'
-order by state_county_code;
