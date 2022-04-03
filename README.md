@@ -71,13 +71,23 @@ Our group decided to dive into this topic, and research internet availability an
 
 **Where is our data coming from?**
    - [State Library of Kansas](https://kslib.info/423/State-Data-Center)
+     * The Kansas State Library has extensive data for all counties in the state.
+     * We plan to use this data as a layer in the interactive map and as a feature in the machine learning model.
      * Kansas info: County data, Lat/long, County population, Poverty by county, School district info
+     
    - [FCC Fixed Broadband Deployment](https://broadbandmap.fcc.gov/#/data-download)
-     * Internet Providers and speeds correlated with location
+     * The FCC tracks broadband access across the United States, which includes an interactive map and the data tables behind the map. 
+     * We used an Area table and Provider table to collect data about Internet Providers and speeds correlated with location
+
+   - [United States Department of Agriculture (USDA)](https://www.usda.gov/reconnect)
+     * The USDA provides grants and loans to improve internet infrastructure across the nation. 
+     * Through this website, we found useful links to datasets from the US Census Bureau.
+    
    - [US Census Bureau](https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural/2010-urban-rural.html)
-     * Population density
-
-
+     * We struggled to find data relevant to our project until we stumbled onto a link to the data from the [USDA ReConnect site](https://www.usda.gov/reconnect).
+     * This data was used to obtain the rural and urban density and population percentages by county. 
+     * This data is used in the machine learning model, and will be a layer in the interactive map.
+   
 
 ### Machine Learning Modeling
 
@@ -87,13 +97,7 @@ Our group decided to dive into this topic, and research internet availability an
    * Create a [Schema](https://github.com/Sebjet24/Rural_Surge/blob/Mindy/Resources/schema.sql) to show how we organized the data
    * Create ERDs (Entity Relationship Diagrams)
     
-     **ERD - FCC data**
-   
-      <img src="Images/ERD_FCC_tables.png" width="50%" height="30%">
-     
-     **ERD - State of Kansas data**
-     
-      <img src="Images/ERD-Kansas_Tables.png" width="50%" height="30%">
+  <New ERD image>
       
    
    * Load data into a database in AWS
@@ -125,7 +129,7 @@ Our group decided to dive into this topic, and research internet availability an
      ![image](https://user-images.githubusercontent.com/93055450/161391844-aba47a4e-2b92-4b5a-b7ef-41ea67fba502.png)
 
 
-
+### Database stuff
 
 
 
