@@ -30,6 +30,21 @@ CREATE TABLE ks_county_codes (
 	PRIMARY KEY (county_code)
 );
 
+-- Create a validation table that combines the GEOID state_county_code and the KBOR string character code for KS counties
+-- then drop ks_county_codes and ks_code_counties
+--DROP TABLE ks_state_county_codes;
+CREATE TABLE ks_state_county_codes 
+AS
+SELECT DISTINCT nc.state_county_code, sc.county_code, sc.county_desc, sc.desc_upper
+FROM ks_code_counties AS nc
+LEFT JOIN ks_county_codes AS sc ON nc.countyname = sc.county_desc
+WHERE state_county_code like '20%'
+ORDER BY state_county_code;
+
+SELECT DISTINCT state_county_code FROM ks_state_county_codes;
+DROP TABLE ks_code_counties;
+DROP TABLE ks_county_codes;
+
 -- Create county table for Rural Surge Project
 -- KS Library data https://kslib.info/423/State-Data-Center
 
@@ -39,27 +54,26 @@ CREATE TABLE ks_county_lat_long_txt_format (
 	county_code VARCHAR NOT NULL,
 	county_lat VARCHAR NOT NULL,
 	county_lng	VARCHAR NOT NULL,
-	FOREIGN KEY (county_code) REFERENCES ks_county_codes (county_code),
-    PRIMARY KEY (county_code)
-    
+	PRIMARY KEY (county_code)
 );
 
 -- Create ks_school_dist_county_pop_poverty table
 
 SELECT * FROM ks_school_dist_county_pop_poverty;
 
---DROP TABLE ks_school_dist_county_pop_poverty;
+DROP TABLE ks_school_dist_county_pop_poverty;
 --
 CREATE TABLE ks_school_dist_county_pop_poverty (
+	dist_county_code VARCHAR NOT NULL,
 	school_dist INT NOT NULL,
 	county_code VARCHAR NOT NULL,
     total_pop_est INT,
 	child_pop INT,
 	child_poverty_numb INT,
 	child_poverty_percent FLOAT(2),
-	FOREIGN KEY (county_code) REFERENCES ks_county_lat_long_txt_format (county_code),
-	FOREIGN KEY (school_dist) REFERENCES ks_school_dist_codes (school_dist)
-	--PRIMARY KEY (school_dist)
+	--FOREIGN KEY (county_code) REFERENCES ks_state_county_codes (county_code),
+	--FOREIGN KEY (school_dist) REFERENCES ks_school_dist_codes (school_dist)
+	PRIMARY KEY (dist_county_code)
 );
 
 -- FCC data https://broadbandmap.fcc.gov/#/data-download
