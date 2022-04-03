@@ -41,7 +41,7 @@ LEFT JOIN ks_county_codes AS sc ON nc.countyname = sc.county_desc
 WHERE state_county_code like '20%'
 ORDER BY state_county_code;
 
-SELECT DISTINCT state_county_code FROM ks_state_county_codes;
+SELECT * FROM ks_state_county_codes;
 DROP TABLE ks_code_counties;
 DROP TABLE ks_county_codes;
 
