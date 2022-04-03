@@ -14,7 +14,7 @@ Our group decided to dive into this topic, and research internet availability an
 - Group Slack channel
 - Group Project GitHub, including a branch for each team member
 - Breakout room during class time
-- Team Zoom calls (March 19th and 26th, April 1st and 2nd)
+- Team Zoom calls (March 19th and 26th, April 1st, 2nd, 3rd)
 - Team has shared phone numbers and email addresses
 
 
