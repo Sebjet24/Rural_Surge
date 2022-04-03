@@ -47,6 +47,8 @@ Our group decided to dive into this topic, and research internet availability an
     * Used to present our project plan.
 - [Tableau](https://www.tableau.com/)
     * A visual analytics platform transforming the way we use data to solve problems—empowering people and organizations to make the most of their data.
+- [Microsoft Word](https://www.microsoft.com/en-us/microsoft-365/word)
+    * Used to create the Rural Surge flowchart
 
 
 ## Project Outline
