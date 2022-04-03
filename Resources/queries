@@ -159,12 +159,14 @@ and has_0 =0
 ;
 -- Fernando's query
 -- format decimals SELECT round( CAST(float8 '3.1415927' as numeric), 2);
---DROP TABLE ml_data;
+DROP TABLE ml_data;
+
 CREATE TABLE ml_data
 AS
 select
 id,
 'R' u_r_code,
+1 ur_binary,
 avg(has_0) avg_has_zero,
 avg(has_1) avg_has_one,
 avg(has_2) avg_has_two,
@@ -175,19 +177,24 @@ group by id
 order by id;
 
 -- Then insert urban values
-INSERT INTO ml_data
-AS
+INSERT INTO ml_data (id, u_r_code, ur_binary, avg_has_zero, avg_has_one, avg_has_two, avg_has_3more)
 select
 id,
-'R' u_r_code,
+'U' u_r_code,
+1 ur_binary,
 avg(has_0) avg_has_zero,
 avg(has_1) avg_has_one,
 avg(has_2) avg_has_two,
 avg(has_3more) avg_has_3more
 from area_mod
-where type = 'county' and urban_rural = 'R'
+where type = 'county' and urban_rural = 'U'
 group by id
 order by id;
+
+SELECT * FROM ml_data
+order by id;
+
+
 -- population that is 55% or more rural
 select
 state_county_code,
