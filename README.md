@@ -99,7 +99,7 @@ Our group decided to dive into this topic, and research internet availability an
    * Connect database from AWS into pgAdmin
    * Discuss what data we need for our Dataset
    * Process (format, clean and sample) our data using PySpark
-   * Transform our data using _______
+   * Developed usable DataFrames through Jupyter Notebook and return DataFrames as CSV files
 
 - Description of preliminary feature engineering and preliminary feature selection, including their decision-making process
 
