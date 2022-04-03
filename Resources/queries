@@ -100,7 +100,13 @@ where id = '20001';
 
 -- ML Model data set using ks_pop_density_data and area_data_ml
 -- has_0 = Population with zero providers (i.e., no broadband) given choice of technology and speed
-SELECT DISTINCT at.id, gl.geoid, at.type, gl.name, at.urban_rural, at.speed, at.has_0, at.has_1, at.has_2, at.has_3more
+SELECT DISTINCT at.id, at.type, at.urban_rural, at.speed, at.has_0, at.has_1, at.has_2, at.has_3more
 FROM area_table at LEFT OUTER JOIN geo_lookup gl ON (at.id, at.type) = (gl.geoid, gl.type)
 WHERE at.id like '20%'
 AND at.type = 'county';
+
+
+select * from area_mod
+where type = 'county';
+
+select * from bb_providers;
