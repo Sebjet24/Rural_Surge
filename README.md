@@ -18,8 +18,8 @@ In addition, the team accomplished:
 * GitHub management
 * Researched further machine learning models to fit our needs
 
-# First Segment Narrative
-## Overview
+## First Segment Narrative
+### Overview
 During the first week of the project, the team met during class time, and also met on Saturday, 3/19/2022 via Zoom. The team defined the name of the project, established its scope, developed methods of communicating, and outlined our roles in the project. Using the rubric, we also established the Github repository, created a branch for each team, committed to our branches, and developed initial deliverables for week one of the project. 
 
 ### Communications
