@@ -48,7 +48,7 @@ Our group decided to dive into this topic, and research internet availability an
 - [Tableau](https://www.tableau.com/)
     * A visual analytics platform transforming the way we use data to solve problems—empowering people and organizations to make the most of their data.
 - [Microsoft Word](https://www.microsoft.com/en-us/microsoft-365/word)
-    * Used to create the Rural Surge flowchart
+    * Used to create our project plan
 
 
 ## Project Outline
@@ -71,61 +71,93 @@ Our group decided to dive into this topic, and research internet availability an
 
 **Where is our data coming from?**
    - [State Library of Kansas](https://kslib.info/423/State-Data-Center)
+     * The Kansas State Library has extensive data for all counties in the state.
+     * We plan to use this data as a layer in the interactive map and as a feature in the machine learning model.
      * Kansas info: County data, Lat/long, County population, Poverty by county, School district info
+     
    - [FCC Fixed Broadband Deployment](https://broadbandmap.fcc.gov/#/data-download)
-     * Internet Providers and speeds correlated with location
+     * The FCC tracks broadband access across the United States, which includes an interactive map and the data tables behind the map. 
+     * We used an Area table and Provider table to collect data about Internet Providers and speeds correlated with location
+
+   - [United States Department of Agriculture (USDA)](https://www.usda.gov/reconnect)
+     * The USDA provides grants and loans to improve internet infrastructure across the nation. 
+     * Through this website, we found useful links to datasets from the US Census Bureau.
+    
    - [US Census Bureau](https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural/2010-urban-rural.html)
-     * Population density
-
-
+     * We struggled to find data relevant to our project until we stumbled onto a link to the data from the [USDA ReConnect site](https://www.usda.gov/reconnect).
+     * This data was used to obtain the rural and urban density and population percentages by county. 
+     * This data is used in the machine learning model, and will be a layer in the interactive map.
+   
 
 ### Machine Learning Modeling
 
-- Description of preliminary data preprocessing
+#### Description of preliminary data preprocessing & database development
 
-   * Store csv files on GitHub
-   * Create a [Schema](https://github.com/Sebjet24/Rural_Surge/blob/Mindy/Resources/schema.sql) to show how we organized the data
-   * Create ERDs (Entity Relationship Diagrams)
+  -  Store csv files on GitHub
+  -  Create a [Schema](https://github.com/Sebjet24/Rural_Surge/blob/Mindy/Resources/schema.sql) to show how we organized the data
+  -  Create an ERD (Entity Relationship Diagrams)
     
-     **ERD - FCC data**
+    ![image](https://user-images.githubusercontent.com/93055450/161458297-40acae25-12e0-4746-8b65-2ba7876b79e4.png)
    
-      <img src="Images/ERD_FCC_tables.png" width="50%" height="30%">
-     
-     **ERD - State of Kansas data**
-     
-      <img src="Images/ERD-Kansas_Tables.png" width="50%" height="30%">
-   
-   * Load data into a database in AWS
-   * Connect database from AWS into pgAdmin
-   * Discuss what data we need for our Dataset
-   * Process (format, clean and sample) our data using PySpark
-   * Developed usable DataFrames through Jupyter Notebook and return DataFrames as CSV files
+  - Load data into Amazon S3 bucket
 
-- Description of preliminary feature engineering and preliminary feature selection, including their decision-making process
+    <Upload pic of bucket and add link from Image folder>
 
-- Description of how data was split into training and testing sets
+  - Connect data from AWS into pgAdmin to create our database
 
-- Explanation of model choice, including limitations and benefits
+    ![image](https://user-images.githubusercontent.com/93055450/161462392-dd5a582d-1e47-46ce-891b-74bc580ccc63.png)
+    
+
+  - Transform data using PySpark
+    * Here is an example: https://github.com/Sebjet24/Rural_Surge/blob/main/my_project_20_group_3.ipynb
+    
+  - Run various queries and create tables to organize the data we need to run the Machine Learning Model
+    * [See our work here!](https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/queries)
+
+
+#### Description of preliminary feature engineering and preliminary feature selection, including our decision-making process
+
+  - Our initial plan was to include the following as our features:
+    * Rural and urban % per KS county
+    * Number of ISP options per KS county
+    * Highest internet speed per KS county
   
-  * The team discussed the different machine learning options, and initially thought that a **Decision Tree** would be a good fit for our project.
+  - The FCC data proved to need a lot of work for us to use it for our machine learning model.
+  
+  - We used the following as our features:
+    * Kansas counties
+    * Average of number of ISP options per rural portion of each KS county
+    
+  - We will also run another model for urban areas as a comparison
+
+  
+#### Description of how data was split into training and testing sets
+
+ - Because we used an Unsupervised Machine Learning model, we didn't have training and testing sets.
+ - First we used StandardScaler to standardize the data.
+ - Then we used PCA (Princial Component Analysis) to reduce dimension to three principal components.
+    * PCA is a statistical technique used to speed up machine learning algorithms when the number of input features is high.
+    * It transforms a large set of variables into a smaller one that contains most of the info in the original large set.
+ - We created a dataframe with the three principal components, generated by PCA
+ - We created an elbow curve to determine the best number of clusters to use on our scatter plots.
+ - We created a new DataFrame including predicted clusters and population by ISP features.
+ 
+
+#### Explanation of model choice, including limitations and benefits
+  
+- The team discussed the different machine learning options, and initially thought that a **Decision Tree** would be a good fit for our project.
       
      ![image](https://user-images.githubusercontent.com/93055450/160937924-93787c01-78f7-4f5c-907b-792a370c80b5.png)
      
 - After learning more about the data, we decided that an **Unsupervised Learning** model would be a better fit. 
 
-  * Using the K-means clustering algorithm, we could demonstrate how population density in each Kansas county correlated with internet speed, as well as number of Internet Service Providers
+  * [Rural Surge Machine Learning Model](https://github.com/Sebjet24/Rural_Surge/blob/main/RuralSurge_ml_rural.ipynb)
+  * [2D Scatter Plot](https://github.com/Sebjet24/Rural_Surge/blob/main/Images/ML_2D_Scatter_Plot.png)
+  * [3D Scatter Plot](https://github.com/Sebjet24/Rural_Surge/blob/main/Images/ML_3D_Scatter_Plot.png)
+
   
-     ![image](https://user-images.githubusercontent.com/93055450/161391844-aba47a4e-2b92-4b5a-b7ef-41ea67fba502.png)
-
-
-
-
-
-
+  
 ### Visualize the Data
-   - Google Slides
-     * https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/Rural%20Surge.pptx
+   - [Google Slides](https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/Rural%20Surge.pptx)
    - Tableau
-     * Images from Seward county fiber install
-     * Maps
-     * TBD
+      * [Storyboard](https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/Story%20board.pptx)
