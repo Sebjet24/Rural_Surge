@@ -1,84 +1,63 @@
-# Rural Surge: A Study of Internet Quality & Availability in Kansas
+# Rural Surge Final Project
 
-## Project Team
-Sebastian Scholl, Fernando Porras, Mindy Collmeyer, Teresa Wehmeier
-  
+## Second Segment Narrative:
+During the two weeks of this segment, the team remained in the same roles as the first segment. Our focus was on getting the database completely spun up, and the machine learning model data compiled and processed through an unsupervised model. We met several times during these past two weeks, including the four class days and also on Friday, April 1, Saturday, April 2, and Sunday April 3 to finalize the deliverables for this week. 
 
-## Background on our Topic
-For small rural counties in Kansas, the 2020 pandemic emphasized a lack of quality internet access. Schools were closed, and emergency remote instruction became the method to address educational delivery moving into fall 2020. However, as students and parents attempted to learn and work from home, it became clear that not all internet is created equal. Many community members had only cellular data service, which made participating in an online learning environment impossible. Those who had internet access experienced low download rates that many were unable to participate in online class activities.
+My accomplishments for this segment included:
+* ERD built for all original tables in PG Admin
+* Schema built and deployed to PostgreSQL
+* AWS RDS built and synchronized with team
+* AWS S3 policy built so that the team could access files
+* Data explored, specifically examing the data from the perspective of machine learning data
+* Cleaned up the data tables to better identify primary and foreign key constraints
 
-Our group decided to dive into this topic, and research internet availability and quality in the state of Kansas.
-  
+In addition, the team accomplished:
+* Google slides presentation draft developed
+* Dashboard storyboard draft developed
+* Machine learning data run through first machine learing model
+* GitHub management
+* Researched further machine learning models to fit our needs
 
-## Communication Protocols
-- Group Slack channel
-- Group Project GitHub, including a branch for each team member
-- Breakout room during class time
-- Saturday Zoom calls (March 19th and 26th)
-- Team has shared phone numbers and email addresses
+# First Segment Narrative
+## Overview
+During the first week of the project, the team met during class time, and also met on Saturday, 3/19/2022 via Zoom. The team defined the name of the project, established its scope, developed methods of communicating, and outlined our roles in the project. Using the rubric, we also established the Github repository, created a branch for each team, committed to our branches, and developed initial deliverables for week one of the project. 
 
+### Communications
+We are meeting via Zoom, using Slack for communication, and Github for storing information, code and other resources.
 
-## Tools Used on our Project
-- [GitHub](https://github.com/)
-    * The largest and most advanced development platform in the world.
-    * Used to organize our research and documentation.
-- [Pandas](https://pandas.pydata.org/)
-    * A fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language
-- [Python](https://www.python.org/)
-    * A general-purpose, versatile, and powerful programming language.
-- [QuickDBD](https://www.quickdatabasediagrams.com/)
-    * A simple online tool to quickly draw database diagrams.
-    * Used to create ERDs.
-- [Visual Studio Code](https://code.visualstudio.com/)
-   * A code editor redefined and optimized for building and debugging modern web and cloud applications
-- [Canva](https://www.canva.com/)
-    * Online design and publishing tool.
-    * Used to design the Project Flowchart.
-- [GeoJSON](https://geojson.org/)
-    * A format for encoding a variety of geographic data structures.
-- [Google Slides](https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvPlYY/edit#slide=id.g1205a2ea841_0_1)
-    * Used to present our project plan.
-- [Tableau](https://www.tableau.com/)
-    * A visual analytics platform transforming the way we use data to solve problems—empowering people and organizations to make the most of their data.
+### Roles
+To meet the requirements of the first week's rubric, the team clarified more distinctly what data we were going to use, and who was doing what. Although we are all "roughly" taking on one of the four roles defined for the project, we are all working collaboratively on each element, sharing ideas, personal learning experiences, and discoveries as we progress. During the Saturday Zoom meeting, we all stayed on the meeting for a couple of hours, discussing how we could make changes, or fill in gaps in our first week's presentation / outline.
 
+* Sebastian: Created the repository, setup collaborations for all team members, and created a machine learning model layout
 
-## Project Outline
+* Mindy: Created the initial presentation (outline) that describes what, when, who and how we will meet each week's objectives. Having the outline available during the Saturday meeting helped us find gaps in our project that needed to be addressed.
 
-### Our Topic
+* Fernando: Has found some quality data for the state of Kansas, and is working to draw that data down via API or CSV files. He will use this data to create DataFrames that will be used in the mapping scripts and the machine learning models.
 
-**Internet Availability & Quality in Kansas**
-   - How does internet access support (quality, availability, etc.) compare between rural and urban areas in Kansas?
-   - What Internet Service Providers (ISPs) are available in Kansas? 
-   - How does their support vary between rural and urban communities?
-   - Is there a link between poverty rate and quality internet access?
-   - Is there a link between school district success and quality internet access?
+* Teresa: Initiated the project idea, researched the initial data for the project, including FCC data with mapping coordinates, and designed a basic database schema. 
 
+### Resources
+Zoom
+Postgresql
+Jupyter
+Python
+GeoJSON
+Tableau Public
+Quick DBD https://www.quickdatabasediagrams.com/
+MAPBOX
 
-### Our Project Plan
-![image](https://user-images.githubusercontent.com/93055450/160928328-355686b7-e6c8-454a-9ec7-58fc1ff0a26e.png)
+### Data Sources
+FCC Open Data https://opendata.fcc.gov/Wireline/Fixed-Broadband-Deployment-Data-December-2020/hicn-aujz
+Kansas State Library Data Sources https://kslib.info/423/State-Data-Center
 
-   
-### Our Research
+## Planned Project
+Null Hypthosis: Geographic location in the state of Kansas has no impact on the quality of internet access.
 
-**Where is our data coming from?**
-   - [State Library of Kansas](https://kslib.info/423/State-Data-Center)
-     * Kansas info: County data, Lat/long, County population, Poverty by county, School district info
-   - [FCC Fixed Broadband Deployment](https://broadbandmap.fcc.gov/#/data-download)
-     * Internet Providers and speeds correlated with location
-   - [US Census Bureau](https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural/2010-urban-rural.html)
-     * Population density
+Develop data frames and CSV files that can be used to create maps using MAPBOX that can have enhanced layers such as population size, school locations and commercial/ residential areas.
 
+Use the data frames to develop a deep learning model that can predict level of internet services based on location.
 
-### Preparing the data
-   - Store csv files on GitHub
-   - Create a [Schema](https://github.com/Sebjet24/Rural_Surge/blob/Mindy/Resources/schema.sql) to show how we organized the data
-   - Create ERDs (Entity Relationship Diagrams)
-    
-     **ERD - FCC data**
-   
-      <img src="Images/ERD_FCC_tables.png" width="50%" height="30%">
-     
-     **ERD - State of Kansas data**
+Final output: like the Earthquake project we did a few modules back, this one will present a website that displays population density by county and on hover, number of ISP's, highest level of service and residential/ commercial area indicator.
      
       <img src="Images/ERD-Kansas_Tables.png" width="50%" height="30%">
    
