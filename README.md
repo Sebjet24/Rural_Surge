@@ -141,6 +141,7 @@ Our group decided to dive into this topic, and research internet availability an
  - We created an elbow curve to determine the best number of clusters to use on our scatter plots.
  - We created a new DataFrame including predicted clusters and population by ISP features.
  - We created a hvplot.scatter plot using x="zero ISP providers" and y="3 or more ISP providers".
+ -- <img src="Images/ML_2D_Scatter_Plot.png" width="50%" height="30%">
  
 
 #### Explanation of model choice, including limitations and benefits
