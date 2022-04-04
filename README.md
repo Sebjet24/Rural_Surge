@@ -91,20 +91,29 @@ Our group decided to dive into this topic, and research internet availability an
 
 ### Machine Learning Modeling
 
-- Description of preliminary data preprocessing
+- Description of preliminary data preprocessing & database development
 
    * Store csv files on GitHub
    * Create a [Schema](https://github.com/Sebjet24/Rural_Surge/blob/Mindy/Resources/schema.sql) to show how we organized the data
-   * Create ERDs (Entity Relationship Diagrams)
+   * Create ERD (Entity Relationship Diagrams)
     
-  <New ERD image>
-      
+    ![image](https://user-images.githubusercontent.com/93055450/161458297-40acae25-12e0-4746-8b65-2ba7876b79e4.png)
    
-   * Load data into a database in AWS
+   * Load data into Amazon S3 bucket
+
+    ![image](https://user-images.githubusercontent.com/93055450/161458389-787cb5ef-ff73-45ba-915b-708c9d61e437.png)
+
    * Connect database from AWS into pgAdmin
-   * Discuss what data we need for our Dataset
-   * Process (format, clean and sample) our data using PySpark
-   * Develop usable DataFrames through Jupyter Notebook and return DataFrames as CSV files
+
+    ![image](https://user-images.githubusercontent.com/93055450/161458558-8959a1f6-792d-4e03-8290-efbb9ed775b0.png)
+    
+
+   * Transform data using PySpark
+       * Here is an example: https://github.com/Sebjet24/Rural_Surge/blob/main/my_project_20_group_3.ipynb
+    
+   * Run various queries and create tables to organize the data we need to run the Machine Learning Model
+       * [See our work here!](https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/queries)
+
 
 - Description of preliminary feature engineering and preliminary feature selection, including their decision-making process
 
@@ -127,9 +136,6 @@ Our group decided to dive into this topic, and research internet availability an
   * Using the K-means clustering algorithm, we could demonstrate how population density in each Kansas county correlated with internet speed, as well as number of Internet Service Providers
   
      ![image](https://user-images.githubusercontent.com/93055450/161391844-aba47a4e-2b92-4b5a-b7ef-41ea67fba502.png)
-
-
-### Database stuff
 
 
 
