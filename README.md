@@ -95,13 +95,11 @@ Our group decided to dive into this topic, and research internet availability an
 
   -  Store csv files on GitHub
   -  Create a [Schema](https://github.com/Sebjet24/Rural_Surge/blob/Mindy/Resources/schema.sql) to show how we organized the data
-  -  Create an ERD (Entity Relationship Diagrams)
-    
-    ![image](https://user-images.githubusercontent.com/93055450/161458297-40acae25-12e0-4746-8b65-2ba7876b79e4.png)
+  -  Create an [ERD (Entity Relationship Diagrams)](https://github.com/Sebjet24/Rural_Surge/blob/main/Images/ERD_FCC_tables.png)
    
   - Load data into Amazon S3 bucket
 
-    <Upload pic of bucket and add link from Image folder>
+    ![image](https://user-images.githubusercontent.com/93055450/161467600-b2840507-f76a-46de-9245-485e84adcca4.png)
 
   - Connect data from AWS into pgAdmin to create our database
 
