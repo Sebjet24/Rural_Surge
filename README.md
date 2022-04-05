@@ -228,7 +228,8 @@ Ten tables were initially created (see schema) and additional tables added as we
   <img src="Images/pg_admin_table_views.png" width="50%" height="30%">
 
 * Includes at least one join using the database language (not including any joins in Pandas)
-** We created a query and subsequent data table with the below, which includes a join from area_table and geo_lookup tables.
+
+We created a query and subsequent data table with the below, which includes a left outer join from area_table and geo_lookup tables.
 
     ```
     -- has_0 = Population with zero providers (i.e., no broadband) given choice of technology and speed
@@ -241,6 +242,7 @@ Ten tables were initially created (see schema) and additional tables added as we
 
 * Includes at least one connection string (using SQLAlchemy or PyMongo)
 We needed to convert a string of text in a column to a count of the string characters in that column. Fernando was able to pull the data table into Google Colab and Spark to create the new column, then reload it to the shared database through AWS RDS services.
+
 ```
 area_df = spark.read.jdbc(url = "jdbc:postgresql://ruralsurge.cu3ibjje45e1.us-east-1.rds.amazonaws.com:5432/rural_surge_db", 
                      table = "(SELECT * FROM area_table) AS my_table",
