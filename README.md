@@ -142,7 +142,7 @@ Our group decided to dive into this topic, and research internet availability an
  - We created a hvplot.scatter plot using x="zero ISP providers" and y="3 or more ISP providers".
 
 #### Explanation of model choice, including limitations and benefits
-The team has struggled to decide what questions we want to learn from the machine learning model, mostly because some of the data we are using has limitations. After thoroughly exploring the data, we decided that we had enough data to answer the question: "Does geographic location have an impact on availablity of broadband internet access?" Once we understood our question, we explored, based on the type of data we could extract for the model, that an unsupervised clustering model would fit our data best, because:
+The team has struggled to decide what questions we want to learn from the machine learning model, mostly because some of the data we are using has limitations. After thoroughly exploring the data, we decided that we had enough data to answer the question: "Does geographic location have an impact on availablity of broadband internet access?" Once we understood our question, we decided, based on the type of data we could extract for the model, that an unsupervised clustering model would fit our data best, because:
 1. The data is numeric
 2. There are no known outcomes
 3. Clusters suit the data we are looking at because our data is "clustered" into Kansas counties and within these counties there are clusteres of rural and urban areas.
