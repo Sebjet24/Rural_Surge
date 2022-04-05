@@ -30,6 +30,24 @@ CREATE TABLE ks_county_codes (
 	PRIMARY KEY (county_code)
 );
 
+<<<<<<< HEAD
+=======
+-- Create a validation table that combines the GEOID state_county_code and the KBOR string character code for KS counties
+-- then drop ks_county_codes and ks_code_counties
+--DROP TABLE ks_state_county_codes;
+CREATE TABLE ks_state_county_codes 
+AS
+SELECT DISTINCT nc.state_county_code, sc.county_code, sc.county_desc, sc.desc_upper
+FROM ks_code_counties AS nc
+LEFT JOIN ks_county_codes AS sc ON nc.countyname = sc.county_desc
+WHERE state_county_code like '20%'
+ORDER BY state_county_code;
+
+SELECT * FROM ks_state_county_codes;
+DROP TABLE ks_code_counties;
+DROP TABLE ks_county_codes;
+
+>>>>>>> 612ea0ab911bba99f245506d149fb30104126976
 -- Create county table for Rural Surge Project
 -- KS Library data https://kslib.info/423/State-Data-Center
 
@@ -39,27 +57,44 @@ CREATE TABLE ks_county_lat_long_txt_format (
 	county_code VARCHAR NOT NULL,
 	county_lat VARCHAR NOT NULL,
 	county_lng	VARCHAR NOT NULL,
+<<<<<<< HEAD
 	FOREIGN KEY (county_code) REFERENCES ks_county_codes (county_code),
     PRIMARY KEY (county_code)
     
+=======
+	PRIMARY KEY (county_code)
+>>>>>>> 612ea0ab911bba99f245506d149fb30104126976
 );
 
 -- Create ks_school_dist_county_pop_poverty table
 
 SELECT * FROM ks_school_dist_county_pop_poverty;
 
+<<<<<<< HEAD
 --DROP TABLE ks_school_dist_county_pop_poverty;
 --
 CREATE TABLE ks_school_dist_county_pop_poverty (
+=======
+DROP TABLE ks_school_dist_county_pop_poverty;
+--
+CREATE TABLE ks_school_dist_county_pop_poverty (
+	dist_county_code VARCHAR NOT NULL,
+>>>>>>> 612ea0ab911bba99f245506d149fb30104126976
 	school_dist INT NOT NULL,
 	county_code VARCHAR NOT NULL,
     total_pop_est INT,
 	child_pop INT,
 	child_poverty_numb INT,
 	child_poverty_percent FLOAT(2),
+<<<<<<< HEAD
 	FOREIGN KEY (county_code) REFERENCES ks_county_lat_long_txt_format (county_code),
 	FOREIGN KEY (school_dist) REFERENCES ks_school_dist_codes (school_dist)
 	--PRIMARY KEY (school_dist)
+=======
+	--FOREIGN KEY (county_code) REFERENCES ks_state_county_codes (county_code),
+	--FOREIGN KEY (school_dist) REFERENCES ks_school_dist_codes (school_dist)
+	PRIMARY KEY (dist_county_code)
+>>>>>>> 612ea0ab911bba99f245506d149fb30104126976
 );
 
 -- FCC data https://broadbandmap.fcc.gov/#/data-download
@@ -70,6 +105,11 @@ CREATE TABLE ks_school_dist_county_pop_poverty (
 -- Urban = U; Rural = R
 
 SELECT * FROM area_table;
+<<<<<<< HEAD
+=======
+
+DROP TABLE area_table;
+>>>>>>> 612ea0ab911bba99f245506d149fb30104126976
 --
 CREATE TABLE area_table (
 	type VARCHAR NOT NULL,
@@ -84,6 +124,22 @@ CREATE TABLE area_table (
 	has_3more INT
 );
 
+<<<<<<< HEAD
+=======
+CREATE TABLE area_mod (
+	type VARCHAR NOT NULL,
+    id VARCHAR NOT NULL,
+	tech VARCHAR NOT NULL,
+    urban_rural VARCHAR NOT NULL,
+	tribal_non VARCHAR NOT NULL,
+	speed FLOAT,
+	has_0 INT,
+	has_1 INT,
+	has_2 INT,
+	has_3more INT,
+	tech_options INT
+);
+>>>>>>> 612ea0ab911bba99f245506d149fb30104126976
 -- Create Geography Lookup Table from FCC site
 -- type = Type of area (national, state, county,
 --congressional district, census designated place, tribal area, CBSA)
@@ -95,7 +151,11 @@ CREATE TABLE area_table (
 
 SELECT * FROM geo_lookup;
 
+<<<<<<< HEAD
 DROP TABLE geo_lookup;
+=======
+--DROP TABLE geo_lookup;
+>>>>>>> 612ea0ab911bba99f245506d149fb30104126976
 --
 CREATE TABLE geo_lookup (
 	year VARCHAR(4) NOT NULL,
@@ -119,7 +179,12 @@ CREATE TABLE geo_lookup (
 -- Summary data of fixed broadband coverage by geographic area
 -- CSV file name is Fixed_Broadband_Deployment_Data__December_2020
 
+<<<<<<< HEAD
 SELECT * FROM bb_providers;
+=======
+SELECT * FROM bb_providers 
+LIMIT 50;
+>>>>>>> 612ea0ab911bba99f245506d149fb30104126976
 
 --DROP TABLE bb_providers;
 --
@@ -205,4 +270,8 @@ CREATE TABLE pct_urban_rural_county (
 	area_rural BIGINT,
 	areapct_rural FLOAT,
 	popden_rural FLOAT(1)
+<<<<<<< HEAD
 );
+=======
+);
+>>>>>>> 612ea0ab911bba99f245506d149fb30104126976
