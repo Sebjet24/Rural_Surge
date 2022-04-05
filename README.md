@@ -224,6 +224,7 @@ config = {"user":"root",
 
 * Includes at least two tables (or collections, if using MongoDB)
 Ten tables were initially created (see schema) and additional tables added as we explored for machine learning data. 
+
   <img src="Images/pg_admin_table_views.png" width="50%" height="30%">
 
 * Includes at least one join using the database language (not including any joins in Pandas)
