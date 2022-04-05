@@ -1,287 +1,287 @@
-school_dist	school_dist_name
-101	   Erie 
-102	   Cimarron-Ensign 
-103	   Cheylin
-105	   Rawlins County 
-106	   Western Plains 
-107	   Rock Hills 
-108	   North Central-Washington Schools 
-109	   Republic County-Hillcrest Rural Schools 
-110	   Thunder Ridge 
-111	   Doniphan West 
-112	   Central Plains
-113	   Prairie Hills
-114	   Riverside
-115	   Nemaha Central
-200	   Greeley County Schools
-202	   Turner
-203	   Piper
-204	   Bonner Springs 
-205	   Bluestem 
-206	   Remington-Whitewater 
-207	   Fort Leavenworth 
-208	   WaKeeney 
-209	   Moscow Public Schools 
-210	   Hugoton Public Schools 
-211	   Norton Community Schools 
-212	   Northern Valley 
-214	   Ulysses 
-215	   Lakin 
-216	   Deerfield 
-217	   Rolla 
-218	   Elkhart 
-219	   Minneola 
-220	   Ashland 
-223	   Barnes 
-224	   Clifton-Clyde 
-225	   Fowler 
-226	   Meade 
-227	   Jetmore 
-229	   Blue Valley 
-230	   Spring Hill 
-231	   Gardner Edgerton 
-232	   De Soto 
-233	   Olathe 
-234	   Fort Scott 
-235	   Uniontown 
-237	   Smith Center 
-239	   North Ottawa County 
-240	   Twin Valley 
-241	   Wallace County Schools 
-242	   Weskan 
-243	   Lebo-Waverly 
-244	   Burlington 
-245	   LeRoy-Gridley 
-246	   Northeast 
-247	   Cherokee 
-248	   Girard 
-249	   Frontenac Public Schools 
-250	   Pittsburg 
-251	   North Lyon County 
-252	   Southern Lyon County 
-253	   Emporia 
-254	   Barber County North 
-255	   South Barber 
-256	   Marmaton Valley 
-257	   Iola 
-258	   Humboldt 
-259	   Wichita 
-260	   Derby 
-261	   Haysville 
-262	   Valley Center Public Schools 
-263	   Mulvane 
-264	   Clearwater 
-265	   Goddard 
-266	   Maize 
-267	   Renwick 
-268	   Cheney 
-269	   Palco 
-270	   Plainville 
-271	   Stockton 
-272	   Waconda 
-273	   Beloit 
-274	   Oakley 
-275	   Triplains 
-281	   Hill City 
-282	   West Elk 
-283	   Elk Valley 
-284	   Chase County 
-285	   Cedar Vale 
-286	   Chautauqua County Community 
-287	   West Franklin 
-288	   Central Heights 
-289	   Wellsville 
-290	   Ottawa 
-291	   Grinnell Public Schools 
-292	   Wheatland 
-293	   Quinter Public Schools 
-294	   Oberlin 
-297	   St. Francis Community Schools
-298	   Lincoln
-299	   Sylvan Grove 
-300	   Comanche County 
-303	   Ness City 
-305	   Salina 
-306	   Southeast of Saline 
-307	   Ell-Saline 
-308	   Hutchinson Public Schools 
-309	   Nickerson 
-310	   Fairfield 
-311	   Pretty Prairie 
-312	   Haven Public Schools 
-313	   Buhler 
-314	   Brewster 
-315	   Colby Public Schools 
-316	   Golden Plains 
-320	   Wamego 
-321	   Kaw Valley 
-322	   Onaga-Havensville-Wheaton 
-323	   Rock Creek 
-325	   Phillipsburg 
-326	   Logan 
-327	   Ellsworth 
-329	   Mill Creek Valley 
-330	   Wabaunsee East 
-331	   Kingman-Norwich 
-332	   Cunningham 
-333	   Concordia 
-334	   Southern Cloud 
-335	   North Jackson 
-336	   Holton 
-337	   Royal Valley 
-338	   Valley Falls 
-339	   Jefferson County North 
-340	   Jefferson West 
-341	   Oskaloosa Public Schools 
-342	   McLouth 
-343	   Perry Public Schools 
-344	   Pleasanton 
-345	   Seaman 
-346	   Jayhawk 
-347	   Kinsley-Offerle 
-348	   Baldwin City 
-349	   Stafford 
-350	   St. John-Hudson 
-351	   Macksville 
-352	   Goodland 
-353	   Wellington 
-355	   Ellinwood Public Schools 
-356	   Conway Springs 
-357	   Belle Plaine 
-358	   Oxford 
-359	   Argonia Public Schools 
-360	   Caldwell 
-361	   Anthony-Harper 
-362	   Prairie View 
-363	   Holcomb 
-364	   Marysville 
-365	   Garnett 
-366	   Woodson 
-367	   Osawatomie 
-368	   Paola 
-369	   Burrton 
-371	   Montezuma 
-372	   Silver Lake 
-373	   Newton 
-374	   Sublette 
-375	   Circle 
-376	   Sterling 
-377	   Atchison County Community Schools 
-378	   Riley County 
-379	   Clay Center 
-380	   Vermillion 
-381	   Spearville 
-382	   Pratt 
-383	   Manhattan 
-384	   Blue Valley 
-385	   Andover 
-386	   Madison-Virgil 
-387	   Altoona-Midway 
-388	   Ellis 
-389	   Eureka 
-390	   Hamilton 
-392	   Osborne County 
-393	   Solomon 
-394	   Rose Hill Public Schools 
-395	   LaCrosse 
-396	   Douglass Public Schools 
-397	   Centre 
-398	   Peabody-Burns 
-399	   Paradise 
-400	   Smoky Valley 
-401	   Chase-Raymond 
-402	   Augusta 
-403	   Otis-Bison 
-404	   Riverton 
-405	   Lyons 
-407	   Russell County 
-408	   Marion-Florence 
-409	   Atchison Public Schools 
-410	   Durham-Hillsboro-Lehigh 
-411	   Goessel 
-412	   Hoxie Community Schools 
-413	   Chanute Public Schools 
-415	   Hiawatha 
-416	   Louisburg 
-417	   Morris County 
-418	   McPherson 
-419	   Canton-Galva 
-420	   Osage City 
-421	   Lyndon 
-422	   Greensburg 
-423	   Moundridge 
-426	   Pike Valley 
-428	   Great Bend 
-429	   Troy Public Schools 
-430	   South Brown County 
-431	   Hoisington 
-432	   Victoria 
-434	   Santa Fe Trail 
-435	   Abilene 
-436	   Caney Valley 
-437	   Auburn-Washburn 
-438	   Skyline Schools 
-439	   Sedgwick Public Schools 
-440	   Halstead 
-443	   Dodge City 
-444	   Little River 
-445	   Coffeyville 
-446	   Independence 
-447	   Cherryvale 
-448	   Inman 
-449	   Easton 
-450	   Shawnee Heights 
-452	   Stanton County 
-453	   Leavenworth 
-454	   Burlingame Public Schools 
-456	   Marais des Cygnes Valley 
-457	   Garden City 
-458	   Basehor-Linwood 
-459	   Bucklin 
-460	   Hesston 
-461	   Neodesha 
-462	   Central 
-463	   Udall 
-464	   Tonganoxie 
-465	   Winfield 
-466	   Scott County 
-467	   Leoti 
-468	   Healy Public Schools 
-469	   Lansing 
-470	   Arkansas City 
-471	   Dexter 
-473	   Chapman 
-474	   Haviland 
-475	   Geary County Schools 
-476	   Copeland 
-477	   Ingalls 
-479	   Crest 
-480	   Liberal 
-481	   Rural Vista 
-482	   Dighton 
-483	   Kismet-Plains 
-484	   Fredonia 
-487	   Herington 
-489	   Hays 
-490	   El Dorado 
-491	   Eudora 
-492	   Flinthills 
-493	   Columbus 
-494	   Syracuse
-495	   Fort Larned 
-496	   Pawnee Heights 
-497	   Lawrence 
-498	   Valley Heights 
-499	   Galena 
-500	   Kansas City 
-501	   Topeka Public Schools 
-502	   Lewis 
-503	   Parsons 
-504	   Oswego 
-505	   Chetopa-St. Paul 
-506	   Labette County 
-507	   Satanta 
-508	   Baxter Springs 
-509	   South Haven 
-511	   Attica 
-512	   Shawnee Mission Public Schools
+﻿school_dist,school_dist_name
+101,Erie
+102,Cimarron-Ensign
+103,Cheylin
+105,Rawlins County
+106,Western Plains
+107,Rock Hills
+108,North Central-Washington Schools
+109,Republic County-Hillcrest Rural Schools
+110,Thunder Ridge
+111,Doniphan West
+112,Central Plains
+113,Prairie Hills
+114,Riverside
+115,Nemaha Central
+200,Greeley County Schools
+202,Turner
+203,Piper
+204,Bonner Springs
+205,Bluestem
+206,Remington-Whitewater
+207,Fort Leavenworth
+208,WaKeeney
+209,Moscow Public Schools
+210,Hugoton Public Schools
+211,Norton Community Schools
+212,Northern Valley
+214,Ulysses
+215,Lakin
+216,Deerfield
+217,Rolla
+218,Elkhart
+219,Minneola
+220,Ashland
+223,Barnes
+224,Clifton-Clyde
+225,Fowler
+226,Meade
+227,Jetmore
+229,Blue Valley
+230,Spring Hill
+231,Gardner Edgerton
+232,De Soto
+233,Olathe
+234,Fort Scott
+235,Uniontown
+237,Smith Center
+239,North Ottawa County
+240,Twin Valley
+241,Wallace County Schools
+242,Weskan
+243,Lebo-Waverly
+244,Burlington
+245,LeRoy-Gridley
+246,Northeast
+247,Cherokee
+248,Girard
+249,Frontenac Public Schools
+250,Pittsburg
+251,North Lyon County
+252,Southern Lyon County
+253,Emporia
+254,Barber County North
+255,South Barber
+256,Marmaton Valley
+257,Iola
+258,Humboldt
+259,Wichita
+260,Derby
+261,Haysville
+262,Valley Center Public Schools
+263,Mulvane
+264,Clearwater
+265,Goddard
+266,Maize
+267,Renwick
+268,Cheney
+269,Palco
+270,Plainville
+271,Stockton
+272,Waconda
+273,Beloit
+274,Oakley
+275,Triplains
+281,Hill City
+282,West Elk
+283,Elk Valley
+284,Chase County
+285,Cedar Vale
+286,Chautauqua County Community
+287,West Franklin
+288,Central Heights
+289,Wellsville
+290,Ottawa
+291,Grinnell Public Schools
+292,Wheatland
+293,Quinter Public Schools
+294,Oberlin
+297,St. Francis Community Schools
+298,Lincoln
+299,Sylvan Grove
+300,Comanche County
+303,Ness City
+305,Salina
+306,Southeast of Saline
+307,Ell-Saline
+308,Hutchinson Public Schools
+309,Nickerson
+310,Fairfield
+311,Pretty Prairie
+312,Haven Public Schools
+313,Buhler
+314,Brewster
+315,Colby Public Schools
+316,Golden Plains
+320,Wamego
+321,Kaw Valley
+322,Onaga-Havensville-Wheaton
+323,Rock Creek
+325,Phillipsburg
+326,Logan
+327,Ellsworth
+329,Mill Creek Valley
+330,Wabaunsee East
+331,Kingman-Norwich
+332,Cunningham
+333,Concordia
+334,Southern Cloud
+335,North Jackson
+336,Holton
+337,Royal Valley
+338,Valley Falls
+339,Jefferson County North
+340,Jefferson West
+341,Oskaloosa Public Schools
+342,McLouth
+343,Perry Public Schools
+344,Pleasanton
+345,Seaman
+346,Jayhawk
+347,Kinsley-Offerle
+348,Baldwin City
+349,Stafford
+350,St. John-Hudson
+351,Macksville
+352,Goodland
+353,Wellington
+355,Ellinwood Public Schools
+356,Conway Springs
+357,Belle Plaine
+358,Oxford
+359,Argonia Public Schools
+360,Caldwell
+361,Anthony-Harper
+362,Prairie View
+363,Holcomb
+364,Marysville
+365,Garnett
+366,Woodson
+367,Osawatomie
+368,Paola
+369,Burrton
+371,Montezuma
+372,Silver Lake
+373,Newton
+374,Sublette
+375,Circle
+376,Sterling
+377,Atchison County Community Schools
+378,Riley County
+379,Clay Center
+380,Vermillion
+381,Spearville
+382,Pratt
+383,Manhattan
+384,Blue Valley
+385,Andover
+386,Madison-Virgil
+387,Altoona-Midway
+388,Ellis
+389,Eureka
+390,Hamilton
+392,Osborne County
+393,Solomon
+394,Rose Hill Public Schools
+395,LaCrosse
+396,Douglass Public Schools
+397,Centre
+398,Peabody-Burns
+399,Paradise
+400,Smoky Valley
+401,Chase-Raymond
+402,Augusta
+403,Otis-Bison
+404,Riverton
+405,Lyons
+407,Russell County
+408,Marion-Florence
+409,Atchison Public Schools
+410,Durham-Hillsboro-Lehigh
+411,Goessel
+412,Hoxie Community Schools
+413,Chanute Public Schools
+415,Hiawatha
+416,Louisburg
+417,Morris County
+418,McPherson
+419,Canton-Galva
+420,Osage City
+421,Lyndon
+422,Greensburg
+423,Moundridge
+426,Pike Valley
+428,Great Bend
+429,Troy Public Schools
+430,South Brown County
+431,Hoisington
+432,Victoria
+434,Santa Fe Trail
+435,Abilene
+436,Caney Valley
+437,Auburn-Washburn
+438,Skyline Schools
+439,Sedgwick Public Schools
+440,Halstead
+443,Dodge City
+444,Little River
+445,Coffeyville
+446,Independence
+447,Cherryvale
+448,Inman
+449,Easton
+450,Shawnee Heights
+452,Stanton County
+453,Leavenworth
+454,Burlingame Public Schools
+456,Marais des Cygnes Valley
+457,Garden City
+458,Basehor-Linwood
+459,Bucklin
+460,Hesston
+461,Neodesha
+462,Central
+463,Udall
+464,Tonganoxie
+465,Winfield
+466,Scott County
+467,Leoti
+468,Healy Public Schools
+469,Lansing
+470,Arkansas City
+471,Dexter
+473,Chapman
+474,Haviland
+475,Geary County Schools
+476,Copeland
+477,Ingalls
+479,Crest
+480,Liberal
+481,Rural Vista
+482,Dighton
+483,Kismet-Plains
+484,Fredonia
+487,Herington
+489,Hays
+490,El Dorado
+491,Eudora
+492,Flinthills
+493,Columbus
+494,Syracuse
+495,Fort Larned
+496,Pawnee Heights
+497,Lawrence
+498,Valley Heights
+499,Galena
+500,Kansas City
+501,Topeka Public Schools
+502,Lewis
+503,Parsons
+504,Oswego
+505,Chetopa-St. Paul
+506,Labette County
+507,Satanta
+508,Baxter Springs
+509,South Haven
+511,Attica
+512,Shawnee Mission Public Schools
