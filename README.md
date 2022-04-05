@@ -177,7 +177,7 @@ The team members are expected to present a fully integrated database, including 
 
 #### ERD
 
-<img src="Images/ERD_FCC_tables.png" width="40%" height="20%">
+<img src="Images/ERD_FCC_tables.png" width="60%" height="30%">
 
 #### Schema Sample
 See full schema <a href="Resources/schema.sql">here</a> and code snip below.
@@ -225,7 +225,7 @@ config = {"user":"root",
 * Includes at least two tables (or collections, if using MongoDB)
 Ten tables were initially created (see schema) and additional tables added as we explored for machine learning data. 
 
-  <img src="Images/pg_admin_table_views.png" width="50%" height="30%">
+  <img src="Images/pg_admin_table_views.png" width="40%" height="20%">
 
 * Includes at least one join using the database language (not including any joins in Pandas)
 
