@@ -154,10 +154,11 @@ Our group decided to dive into this topic, and research internet availability an
   * Here is our model!    [Rural Surge Machine Learning Model](https://github.com/Sebjet24/Rural_Surge/blob/main/RuralSurge_ml_rural.ipynb)
   
   * **2D Scatter Plot**
-   <img src="Images/ML_3D_Scatter_Plot.png" width="50%" height="30%">
+  <img src="Images/ML_2D_Scatter_Plot.png" width="50%" height="30%">
+   
   
   * **3D Scatter Plot**
-    <img src="Images/ML_2D_Scatter_Plot.png" width="50%" height="30%">
+   <img src="Images/ML_3D_Scatter_Plot.png" width="50%" height="30%">
   
   
 ### Visualize the Data
