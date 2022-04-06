@@ -93,7 +93,8 @@ from area_table
 where type = 'county'
 and id like '20%'
 and has_0 is not null
-GROUP BY id, urban_rural, tribal_non, speed;
+GROUP BY id, urban_rural, tribal_non, speed
+ORDER BY id, urban_rural;
 
 select * from area_data_ml
 where id = '20001';
@@ -106,7 +107,84 @@ WHERE at.id like '20%'
 AND at.type = 'county';
 
 
-select * from area_mod
-where type = 'county';
+select tech_options, count(speed)
+from area_mod
+where type = 'county'
+and id = '20003'
+and urban_rural = 'R'
+--and speed =.2
+group by tech_options;
 
-select * from bb_providers;
+select distinct tech, speed
+from area_mod
+where tech_options = 1
+and (has_1 >0 or has_2 >0 or has_3more>0)
+order by tech, speed;
+
+delete from area_mod
+where type <> 'county';
+
+select * from area_mod
+where id not like '20%';
+
+ALTER TABLE ml_data
+ADD COLUMN id_ur VARCHAR;
+
+delete from ml_data
+where id_ur is null;
+
+INSERT INTO ml_data (id_ur, id, u_r_code, ur_binary, avg_has_zero, avg_has_one, avg_has_two, avg_has_3more)
+select 
+concat(id,u_r_code) as id_ur,
+id,
+u_r_code,
+ur_binary,
+avg_has_zero,
+avg_has_one,
+avg_has_two,
+avg_has_3more
+from ml_data
+;
+
+select * from ml_data;
+
+-- append rural data into ks_pop_density_data
+INSERT INTO ks_pop_density_data (id_ru, state_county_code, countyname, pop_pct, area_pct, rural_urban)
+select
+	concat(state_county_code, 'R') as id_ru,
+	state_county_code,
+	countyname, 
+	poppct_rural,
+	areapct_rural,
+	'R' rural_urban
+from pct_urban_rural_county
+where state_county_code like '20%'
+and poppct_rural is not null
+and popden_rural is not null;
+
+select * from ml_data
+order by id_ur;
+
+
+DELETE  FROM
+    ml_data a
+        USING ml_data b
+WHERE
+    a.id_ur = b.id_ur;
+
+drop table ml_data;
+
+
+CREATE TABLE ml_data (
+	id_ur VARCHAR,
+	id VARCHAR,
+	u_r_code VARCHAR,
+	avg_has_zero FLOAT(2),
+	avg_has_one FLOAT(2),
+	avg_has_two FLOAT(2),
+	avg_has_3more FLOAT(2),
+	PRIMARY KEY (id_ur)
+);
+
+
+select * from ml_data;
