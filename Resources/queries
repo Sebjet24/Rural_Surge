@@ -100,7 +100,107 @@ where id = '20001';
 
 -- ML Model data set using ks_pop_density_data and area_data_ml
 -- has_0 = Population with zero providers (i.e., no broadband) given choice of technology and speed
-SELECT DISTINCT at.id, gl.geoid, at.type, gl.name, at.urban_rural, at.speed, at.has_0, at.has_1, at.has_2, at.has_3more
+SELECT DISTINCT at.id, at.type, at.urban_rural, at.speed, at.has_0, at.has_1, at.has_2, at.has_3more
 FROM area_table at LEFT OUTER JOIN geo_lookup gl ON (at.id, at.type) = (gl.geoid, gl.type)
 WHERE at.id like '20%'
 AND at.type = 'county';
+
+
+select * from area_mod
+where type = 'county'
+and speed = .2;
+
+select * from bb_providers;
+
+SELECT DISTINCT id, urban_rural, tribal_non, avg(speed) avg_speed, avg(tech_options) avg_options
+FROM area_mod
+WHERE TYPE = 'county'
+--and urban_rural = 'R'
+--and tribal_non = 'N'
+and id like '20%'
+GROUP BY id, urban_rural, tribal_non;
+
+SELECT distinct id, urban_rural, max(tech_options) max_tech
+FROM area_mod
+WHERE TYPE = 'county'
+and urban_rural = 'U'
+--and tribal_non = 'N'
+and id like '20%'
+group by id, urban_rural
+;
+select sum(tech_count)
+from area_data_ml
+order by id_ur;
+
+-- speed, pop_density, provider options
+SELECT * FROM pct_urban_rural_county
+where state_county_code = '20003';
+
+select id, sum(tech_count)
+from tech_option_count
+where id in ('20001','20003','20005')
+group by id;
+
+select distinct id, sum(has_0) tot_has_0,
+max(has_1) max_has_1, max(has_2) max_has_2, max(has_3more) max_has_3_plus
+from area_mod
+where type = 'county'
+and tech_options = '1'
+and id = '20003'
+and has_0 =0
+group by id;
+
+select distinct id, tech, speed, has_0, has_1, has_2, has_3more
+from area_mod
+where type = 'county'
+and tech_options = '1'
+and id = '20001'
+and has_0 =0
+;
+-- Fernando's query
+-- format decimals SELECT round( CAST(float8 '3.1415927' as numeric), 2);
+DROP TABLE ml_data;
+
+CREATE TABLE ml_data
+AS
+select
+id,
+'R' u_r_code,
+1 ur_binary,
+avg(has_0) avg_has_zero,
+avg(has_1) avg_has_one,
+avg(has_2) avg_has_two,
+avg(has_3more) avg_has_3more
+from area_mod
+where type = 'county' and urban_rural = 'R'
+group by id
+order by id;
+
+-- Then insert urban values
+INSERT INTO ml_data (id, u_r_code, ur_binary, avg_has_zero, avg_has_one, avg_has_two, avg_has_3more)
+select
+id,
+'U' u_r_code,
+1 ur_binary,
+avg(has_0) avg_has_zero,
+avg(has_1) avg_has_one,
+avg(has_2) avg_has_two,
+avg(has_3more) avg_has_3more
+from area_mod
+where type = 'county' and urban_rural = 'U'
+group by id
+order by id;
+
+SELECT * FROM ml_data
+order by id;
+
+
+-- population that is 55% or more rural
+select
+state_county_code,
+poppct_rural
+from pct_urban_rural_county
+where state_county_code like '20%'
+and
+poppct_rural >= 55.00;
+
