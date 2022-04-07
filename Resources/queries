@@ -1,0 +1,206 @@
+-- Questions to answer with data queries
+-- How does internet access (quality, availability, etc)
+-- compare between rural and urban areas in Kansas?
+-- What Internet Service Providers (ISPs) are available in Kansas?
+-- How does their support vary between rural and urban communities?
+
+SELECT * FROM area_table
+where type = 'county'
+and id like '20%';
+
+SELECT distinct id, urban_rural, speed, has_0, has_1, has_2, has_3more
+from area_table
+WHERE id like '20%';
+
+-- about geoid: https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html
+SELECT * FROM geo_lookup
+where geoid like '20%';
+
+SELECT * FROM pct_urban_rural_county
+WHERE state_code = '20'
+limit 50;
+
+alter table "pct_urban_rural_county" add column "state_county_code" varchar(255);
+update "pct_urban_rural_county"
+    set "state_county_code" = concat(state_code,county_code);
+	
+select *
+from pct_urban_rural_county
+where state_county_code like '20%';
+
+-- from area table join id select type, id, urban_rural, speed, has_0, has_1, has_2, has_3more
+-- from geo_lookup join geoid select geoid, type, name, centroid_lng, centroid_lat, bbox_arr
+-- from pct_urban_rural_county join state_county_code select countyname, pop_cou,
+-- poppct_urban, popden_urban, pop_rural, poppct_rural, popden_rural
+-- join example:
+--SELECT * FROM weather w LEFT OUTER JOIN cities c ON w.city = c.name;
+
+-- get population density data by state_county_code for urban data into new table ks_pop_density_data
+
+DROP TABLE ks_pop_density_data;
+
+CREATE TABLE ks_pop_density_data (id_ru, state_county_code, countyname, pop_pct, area_pct, rural_urban)
+AS
+select
+	concat(state_county_code, 'U') as id_ru,
+	state_county_code,
+	countyname, 
+	poppct_urban,
+	areapct_urban,
+	'U' rural_urban
+from pct_urban_rural_county
+where state_county_code like '20%'
+and poppct_urban is not null
+and popden_urban is not null;
+
+select * from ks_pop_density_data;
+
+-- append rural data into ks_pop_density_data
+INSERT INTO ks_pop_density_data (id_ru, state_county_code, countyname, pop_pct, area_pct, rural_urban)
+select
+	concat(state_county_code, 'R') as id_ru,
+	state_county_code,
+	countyname, 
+	poppct_rural,
+	areapct_rural,
+	'R' rural_urban
+from pct_urban_rural_county
+where state_county_code like '20%'
+and poppct_rural is not null
+and popden_rural is not null;
+
+--DROP TABLE ks_pop_density_data;
+select * from ks_pop_density_data
+order by countyname;
+
+-- get population density data by state_county_code for urban data into new table ks_pop_density_data
+
+--DROP TABLE area_data_ml;
+
+CREATE TABLE area_data_ml (id_ur, id, urban_rural, tribal_non, speed, pop_zero, pop_one, pop_two, pop_three_more)
+AS
+select
+	concat(id,urban_rural) as id_ur,
+	id,
+	urban_rural,
+	tribal_non,
+	speed,
+	sum(has_0) as pop_zero,
+	sum(has_1) as pop_one,
+	sum(has_2) as pop_two,
+	sum(has_3more) as pop_three_more
+from area_table
+where type = 'county'
+and id like '20%'
+and has_0 is not null
+GROUP BY id, urban_rural, tribal_non, speed;
+
+select * from area_data_ml
+where id = '20001';
+
+-- ML Model data set using ks_pop_density_data and area_data_ml
+-- has_0 = Population with zero providers (i.e., no broadband) given choice of technology and speed
+SELECT DISTINCT at.id, at.type, at.urban_rural, at.speed, at.has_0, at.has_1, at.has_2, at.has_3more
+FROM area_table at LEFT OUTER JOIN geo_lookup gl ON (at.id, at.type) = (gl.geoid, gl.type)
+WHERE at.id like '20%'
+AND at.type = 'county';
+
+
+select * from area_mod
+where type = 'county'
+and speed = .2;
+
+select * from bb_providers;
+
+SELECT DISTINCT id, urban_rural, tribal_non, avg(speed) avg_speed, avg(tech_options) avg_options
+FROM area_mod
+WHERE TYPE = 'county'
+--and urban_rural = 'R'
+--and tribal_non = 'N'
+and id like '20%'
+GROUP BY id, urban_rural, tribal_non;
+
+SELECT distinct id, urban_rural, max(tech_options) max_tech
+FROM area_mod
+WHERE TYPE = 'county'
+and urban_rural = 'U'
+--and tribal_non = 'N'
+and id like '20%'
+group by id, urban_rural
+;
+select sum(tech_count)
+from area_data_ml
+order by id_ur;
+
+-- speed, pop_density, provider options
+SELECT * FROM pct_urban_rural_county
+where state_county_code = '20003';
+
+select id, sum(tech_count)
+from tech_option_count
+where id in ('20001','20003','20005')
+group by id;
+
+select distinct id, sum(has_0) tot_has_0,
+max(has_1) max_has_1, max(has_2) max_has_2, max(has_3more) max_has_3_plus
+from area_mod
+where type = 'county'
+and tech_options = '1'
+and id = '20003'
+and has_0 =0
+group by id;
+
+select distinct id, tech, speed, has_0, has_1, has_2, has_3more
+from area_mod
+where type = 'county'
+and tech_options = '1'
+and id = '20001'
+and has_0 =0
+;
+-- Fernando's query
+-- format decimals SELECT round( CAST(float8 '3.1415927' as numeric), 2);
+DROP TABLE ml_data;
+
+CREATE TABLE ml_data
+AS
+select
+id,
+'R' u_r_code,
+1 ur_binary,
+avg(has_0) avg_has_zero,
+avg(has_1) avg_has_one,
+avg(has_2) avg_has_two,
+avg(has_3more) avg_has_3more
+from area_mod
+where type = 'county' and urban_rural = 'R'
+group by id
+order by id;
+
+-- Then insert urban values
+INSERT INTO ml_data (id, u_r_code, ur_binary, avg_has_zero, avg_has_one, avg_has_two, avg_has_3more)
+select
+id,
+'U' u_r_code,
+1 ur_binary,
+avg(has_0) avg_has_zero,
+avg(has_1) avg_has_one,
+avg(has_2) avg_has_two,
+avg(has_3more) avg_has_3more
+from area_mod
+where type = 'county' and urban_rural = 'U'
+group by id
+order by id;
+
+SELECT * FROM ml_data
+order by id;
+
+
+-- population that is 55% or more rural
+select
+state_county_code,
+poppct_rural
+from pct_urban_rural_county
+where state_county_code like '20%'
+and
+poppct_rural >= 55.00;
+

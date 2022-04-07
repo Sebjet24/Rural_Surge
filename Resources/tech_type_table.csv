@@ -1,0 +1,17 @@
+<<<<<<< HEAD
+﻿tech_type_code,tech_type_desc
+a,ADSL
+c,Cable
+f,Fiber
+o,Other
+s,Satellite
+w,Wireless
+=======
+﻿tech_type_code,tech_type_desc
+a,ADSL
+c,Cable
+f,Fiber
+o,Other
+s,Satellite
+w,Wireless
+>>>>>>> 612ea0ab911bba99f245506d149fb30104126976
