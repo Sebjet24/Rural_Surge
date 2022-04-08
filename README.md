@@ -10,14 +10,6 @@ For small rural counties in Kansas, the 2020 pandemic emphasized a lack of quali
 Our group decided to dive into this topic, and research internet availability and quality in the state of Kansas.
   
 
-## Communication Protocols
-- Group Slack channel
-- Group Project GitHub, including a branch for each team member
-- Breakout room during class time
-- Team Zoom calls (March 19th and 26th, April 1st, 2nd, 3rd)
-- Team has shared phone numbers and email addresses
-
-
 ## Tools Used on our Project
 - [GitHub](https://github.com/)
     * The largest and most advanced development platform in the world.
