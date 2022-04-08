@@ -1,0 +1,114 @@
+-- create a table to pull percent urban/ rural to add to ml_data_2 table
+
+CREATE TABLE ml_poppct_ur (id_ur, poppct_ur)
+AS 
+SELECT concat(state_county_code,'R') id_ur, poppct_rural AS poppct_ur
+FROM pct_urban_rural_county
+WHERE poppct_rural is not null
+AND poppct_rural >=0
+AND state_code = '20';
+
+-- append urban percentage to ml_poppct_ur table
+INSERT INTO ml_poppct_ur (id_ur, poppct_ur)
+SELECT concat(state_county_code,'U') id_ur, poppct_urban AS poppct_ur
+FROM pct_urban_rural_county
+WHERE poppct_urban is not null
+AND poppct_urban >=0
+AND state_code = '20';
+
+SELECT * FROM ml_poppct_ur;
+
+SELECT * from ml_poppct_ur
+ORDER BY id_ur;
+--DROP TABLE ml_poppct_ur;
+
+select * from ml_data;
+
+-- develop table to calculate speed
+-- definition of "sufficient broadband" is 100mb or higher
+
+CREATE TABLE tech_speeds (tech, avg_speed, max_speed)
+AS
+select tech, round(avg(speed)) avg_speed, max(speed) max_speed
+from area_mod
+where tech_options = 1
+and has_0 = 0
+group by tech
+;
+
+select * from ml_speeds;
+
+DROP TABLE county_speeds1;
+CREATE TABLE county_speeds_grtn_zero
+AS
+SELECT DISTINCT concat(id,urban_rural) id_ur, concat(tech,speed) tech_code_speed, tech, speed
+FROM area_mod
+WHERE tech_options = 1
+AND has_0>0 -- NO ONE HAS NO SERVICE
+ORDER BY id_ur;
+
+
+SELECT DISTINCT id_ur, count(tech) num_services, min(speed) min_speed, avg(speed) avg_speed, max(speed) max_speed
+FROM county_speeds_grtn_zero
+WHERE id_ur like '%R'
+GROUP BY id_ur
+ORDER BY id_ur;
+
+CREATE TABLE tech_type_code (tech_code_speed, tech_code, tech_speed)
+AS
+SELECT DISTINCT concat(tech,speed) AS tech_code_speed, tech, speed
+from area_mod
+where tech_options = 1;
+
+-- calculate percent have zero, one, two or 3+
+CREATE TABLE percent_by_providers (id_ur,perc_zero,perc_one,perc_two,perc_3more)
+AS
+select
+	id_ur,
+	sum((avg_has_zero+avg_has_one+avg_has_two+avg_has_3more)/avg_has_zero/100) perc_zero,
+	sum((avg_has_zero+avg_has_one+avg_has_two+avg_has_3more)/avg_has_one/100) perc_one,
+	sum((avg_has_zero+avg_has_one+avg_has_two+avg_has_3more)/avg_has_two/100) perc_two,
+	sum((avg_has_zero+avg_has_one+avg_has_two+avg_has_3more)/avg_has_3more/100) perc_3more
+FROM ml_data_2
+GROUP BY id_ur;
+
+-- add percent_by_providers to ml_data_2
+CREATE TABLE ml_data_3 (id_ur, county_desc, u_r_code, avg_zero, avg_one, avg_two, avg_three, perc_zero, perc_one, perc_two, perc_three)
+AS 
+SELECT
+	a.id_ur,
+	a.county_desc,
+	a.u_r_code,
+	a.avg_has_zero,
+	a.avg_has_one,
+	a.avg_has_two,
+	a.avg_has_3more,
+	b.perc_zero,
+	b.perc_one,
+	b.perc_two,
+	b.perc_3more
+FROM ml_data_2 as a 
+LEFT JOIN percent_by_providers as b ON a.id_ur=b.id_ur;
+
+CREATE TABLE ml_data_4
+AS
+select
+	a.id_ur,
+	a.county_desc,
+	a.u_r_code,
+	a.avg_zero,
+	a.avg_one,
+	a.avg_two,
+	a.avg_three,
+	a.perc_zero,
+	a.perc_one,
+	a.perc_two,
+	a.perc_three,
+	b.avg_speed,
+	b.max_speed
+from ml_data_3 AS a
+LEFT JOIN county_spee_avg_max AS b ON a.id_ur=b.id_ur;
+
+
+
+
