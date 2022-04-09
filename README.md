@@ -267,6 +267,6 @@ length_df.write.jdbc(url=jdbc_url, table='area_mod', mode=mode, properties=confi
 ```
   
 ### Visualize the Data
-   - [Google Slides](https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/Rural%20Surge.pptx)
+   - [Google Slides](https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvPlYY/edit?usp=sharing)
    - Tableau
       * [Storyboard](https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/Story%20board.pptx)
