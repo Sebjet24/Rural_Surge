@@ -73,7 +73,7 @@ desc_upper string
 
 PROVIDER_DETAIL
 --
-hoconum int fk
+hoconum int FK >- BB_PROVIDERS.holding_co_no
 tech string
 d_1 int
 d_2 int
@@ -92,3 +92,32 @@ u_6 int
 u_7 int
 u_8 int
 u_9 int
+
+PCT_URBAN_RURAL_COUNTY
+--
+state_code string pk
+county_code string
+statename string
+countyname string
+pop_cou int
+area_cou BIGINT
+pop_urban INT
+poppct_urban FLOAT
+area_urban BIGINT
+areapct_urban FLOAT
+popden_urban FLOAT
+pop_ua BIGINT
+poppct_ua FLOAT
+area_ua BIGINT
+areapct_ua FLOAT
+popden_ua FLOAT
+pop_uc INT
+poppct_uc FLOAT
+area_uc BIGINT
+areapct_uc FLOAT
+popden_uc FLOAT
+pop_rural INT
+poppct_rural FLOAT
+area_rural BIGINT
+areapct_rural FLOAT
+popden_rural FLOAT
