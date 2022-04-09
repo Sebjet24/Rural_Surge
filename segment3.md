@@ -87,6 +87,30 @@ Additionally, the model obviously addresses the question or problem the team is 
 ![random_forest](https://user-images.githubusercontent.com/92836648/162582298-ba3dca0c-dd06-46ba-8a7c-d5f250479bda.png)
 ![adaboost](https://user-images.githubusercontent.com/92836648/162582299-c25f1b4c-6bd7-4c7c-becc-17a4bd5d28b9.png)
 
+R scripts run for t tests and regression analysis
+
+T-test sample below and average speed code <a href="Analysis/rural_surge_analysis_avg_speed_r_file.R">here</a> and max code <a href="Analysis/rural_surge_analysis_max_speeds_r_file.R">here</a>.
+
+```
+## - perform a t-test. reference USDA definition of 100 mb sufficient broadband
+t.test(rs_speed$avg_speed)
+
+# - perform t-test by ru_code
+rs_speed_r <- subset(rs_speed, u_r_code=="R")
+rs_speed_u <- subset(rs_speed, u_r_code=="U")
+
+
+t.test(rs_speed_r$avg_speed)
+t.test(rs_speed_u$avg_speed)
+
+## deeper dive - create box and whisker plot by ur_code
+## sample code: p <- ggplot(df, aes(carat, price)) +geom_point() +
+## labs(title = "Diamonds", x = "x-axis -> Carat", y = "y-axis -> Price")
+ggplot(rs_speed, aes(u_r_code, avg_speed)) +
+  geom_boxplot() + labs(title = "Average Available Download Rate by Rural-Urban Classification", x="Rural-Urban",y="Avg Available Speed")
+  
+```
+
 
 ## Database Integration (0 points)
 There are no deliverables for the database integration section of the project for this segment.
