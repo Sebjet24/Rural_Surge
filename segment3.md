@@ -8,11 +8,31 @@ The presentation tells a cohesive story about the project and includes the follo
 Rural Surge: A Study of Internet Quality & Availability in Kansas
 
 Reason topic was selected
+
 For small rural counties in Kansas, the 2020 pandemic emphasized a lack of quality internet access. Schools were closed, and emergency remote instruction became the method to address educational delivery moving into fall 2020. However, as students, parents and teachers attempted to learn and work from home, it became clear that not all internet is created equal. Many community members had only cellular data service with only a hotspot connected to a notebook or just a cell phone, which made participating in an online learning environment impossible. Those who had internet access experienced slow download rates that made it difficult to participate in online class activities.
 
 Our group decided to dive into this topic, and research internet availability and quality in the state of Kansas.
 
 Description of the source of data
+
+**Where is our data coming from?**
+   - [State Library of Kansas](https://kslib.info/423/State-Data-Center)
+     * The Kansas State Library has extensive data for all counties in the state.
+     * We plan to use this data as a layer in the interactive map and as a feature in the machine learning model.
+     * Kansas info: County data, Lat/long, County population, Poverty by county, School district info
+     
+   - [FCC Fixed Broadband Deployment](https://broadbandmap.fcc.gov/#/data-download)
+     * The FCC tracks broadband access across the United States, which includes an interactive map and the data tables behind the map. 
+     * We used an Area table and Provider table to collect data about Internet Providers and speeds correlated with location
+
+   - [United States Department of Agriculture (USDA)](https://www.usda.gov/reconnect)
+     * The USDA provides grants and loans to improve internet infrastructure across the nation. 
+     * Through this website, we found useful links to datasets from the US Census Bureau.
+    
+   - [US Census Bureau](https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural/2010-urban-rural.html)
+     * We struggled to find data relevant to our project until we stumbled onto a link to the data from the [USDA ReConnect site](https://www.usda.gov/reconnect).
+     * This data was used to obtain the rural and urban density and population percentages by county. 
+     * This data is used in the machine learning model, and will be a layer in the interactive map.
 Questions the team hopes to answer with the data
 Description of the data exploration phase of the project
 Description of the analysis phase of the project
@@ -28,6 +48,9 @@ https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvP
 
 ### Main Branch
 All code in the main branch is production-ready. All code is clean, commented, easy to read, and adheres to a coding standard (e.g., PEP8)
+
+#### Schema
+The database schema was created in SQL, along with comments describing the data tables. 
 
 The main branch should include:
 
