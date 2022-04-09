@@ -14,27 +14,35 @@ Our group decided to dive into this topic, and research internet availability an
 - [GitHub](https://github.com/)
     * The largest and most advanced development platform in the world.
     * Used to organize our research and documentation.
-- [Pandas](https://pandas.pydata.org/)
-    * A fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language
 - [Python](https://www.python.org/)
     * A general-purpose, versatile, and powerful programming language.
+- [Jupyter Notebook](https://jupyter.org/)
+    * An open source web application, used to create and share documents that contain live code, equations, visualizations, and text.
+    * We created our unsupervised machine learning model and random forest model in Jupyter Notebook.
+- Libraries we used:
+    * [Pandas](https://pandas.pydata.org/)
+    * [Plotly](https://plotly.com/)
+    * [Scikit-learn](https://scikit-learn.org/stable/)
+    * [PySpark](https://spark.apache.org/docs/latest/api/python/)
+    * [Numpy](https://numpy.org/)
 - [QuickDBD](https://www.quickdatabasediagrams.com/)
     * A simple online tool to quickly draw database diagrams.
     * Used to create ERDs.
-- [Visual Studio Code](https://code.visualstudio.com/)
-   * A code editor redefined and optimized for building and debugging modern web and cloud applications
 - [Canva](https://www.canva.com/)
     * Online design and publishing tool.
     * Used to design the Project Flowchart.
-- [Amazon S3](https://aws.amazon.com/s3/)
-    * Object storage service offering industry-leading scalability, data availability, security, and performance.
-    * Used to store our data on the cloud
+- [Amazon AWS](https://aws.amazon.com/)
+    * Amazon Web Services, Inc. (AWS) is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, 
+    	on a metered pay-as-you-go basis.
+    * We used S3 to store our tables so the whole team could access them quickly and easily online, and RDS to link the tables to pgAdmin.
 - [pgAdmin](https://www.pgadmin.org/)
     * The most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world.
-- [PySpark](https://spark.apache.org/docs/latest/api/python/)
-    * PySpark is the Python API for Apache Spark, an open source, distributed computing framework and set of libraries for real-time, large-scale data processing.
-- [GeoJSON](https://geojson.org/)
-    * A format for encoding a variety of geographic data structures.
+    * Used to create our database (using Postgres)
+- [PostgreSQL](https://www.postgresql.org/)
+    * Also known as Postgres, PostgreSQL is a free and open-source relational database management system (RDBMS) emphasizing extensibility and SQL compliance.
+* [R](https://www.r-project.org/)
+    * A programming language for statistical computing and graphics.
+    * We used R to create a box-and-whisker plot to present our data in another form.
 - [Google Slides](https://www.google.com/slides/about/)
     * Used to present our project plan.
 - [Tableau](https://www.tableau.com/)
@@ -259,6 +267,6 @@ length_df.write.jdbc(url=jdbc_url, table='area_mod', mode=mode, properties=confi
 ```
   
 ### Visualize the Data
-   - [Google Slides](https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/Rural%20Surge.pptx)
+   - [Google Slides](https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvPlYY/edit?usp=sharing)
    - Tableau
       * [Storyboard](https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/Story%20board.pptx)

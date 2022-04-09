@@ -60,6 +60,11 @@ Description of current accuracy score
 
 Additionally, the model obviously addresses the question or problem the team is solving.
 
+![split_train_test_code](https://user-images.githubusercontent.com/92836648/162582295-a49c3e90-6fc0-4888-a562-692d7a32c0d0.png)
+![random_forest](https://user-images.githubusercontent.com/92836648/162582298-ba3dca0c-dd06-46ba-8a7c-d5f250479bda.png)
+![adaboost](https://user-images.githubusercontent.com/92836648/162582299-c25f1b4c-6bd7-4c7c-becc-17a4bd5d28b9.png)
+
+
 ## Database Integration (0 points)
 There are no deliverables for the database integration section of the project for this segment.
 
