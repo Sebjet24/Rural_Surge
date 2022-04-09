@@ -23,17 +23,20 @@ ru_summary_max <- rs_speed_max %>% group_by(u_r_code) %>% summarize(Mean=mean(ma
 library(tidyverse)
 
 ## - perform a t-test.Mean set at 100 MB - reference USDA definition of sufficient broadband
-t.test(rs_speed_max$avg_speed,mu=1000)
+t.test(rs_speed_max$avg_speed)
 
 # perform t-test by ur_code
 rs_speed_r_max <- subset(rs_speed_max, u_r_code=="R")
 rs_speed_u_max <- subset(rs_speed_max, u_r_code=="U")
 
 
-t.test(rs_speed_r_max$max_speed,mu=1000)
-t.test(rs_speed_u_max$max_speed,mu=1000)
+t.test(rs_speed_r_max$max_speed)
+t.test(rs_speed_u_max$max_speed)
 
-## deeper dive - create box and whisker plot by ur_code
-ggplot(rs_speed_max, aes(u_r_code, max_speed)) +
-  geom_boxplot()
+## deeper dive - create box and whisker plot by ur_code and max speed
+## sample code: p <- ggplot(df, aes(carat, price)) +geom_point() +
+## labs(title = "Diamonds", x = "x-axis -> Carat", y = "y-axis -> Price")
+ggplot(rs_speed, aes(u_r_code, max_speed)) +
+  geom_boxplot() + labs(title = "Max Available Download Rate by Rural-Urban Classification", x="Rural-Urban",y="Max Available Speed")
+
 
