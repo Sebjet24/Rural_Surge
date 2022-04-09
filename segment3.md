@@ -74,6 +74,8 @@ Each team member has at least four commits for the duration of the third segment
 Students will be expected to submit the working code for their machine learning model, as well as the following:
 
 Description of data preprocessing
+
+Before we could perform analysis of the 
 Description of feature engineering and the feature selection, including the decision-making process
 Description of how data was split into training and testing sets
 Explanation of model choice, including limitations and benefits
