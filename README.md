@@ -59,8 +59,6 @@ Our group decided to dive into this topic, and research internet availability an
    - How does internet access support (quality, availability, etc.) compare between rural and urban areas in Kansas?
    - What Internet Service Providers (ISPs) are available in Kansas? 
    - How does their support vary between rural and urban communities?
-   - Is there a link between poverty rate and quality internet access?
-   - Is there a link between school district success and quality internet access?
 
 
 ### Our Project Plan
