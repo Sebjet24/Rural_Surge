@@ -139,7 +139,7 @@ Here is the [code](https://github.com/Sebjet24/Rural_Surge/blob/main/Analysis/ru
 
 **Code for the t-test**
 
-The team performed an analysis using R script to determine if there is a difference between urban-rural (UR) classification. We used regression analysis and descriptive summary of the data, which suggests there is a statitical signifiance (.02897) when comparing ISP availability by the UR classification. 
+The team performed an analysis using R script to determine if there is a difference between urban-rural (UR) classification. We used regression analysis and descriptive summary of the data, which suggests there is a statitical signifiance (.02897) when comparing ISP availability by the UR classification. The file is available <a href="Analysis/rural_surge_analysis_has_zero.R">here</a> and the results displayed below.
 
 #### Results of linear regression and descriptive statistics
 
