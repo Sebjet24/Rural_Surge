@@ -87,23 +87,35 @@ The preprocessing included:
 * Described the dataframe to show the total features and rows
 
 Below is an image of some of the preprocessing steps:
+
+<img src="Images/split_train_test_code_2.png" width="50%" height="30%">
+
+
 ![split_train_test_code_2](https://user-images.githubusercontent.com/92836648/162632416-26bc4ada-25c1-4db0-8f11-f46275b29df7.png)
 
-Description of feature engineering and the feature selection, including the decision-making process
+The team wanted to answer two questions: does geographic location impact internet quality, and does Rural-Urban classifier impact Internet Service Provider (ISP) availabilty. Due to the need for classification, we changed our mind late in the project to focus on a Random Forest model, which improved predictability of the data to 86% accuracy score once we included average internet speeds. Adding the speed feature was something we knew we had to have to answer our question; however, the data we had to identify these speeds was difficult to work with. We finally came up with a dataset we felt would represent the data well, without impacting the integrity of the analysis.
 
-The team wanted to answer two questions: does geographical location impact internet quality, and does Rural-Urban classifiers impact Internet Service Provider (ISP) availabilty. Due to the need for classification, we changed our mind late in the project to focus on a Random Forest model, which improved predictability of the data to 86% accuracy score once we included average internet speeds. Adding the speed feature was something we knew we had to have to answer our question; however, the data we had to identify these speeds was difficult to work with. We finally came up with a dataset we felt would represent the data well, without impacting the integrity of the analysis.
+The features included the average population in each county who had 1) no ISP providers available, 2) one ISP provider available, 3) two ISP providers available and 4) three or more ISP providers available. We also included the percentage of each of those populations, and finally a feature for each of the 105 counties in Kansas based on their Rural-Urban classification.
 
-The features included the average number of the population in each county who had 1) no ISP providers available, 2) one ISP provider available, 3) two ISP providers available and 4) three or more ISP providers available. We also included the percentage of each of those populations, and finally a feature for each of the 105 counties in Kansas based on their Rural-Urban classification.
-
-The team feels the biggest limitation in developing a machine learning model for this project has been the data itself. It has taken much longer than anticipated to build the data because we have spent so much time manipulating it while trying not to affect the integrity of the data. However, the benefits of the cluster model are that, from a geographical perspective, clustering makes sense, and provides a more visual look at the data.
+The team feels the biggest limitation in developing a machine learning model for this project has been the data itself. It took much longer than anticipated to build the data because we spent so much time manipulating it while trying not to impact its integrity. In a real world scenario, this may not have been a problem, but due to time constraints for the project, it was an issue. The benefits of the Random Forest model is the ability to use the Urban-Rural classification as our dependent variable, which helps answer the question of whether geographic location has an impact on internet quality and availability.
 
 The team acknowledges a need for additional features to gain more insight into the data, not least of which is poverty levels by county. However, these poverty levels cannot be determined within a Rural-Urban classification at this time, so we elected to leave it out of the model for now.
 
 ![random_forest_2](https://user-images.githubusercontent.com/92836648/162632418-cee1c875-a905-41bd-861a-70fb66e15fc0.png)
 
-R scripts run for t tests and regression analysis
+The team also used R-Studio, and created R scripts run for t tests and regression analysis
 
 T-test sample below and average speed code <a href="Analysis/rural_surge_analysis_avg_speed_r_file.R">here</a> and max code <a href="Analysis/rural_surge_analysis_max_speeds_r_file.R">here</a>.
+
+### Box and Whisker Plots
+
+Average Available Speed
+
+<img src="Images/bw_avg_speed.png">
+
+Max Available Speed
+
+<img src="Images/bw_max_speed.png">
 
 ```
 ## - perform a t-test. reference USDA definition of 100 mb sufficient broadband
