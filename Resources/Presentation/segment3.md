@@ -49,18 +49,21 @@ https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvP
 ### Main Branch
 All code in the main branch is production-ready. All code is clean, commented, easy to read, and adheres to a coding standard (e.g., PEP8)
 
-#### Schema
-The database schema was created in SQL, along with comments describing the data tables. Much of the initial database development, as well as some of the extraction and manipulation occurred using SQL. 
+The resource folder has been reorganized into categories to make it easier to find information. All analytical data is now stored in the <a href="https://github.com/Sebjet24/Rural_Surge/tree/main/Analysis">Analysis</a>folder, wich includes R files and all machine learning code in Jupyter files. The database schema, ERD text file and queries used to explore the data and create new tables is stored in the <a href="https://github.com/Sebjet24/Rural_Surge/tree/main/Resources/DATABASE">DATABASE</a>folder. 
 
 The main branch should include:
 
 * All code necessary to perform exploratory analysis
+  * All code is stored in the <a href="https://github.com/Sebjet24/Rural_Surge/tree/main/Analysis">Analysis</a>folder.
 * Most code necessary to complete the machine learning portion of the project
+  * The random forest ML code is store <a href="Analysis/RuralSurge_ml_RandomForrest_AdaBooster.ipynb">Analysis folder</a> which is the model we elected to use in our analysis for the project.
+  * We also have our initial unsupervised ML code stored in the Analysis folder, but have elected not to use it for the project. Code is available <a href="Analysis/RuralSurge_ml_Unsupervised.ipynb">here</a>.
 
 ### README.md
 The README.md should include:
 
 * Description of the communication protocols has been removed
+  * Protocols have been removed
 * Cohesive, structured outline of the project (this may include images, but they should be easy to follow and digest)
 * Link to Google Slides draft presentation
 
@@ -68,30 +71,51 @@ The README.md should include:
 Requirements for the individual branches follow:
 
 At least one branch for each team member
-Each team member has at least four commits for the duration of the third segment (12 total commits per person)
+Each team member has at least four commits for the duration of the third segment (12 total commits per person) - good.
 
 ## Machine Learning Model (45 points)
 Students will be expected to submit the working code for their machine learning model, as well as the following:
 
+The machine learning model code used in the analysis is a Random Forest model. The code is available <a href="Analysis/RuralSurge_ml_RandomForrest_AdaBooster.ipynb">here</a>.
+
 Description of data preprocessing
+The preprocessing included:
 
-Before we could perform analysis of the 
-Description of feature engineering and the feature selection, including the decision-making process
-Description of how data was split into training and testing sets
-Explanation of model choice, including limitations and benefits
-Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables)
-Description of how they have trained the model thus far, and any additional training that will take place
-Description of current accuracy score
+* Read in the data file
+* Created features in a new dataframe
+* Created our targeted dependent variable based on the Urban-Rural Classification
+* Described the dataframe to show the total features and rows
 
-Additionally, the model obviously addresses the question or problem the team is solving.
+Below is an image of some of the preprocessing steps:
 
-![split_train_test_code](https://user-images.githubusercontent.com/92836648/162582295-a49c3e90-6fc0-4888-a562-692d7a32c0d0.png)
-![random_forest](https://user-images.githubusercontent.com/92836648/162582298-ba3dca0c-dd06-46ba-8a7c-d5f250479bda.png)
-![adaboost](https://user-images.githubusercontent.com/92836648/162582299-c25f1b4c-6bd7-4c7c-becc-17a4bd5d28b9.png)
+<img src="Images/split_train_test_code_2.png" width="50%" height="30%">
 
-R scripts run for t tests and regression analysis
+
+![split_train_test_code_2](https://user-images.githubusercontent.com/92836648/162632416-26bc4ada-25c1-4db0-8f11-f46275b29df7.png)
+
+The team wanted to answer two questions: does geographic location impact internet quality, and does Rural-Urban classifier impact Internet Service Provider (ISP) availabilty. Due to the need for classification, we changed our mind late in the project to focus on a Random Forest model, which improved predictability of the data to 86% accuracy score once we included average internet speeds. Adding the speed feature was something we knew we had to have to answer our question; however, the data we had to identify these speeds was difficult to work with. We finally came up with a dataset we felt would represent the data well, without impacting the integrity of the analysis.
+
+The features included the average population in each county who had 1) no ISP providers available, 2) one ISP provider available, 3) two ISP providers available and 4) three or more ISP providers available. We also included the percentage of each of those populations, and finally a feature for each of the 105 counties in Kansas based on their Rural-Urban classification.
+
+The team feels the biggest limitation in developing a machine learning model for this project has been the data itself. It took much longer than anticipated to build the data because we spent so much time manipulating it while trying not to impact its integrity. In a real world scenario, this may not have been a problem, but due to time constraints for the project, it was an issue. The benefits of the Random Forest model is the ability to use the Urban-Rural classification as our dependent variable, which helps answer the question of whether geographic location has an impact on internet quality and availability.
+
+The team acknowledges a need for additional features to gain more insight into the data, not least of which is poverty levels by county. However, these poverty levels cannot be determined within a Rural-Urban classification at this time, so we elected to leave it out of the model for now.
+
+![random_forest_2](https://user-images.githubusercontent.com/92836648/162632418-cee1c875-a905-41bd-861a-70fb66e15fc0.png)
+
+The team also used R-Studio, and created R scripts run for t tests and regression analysis
 
 T-test sample below and average speed code <a href="Analysis/rural_surge_analysis_avg_speed_r_file.R">here</a> and max code <a href="Analysis/rural_surge_analysis_max_speeds_r_file.R">here</a>.
+
+### Box and Whisker Plots
+
+Average Available Speed
+
+<img src="Images/bw_avg_speed.png">
+
+Max Available Speed
+
+<img src="Images/bw_max_speed.png">
 
 ```
 ## - perform a t-test. reference USDA definition of 100 mb sufficient broadband
