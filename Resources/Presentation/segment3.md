@@ -97,14 +97,7 @@ The features included the average number of the population in each county who ha
 
 The team feels the biggest limitation in developing a machine learning model for this project has been the data itself. It has taken much longer than anticipated to build the data because we have spent so much time manipulating it while trying not to affect the integrity of the data. However, the benefits of the cluster model are that, from a geographical perspective, clustering makes sense, and provides a more visual look at the data.
 
-Description of how data was split into training and testing sets
-
-Explanation of model choice, including limitations and benefits - check
-Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables)
-Description of how they have trained the model thus far, and any additional training that will take place
-Description of current accuracy score - check.
-
-Additionally, the model obviously addresses the question or problem the team is solving.
+The team acknowledges a need for additional features to gain more insight into the data, not least of which is poverty levels by county. However, these poverty levels cannot be determined within a Rural-Urban classification at this time, so we elected to leave it out of the model for now.
 
 ![random_forest_2](https://user-images.githubusercontent.com/92836648/162632418-cee1c875-a905-41bd-861a-70fb66e15fc0.png)
 
