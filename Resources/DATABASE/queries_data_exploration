@@ -1,0 +1,38 @@
+-- Average with no providers
+select u_r_code, sum(avg_zero/(avg_zero + avg_one + avg_two + avg_three)/100), sum(avg_zero + avg_one + avg_two + avg_three) tot_pop
+from ml_data_4
+group by u_r_code;
+
+select * from ml_data_4
+where id = '20175'
+order by avg_zero;
+
+select * from ml_data;
+
+CREATE TABLE ml_data_has_zero
+as
+select concat(id, urban_rural), id, urban_rural, 
+	case
+		when urban_rural = 'R' then '0'
+		when urban_rural = 'U' then '1'
+		end ur_val,
+		round(avg(has_0)) avg_0, round(avg(has_1)) avg_1, round(avg(has_2)) avg_2, round(avg(has_3more)) avg_3
+from area_mod
+where has_0>0
+group by id, urban_rural
+order by id, urban_rural;
+
+create table ml_data_has_zero_u
+as
+select * from ml_data_has_zero
+where urban_rural = 'U';
+
+select * from pct_urban_rural_county
+where state_code = '20'
+and pop_rural between 5000 and 20000;
+
+select * from ks_pop_density_data
+where countyname = 'Johnson'
+order by id_ru;
+
+drop table ml_data_has_zero;
