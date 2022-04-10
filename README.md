@@ -100,20 +100,23 @@ The machine learning model code used in the analysis is a **Random Forest** mode
 
 Below is an image of some of the preprocessing steps:
 
-<img src="Images/split_train_test_code_2.png" width="50%" height="30%">
-
-
 ![split_train_test_code_2](https://user-images.githubusercontent.com/92836648/162632416-26bc4ada-25c1-4db0-8f11-f46275b29df7.png)
 
-The team wanted to answer two questions: does geographic location impact internet quality, and does Rural-Urban classifier impact Internet Service Provider (ISP) availabilty. Due to the need for classification, we changed our mind late in the project to focus on a Random Forest model, which improved predictability of the data to 86% accuracy score once we included average internet speeds. Adding the speed feature was something we knew we had to have to answer our question; however, the data we had to identify these speeds was difficult to work with. We finally came up with a dataset we felt would represent the data well, without impacting the integrity of the analysis.
+The team wanted to answer two questions: 
+1) Does geographic location impact internet quality?
+2) Does Rural-Urban classifier impact Internet Service Provider (ISP) availabilty?
 
-The features included the average population in each county who had 1) no ISP providers available, 2) one ISP provider available, 3) two ISP providers available and 4) three or more ISP providers available. We also included the percentage of each of those populations, and finally a feature for each of the 105 counties in Kansas based on their Rural-Urban classification. Late in the process, we added average available speeds by county and rural-urban classfication. 
+Due to the need for classification, we changed our mind late in the project to focus on a Random Forest model, which improved predictability of the data to 86% accuracy score once we included average internet speeds. Adding the speed feature was something we knew we had to have to answer our question; however, the data we had to identify these speeds was difficult to work with. We finally came up with a dataset we felt would represent the data well, without impacting the integrity of the analysis.
 
-The team feels the biggest limitation in developing a machine learning model for this project has been the data itself. It took much longer than anticipated to build the data because we spent so much time manipulating it while trying not to impact its integrity. In a real world scenario, this may not have been a problem, but due to time constraints for the project, it was an issue. The benefits of the Random Forest model is the ability to use the Urban-Rural classification as our dependent variable, which helps answer the question of whether geographic location has an impact on internet quality and availability.
+The features included the average population in each county who had 1) no ISPs (Internet Service Providers) available, 2) one ISP available, 3) two ISP available and 4) three or more ISPs available. We also included the percentage of each of those populations, and a feature for each of the 105 counties in Kansas based on their Rural-Urban classification. Late in the process, we added average available speeds by county and rural-urban classfication. 
+
+The team feels the biggest limitation in developing a machine learning model for this project has been the data itself. It took much longer than anticipated to build the data because we spent so much time manipulating it while trying not to impact its integrity. In a real world scenario, this may not have been a problem, but due to time constraints for the project, it was an issue. The benefit of the Random Forest model is the ability to use the Urban-Rural classification as our dependent variable, which helps answer the question of whether geographic location has an impact on internet quality and availability.
 
 The team acknowledges a need for additional features to gain more insight into the data, not least of which is poverty levels by county. However, these poverty levels cannot be determined within a Rural-Urban classification at this time, so we elected to leave it out of the model for now.
 
 ![random_forest_2](https://user-images.githubusercontent.com/92836648/162632418-cee1c875-a905-41bd-861a-70fb66e15fc0.png)
+
+**Additional Analysis**
 
 The team also used R-Studio, and created R scripts run for t tests and regression analysis
 
