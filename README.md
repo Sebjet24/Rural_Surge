@@ -135,7 +135,7 @@ Here is the [code](https://github.com/Sebjet24/Rural_Surge/blob/main/Analysis/ru
 
 <img src="Images/bw_max_speed.png">
 
-Code for the t-test
+**Code for the t-test**
 
 ```
 ## - perform a t-test. reference USDA definition of 100 mb sufficient broadband
@@ -255,4 +255,4 @@ length_df.write.jdbc(url=jdbc_url, table='area_mod', mode=mode, properties=confi
    - For our presentation, we used [Google Slides](https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvPlYY/edit?usp=sharing) to tell the story of our project.
    - We also created a [Dashboard](https://public.tableau.com/app/profile/sebastian.scholl/viz/RuralSurge/RuralSurge?publish=yes) in Tableau.
 
-      
+ 
