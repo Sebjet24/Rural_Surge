@@ -90,20 +90,23 @@ Below is an image of some of the preprocessing steps:
 ![split_train_test_code_2](https://user-images.githubusercontent.com/92836648/162632416-26bc4ada-25c1-4db0-8f11-f46275b29df7.png)
 
 Description of feature engineering and the feature selection, including the decision-making process
-The team wanted to answer two questions: does geographical location impact internet quality, and does Rural-Urban classifiers impact Internet Service Provider (ISP) availabilty. Due to the need for classification, we changed our mind late in the project to focus on a Random Forest model 
+
+The team wanted to answer two questions: does geographical location impact internet quality, and does Rural-Urban classifiers impact Internet Service Provider (ISP) availabilty. Due to the need for classification, we changed our mind late in the project to focus on a Random Forest model, which improved predictability of the data to 86% accuracy score once we included average internet speeds. Adding the speed feature was something we knew we had to have to answer our question; however, the data we had to identify these speeds was difficult to work with. We finally came up with a dataset we felt would represent the data well, without impacting the integrity of the analysis.
+
+The features included the average number of the population in each county who had 1) no ISP providers available, 2) one ISP provider available, 3) two ISP providers available and 4) three or more ISP providers available. We also included the percentage of each of those populations, and finally a feature for each of the 105 counties in Kansas based on their Rural-Urban classification.
+
 The team feels the biggest limitation in developing a machine learning model for this project has been the data itself. It has taken much longer than anticipated to build the data because we have spent so much time manipulating it while trying not to affect the integrity of the data. However, the benefits of the cluster model are that, from a geographical perspective, clustering makes sense, and provides a more visual look at the data.
 
 Description of how data was split into training and testing sets
-Training and testing were 
-Explanation of model choice, including limitations and benefits
+
+Explanation of model choice, including limitations and benefits - check
 Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables)
 Description of how they have trained the model thus far, and any additional training that will take place
-Description of current accuracy score
+Description of current accuracy score - check.
 
 Additionally, the model obviously addresses the question or problem the team is solving.
 
 ![random_forest_2](https://user-images.githubusercontent.com/92836648/162632418-cee1c875-a905-41bd-861a-70fb66e15fc0.png)
-![adaboost_2](https://user-images.githubusercontent.com/92836648/162632423-4353b0eb-ff37-46cb-9e0a-bc6ce16c66ed.png)
 
 R scripts run for t tests and regression analysis
 
