@@ -87,6 +87,7 @@ The preprocessing included:
 * Described the dataframe to show the total features and rows
 
 Below is an image of some of the preprocessing steps:
+
 <img src="Images/split_train_test_code_2.png" width="50%" height="30%">
 
 Description of feature engineering and the feature selection, including the decision-making process
