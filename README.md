@@ -252,5 +252,5 @@ length_df.write.jdbc(url=jdbc_url, table='area_mod', mode=mode, properties=confi
 ### Visualize the Data
    - [Google Slides](https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvPlYY/edit?usp=sharing)
    - Tableau
-      * [Our Dashboard] (https://public.tableau.com/app/profile/sebastian.scholl/viz/RuralSurge/RuralSurge?publish=yes))
+      * [Our Dashboard](https://public.tableau.com/app/profile/sebastian.scholl/viz/RuralSurge/RuralSurge?publish=yes))
       
