@@ -27,6 +27,13 @@ as
 select * from ml_data_has_zero
 where urban_rural = 'U';
 
+select urban_rural, sum(avg_0 /(avg_0 + avg_1 + avg_2 + avg_3)) perc_total
+from ml_data_has_zero
+where id = '20091'
+group by urban_rural;
+
+select * from ml_data_has_zero;
+
 select * from pct_urban_rural_county
 where state_code = '20'
 and pop_rural between 5000 and 20000;
@@ -36,3 +43,5 @@ where countyname = 'Johnson'
 order by id_ru;
 
 drop table ml_data_has_zero;
+
+select * from ml_data_u;
