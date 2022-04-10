@@ -87,12 +87,14 @@ The preprocessing included:
 * Described the dataframe to show the total features and rows
 
 Below is an image of some of the preprocessing steps:
-
-<img src="Images/split_train_test_code_2.png" width="50%" height="30%">
+![split_train_test_code_2](https://user-images.githubusercontent.com/92836648/162632416-26bc4ada-25c1-4db0-8f11-f46275b29df7.png)
 
 Description of feature engineering and the feature selection, including the decision-making process
+The team wanted to answer two questions: does geographical location impact internet quality, and does Rural-Urban classifiers impact Internet Service Provider (ISP) availabilty. Due to the need for classification, we changed our mind late in the project to focus on a Random Forest model 
+The team feels the biggest limitation in developing a machine learning model for this project has been the data itself. It has taken much longer than anticipated to build the data because we have spent so much time manipulating it while trying not to affect the integrity of the data. However, the benefits of the cluster model are that, from a geographical perspective, clustering makes sense, and provides a more visual look at the data.
 
 Description of how data was split into training and testing sets
+Training and testing were 
 Explanation of model choice, including limitations and benefits
 Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables)
 Description of how they have trained the model thus far, and any additional training that will take place
@@ -100,7 +102,6 @@ Description of current accuracy score
 
 Additionally, the model obviously addresses the question or problem the team is solving.
 
-![split_train_test_code_2](https://user-images.githubusercontent.com/92836648/162632416-26bc4ada-25c1-4db0-8f11-f46275b29df7.png)
 ![random_forest_2](https://user-images.githubusercontent.com/92836648/162632418-cee1c875-a905-41bd-861a-70fb66e15fc0.png)
 ![adaboost_2](https://user-images.githubusercontent.com/92836648/162632423-4353b0eb-ff37-46cb-9e0a-bc6ce16c66ed.png)
 
