@@ -49,8 +49,6 @@ Our group decided to dive into this topic, and research internet availability an
     * A visual analytics platform transforming the way we use data to solve problems—empowering people and organizations to make the most of their data.
 - [Microsoft Word](https://www.microsoft.com/en-us/microsoft-365/word)
     * Used to create our project plan
-- <a href="https://www.rstudio.com/">R-Studio</a>
-    * A statistical analysis tool used to perform regression analysis and box and whisker plots
 
 
 ## Project Outline
@@ -93,12 +91,9 @@ Our group decided to dive into this topic, and research internet availability an
 
 ### Machine Learning Modeling
 
-Students will be expected to submit the working code for their machine learning model, as well as the following:
+The machine learning model code used in the analysis is a **Random Forest** model. The code is available <a href="Analysis/RuralSurge_ml_RandomForrest_AdaBooster.ipynb">here</a>.
 
-The machine learning model code used in the analysis is a Random Forest model. The code is available <a href="Analysis/RuralSurge_ml_RandomForrest_AdaBooster.ipynb">here</a>.
-
-Description of data preprocessing
-The preprocessing included:
+**Description of data preprocessing**
 
 * Read in the data file
 * Created features in a new dataframe
@@ -257,4 +252,5 @@ length_df.write.jdbc(url=jdbc_url, table='area_mod', mode=mode, properties=confi
 ### Visualize the Data
    - [Google Slides](https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvPlYY/edit?usp=sharing)
    - Tableau
-      * [Storyboard](https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/Story%20board.pptx)
+      * [Our Dashboard] (https://public.tableau.com/app/profile/sebastian.scholl/viz/RuralSurge/RuralSurge?publish=yes))
+      
