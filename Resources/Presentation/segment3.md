@@ -49,18 +49,21 @@ https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvP
 ### Main Branch
 All code in the main branch is production-ready. All code is clean, commented, easy to read, and adheres to a coding standard (e.g., PEP8)
 
-#### Schema
-The database schema was created in SQL, along with comments describing the data tables. Much of the initial database development, as well as some of the extraction and manipulation occurred using SQL. 
+The resource folder has been reorganized into categories to make it easier to find information. All analytical data is now stored in the <a href="https://github.com/Sebjet24/Rural_Surge/tree/main/Analysis">Analysis</a>folder, wich includes R files and all machine learning code in Jupyter files. The database schema, ERD text file and queries used to explore the data and create new tables is stored in the <a href="https://github.com/Sebjet24/Rural_Surge/tree/main/Resources/DATABASE">DATABASE</a>folder. 
 
 The main branch should include:
 
 * All code necessary to perform exploratory analysis
+  * All code is stored in the <a href="https://github.com/Sebjet24/Rural_Surge/tree/main/Analysis">Analysis</a>folder.
 * Most code necessary to complete the machine learning portion of the project
+  * The random forest ML code is store <a href="Analysis/RuralSurge_ml_RandomForrest_AdaBooster.ipynb">Analysis folder</a> which is the model we elected to use in our analysis for the project.
+  * We also have our initial unsupervised ML code stored in the Analysis folder, but have elected not to use it for the project. Code is available <a href="Analysis/RuralSurge_ml_Unsupervised.ipynb">here</a>.
 
 ### README.md
 The README.md should include:
 
 * Description of the communication protocols has been removed
+  * Protocols have been removed
 * Cohesive, structured outline of the project (this may include images, but they should be easy to follow and digest)
 * Link to Google Slides draft presentation
 
@@ -68,15 +71,26 @@ The README.md should include:
 Requirements for the individual branches follow:
 
 At least one branch for each team member
-Each team member has at least four commits for the duration of the third segment (12 total commits per person)
+Each team member has at least four commits for the duration of the third segment (12 total commits per person) - good.
 
 ## Machine Learning Model (45 points)
 Students will be expected to submit the working code for their machine learning model, as well as the following:
 
-Description of data preprocessing
+The machine learning model code used in the analysis is a Random Forest model. The code is available <a href="Analysis/RuralSurge_ml_RandomForrest_AdaBooster.ipynb">here</a>.
 
-Before we could perform analysis of the 
+Description of data preprocessing
+The preprocessing included:
+
+* Read in the data file
+* Created features in a new dataframe
+* Created our targeted dependent variable based on the Urban-Rural Classification
+* Described the dataframe to show the total features and rows
+
+Below is an image of some of the preprocessing steps:
+<img src="Images/split_train_test_code_2.png" width="50%" height="30%">
+
 Description of feature engineering and the feature selection, including the decision-making process
+
 Description of how data was split into training and testing sets
 Explanation of model choice, including limitations and benefits
 Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables)
