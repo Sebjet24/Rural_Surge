@@ -5,36 +5,44 @@ Sebastian Scholl, Fernando Porras, Mindy Collmeyer, Teresa Wehmeier
   
 
 ## Background on our Topic
-For small rural counties in Kansas, the 2020 pandemic emphasized a lack of quality internet access. Schools were closed, and emergency remote instruction became the method to address educational delivery moving into fall 2020. However, as students and parents attempted to learn and work from home, it became clear that not all internet is created equal. Many community members had only cellular data service, which made participating in an online learning environment impossible. Those who had internet access experienced low download rates that many were unable to participate in online class activities.
+For small rural counties in Kansas, the 2020 pandemic emphasized a lack of quality internet access. Schools were closed, and emergency remote instruction became the method to address educational delivery moving into fall 2020. However, as students, parents and teachers attempted to learn and work from home, it became clear that not all internet is created equal. Many community members had only cellular data service with only a hotspot connected to a notebook or just a cell phone, which made participating in an online learning environment impossible. Those who had internet access experienced slow download rates that made it difficult to participate in online class activities.
 
 Our group decided to dive into this topic, and research internet availability and quality in the state of Kansas.
-  
+
 
 ## Tools Used on our Project
 - [GitHub](https://github.com/)
     * The largest and most advanced development platform in the world.
     * Used to organize our research and documentation.
-- [Pandas](https://pandas.pydata.org/)
-    * A fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language
 - [Python](https://www.python.org/)
     * A general-purpose, versatile, and powerful programming language.
+- [Jupyter Notebook](https://jupyter.org/)
+    * An open source web application, used to create and share documents that contain live code, equations, visualizations, and text.
+    * We created our unsupervised machine learning model and random forest model in Jupyter Notebook.
+- Libraries we used:
+    * [Pandas](https://pandas.pydata.org/)
+    * [Plotly](https://plotly.com/)
+    * [Scikit-learn](https://scikit-learn.org/stable/)
+    * [PySpark](https://spark.apache.org/docs/latest/api/python/)
+    * [Numpy](https://numpy.org/)
 - [QuickDBD](https://www.quickdatabasediagrams.com/)
     * A simple online tool to quickly draw database diagrams.
     * Used to create ERDs.
-- [Visual Studio Code](https://code.visualstudio.com/)
-   * A code editor redefined and optimized for building and debugging modern web and cloud applications
 - [Canva](https://www.canva.com/)
     * Online design and publishing tool.
     * Used to design the Project Flowchart.
-- [Amazon S3](https://aws.amazon.com/s3/)
-    * Object storage service offering industry-leading scalability, data availability, security, and performance.
-    * Used to store our data on the cloud
+- [Amazon AWS](https://aws.amazon.com/)
+    * Amazon Web Services, Inc. (AWS) is a subsidiary of Amazon providing on-demand cloud computing platforms and APIs to individuals, companies, and governments, 
+    	on a metered pay-as-you-go basis.
+    * We used S3 to store our tables so the whole team could access them quickly and easily online, and RDS to link the tables to pgAdmin.
 - [pgAdmin](https://www.pgadmin.org/)
     * The most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world.
-- [PySpark](https://spark.apache.org/docs/latest/api/python/)
-    * PySpark is the Python API for Apache Spark, an open source, distributed computing framework and set of libraries for real-time, large-scale data processing.
-- [GeoJSON](https://geojson.org/)
-    * A format for encoding a variety of geographic data structures.
+    * Used to create our database (using Postgres)
+- [PostgreSQL](https://www.postgresql.org/)
+    * Also known as Postgres, PostgreSQL is a free and open-source relational database management system (RDBMS) emphasizing extensibility and SQL compliance.
+* [R](https://www.r-project.org/)
+    * A programming language for statistical computing and graphics.
+    * We used R to create a box-and-whisker plot to present our data in another form.
 - [Google Slides](https://www.google.com/slides/about/)
     * Used to present our project plan.
 - [Tableau](https://www.tableau.com/)
@@ -51,8 +59,6 @@ Our group decided to dive into this topic, and research internet availability an
    - How does internet access support (quality, availability, etc.) compare between rural and urban areas in Kansas?
    - What Internet Service Providers (ISPs) are available in Kansas? 
    - How does their support vary between rural and urban communities?
-   - Is there a link between poverty rate and quality internet access?
-   - Is there a link between school district success and quality internet access?
 
 
 ### Our Project Plan
@@ -83,89 +89,80 @@ Our group decided to dive into this topic, and research internet availability an
 
 ### Machine Learning Modeling
 
-#### Description of preliminary data preprocessing & database development
+The machine learning model code used in the analysis is a **Random Forest** model. The code is available <a href="Analysis/RuralSurge_ml_RandomForrest_AdaBooster.ipynb">here</a>.
 
-  -  Store csv files on GitHub
-  -  Create a [Schema](https://github.com/Sebjet24/Rural_Surge/blob/Mindy/Resources/schema.sql) to show how we organized the data
-  -  Create an [ERD (Entity Relationship Diagrams)](https://github.com/Sebjet24/Rural_Surge/blob/main/Images/ERD_FCC_tables.png)
-   
-  - Load data into Amazon S3 bucket
+**Description of data preprocessing**
 
-    ![image](https://user-images.githubusercontent.com/93055450/161467600-b2840507-f76a-46de-9245-485e84adcca4.png)
+* Read in the data file
+* Created features in a new dataframe
+* Created our targeted dependent variable based on the Urban-Rural Classification
+* Described the dataframe to show the total features and rows
 
-  - Connect data from AWS into pgAdmin to create our database
+Below is an image of some of the preprocessing steps:
 
-    ![image](https://user-images.githubusercontent.com/93055450/161462392-dd5a582d-1e47-46ce-891b-74bc580ccc63.png)
-    
+![split_train_test_code_2](https://user-images.githubusercontent.com/92836648/162632416-26bc4ada-25c1-4db0-8f11-f46275b29df7.png)
 
-  - Transform data using PySpark
-    * Here is an example: https://github.com/Sebjet24/Rural_Surge/blob/main/my_project_20_group_3.ipynb
-    
-  - Run various queries and create tables to organize the data we need to run the Machine Learning Model
-    * [See our work here!](https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/queries)
+The team wanted to answer two questions: 
+1) Does geographic location impact internet quality?
+2) Does Rural-Urban classifier impact Internet Service Provider (ISP) availabilty?
+
+Due to the need for classification, we changed our mind late in the project to focus on a Random Forest model, which improved predictability of the data to 86% accuracy score once we included average internet speeds. Adding the speed feature was something we knew we had to have to answer our question; however, the data we had to identify these speeds was difficult to work with. We finally came up with a dataset we felt would represent the data well, without impacting the integrity of the analysis.
+
+The features included the average population in each county who had 1) no ISPs (Internet Service Providers) available, 2) one ISP available, 3) two ISP available and 4) three or more ISPs available. We also included the percentage of each of those populations, and a feature for each of the 105 counties in Kansas based on their Rural-Urban classification. Late in the process, we added average available speeds by county and rural-urban classfication. 
+
+The team feels the biggest limitation in developing a machine learning model for this project has been the data itself. It took much longer than anticipated to build the data because we spent so much time manipulating it while trying not to impact its integrity. In a real world scenario, this may not have been a problem, but due to time constraints for the project, it was an issue. The benefit of the Random Forest model is the ability to use the Urban-Rural classification as our dependent variable, which helps answer the question of whether geographic location has an impact on internet quality and availability.
+
+The team acknowledges a need for additional features to gain more insight into the data, not least of which is poverty levels by county. However, these poverty levels cannot be determined within a Rural-Urban classification at this time, so we elected to leave it out of the model for now.
+
+![random_forest_2](https://user-images.githubusercontent.com/92836648/162632418-cee1c875-a905-41bd-861a-70fb66e15fc0.png)
 
 
-#### Description of preliminary feature engineering and preliminary feature selection, including our decision-making process
+### Additional Analysis
 
-  - Our initial plan was to include the following as our features:
-    * Rural and urban % per KS county
-    * Number of ISP options per KS county
-    * Highest internet speed per KS county
+The team also used R-Studio, and created R scripts run for t-tests and regression analysis.
+
+
+**Average Available Speed**
+
+Here is the [code](https://github.com/Sebjet24/Rural_Surge/blob/main/Analysis/rural_surge_analysis_avg_speed_r_file.R).
+
+<img src="Images/bw_avg_speed.png">
+
+
+**Max Available Speed**
+
+Here is the [code](https://github.com/Sebjet24/Rural_Surge/blob/main/Analysis/rural_surge_analysis_max_speeds_r_file.R).
+
+<img src="Images/bw_max_speed.png">
+
+Code for the t-test
+
+```
+## - perform a t-test. reference USDA definition of 100 mb sufficient broadband
+t.test(rs_speed$avg_speed)
+
+# - perform t-test by ru_code
+rs_speed_r <- subset(rs_speed, u_r_code=="R")
+rs_speed_u <- subset(rs_speed, u_r_code=="U")
+
+
+t.test(rs_speed_r$avg_speed)
+t.test(rs_speed_u$avg_speed)
+
+## deeper dive - create box and whisker plot by ur_code
+## sample code: p <- ggplot(df, aes(carat, price)) +geom_point() +
+## labs(title = "Diamonds", x = "x-axis -> Carat", y = "y-axis -> Price")
+ggplot(rs_speed, aes(u_r_code, avg_speed)) +
+  geom_boxplot() + labs(title = "Average Available Download Rate by Rural-Urban Classification", x="Rural-Urban",y="Avg Available Speed")
   
-  - The FCC data proved to need a lot of work for us to use it for our machine learning model.
-  
-  - We used the following as our features:
-    * Kansas counties
-    * Average of number of ISP options per rural portion of each KS county
-    
-  - We will also run another model for urban areas as a comparison
+```
 
-  
-#### Description of how data was split into training and testing sets
-
- - Because we used an Unsupervised Machine Learning model, we didn't have training and testing sets.
- - First we used StandardScaler to standardize the data.
- - Then we used PCA (Princial Component Analysis) to reduce dimension to three principal components.
-    * PCA is a statistical technique used to speed up machine learning algorithms when the number of input features is high.
-    * It transforms a large set of variables into a smaller one that contains most of the info in the original large set.
- - We created a dataframe with the three principal components, generated by PCA
- - We created an elbow curve to determine the best number of clusters to use on our scatter plots.
- - We created a new DataFrame including predicted clusters and population by ISP features.
- - We created a hvplot.scatter plot using x="zero ISP providers" and y="3 or more ISP providers".
-
-#### Explanation of model choice, including limitations and benefits
-The team has struggled to decide what questions we want to learn from the machine learning model, mostly because some of the data we are using has limitations. After thoroughly exploring the data, we decided that we had enough data to answer the question: "Does geographic location have an impact on availablity of broadband internet access?" Once we understood our question, we decided, based on the type of data we could extract for the model, that an unsupervised clustering model would fit our data best, because:
-1. The data is numeric
-2. There are no known outcomes
-3. Clusters suit the data we are looking at because our data is "clustered" into Kansas counties and within these counties there are clusteres of rural and urban areas.
-
-After running initial data through the ML model, we were able to produce some scatter plots we felt were useful in "seeing" the clusters; we will continue to add features such as speed, and area type (rural/ urban) to the data set to improve the analysis.
-
-Our process for developing the machine learning model was:
-  
-- The team discussed the different machine learning options, and initially thought that a **Decision Tree** would be a good fit for our project.
-      
-     ![image](https://user-images.githubusercontent.com/93055450/160937924-93787c01-78f7-4f5c-907b-792a370c80b5.png)
-     
-- After learning more about the data, we decided that an **Unsupervised Learning** model would be a better fit. 
-
-  * Here is our model!    [Rural Surge Machine Learning Model](https://github.com/Sebjet24/Rural_Surge/blob/main/RuralSurge_ml_rural.ipynb)
-  
-  * **2D Scatter Plot**
-  <img src="Images/ML_2D_Scatter_Plot.png" width="50%" height="30%">
-   
-  
-  * **3D Scatter Plot**
-   <img src="Images/ML_3D_Scatter_Plot.png" width="50%" height="30%">
-
-#### Limitations and Benefits
-The team feels the biggest limitation in developing a machine learning model for this project has been the data itself. It has taken much longer than anticipated to build the data because we have spent so much time manipulating it while trying not to affect the integrity of the data. However, the benefits of the cluster model are that, from a geographical perspective, clustering makes sense, and provides a more visual look at the data.
 
 ### Database Integration
-The team members are expected to present a fully integrated database, including the following:
 
-* Database stores static data for use during the project
-** The data is stored in PostgreSQL and is connected to AWS RDS. Initial data tables included 10, with additions added as we developed data for the machine learing model. The process began with an ERD that has been revised, and a full schema that was used to build the initial data tables.
+- Our data is stored in PostgreSQL and is connected to [AWS RDS](https://s3.console.aws.amazon.com/s3/buckets/rural-surge-b1?region=us-east-1). 
+- We started with 10 data tables, and added several more as we developed data for the machine learing model. 
+- The process began with an ERD that has been revised, and a full schema that was used to build the initial data tables.
 
 #### ERD
 
@@ -188,9 +185,7 @@ CREATE TABLE tech_type (
 
 ```
 
-* Database interfaces with the project in some format (e.g., scraping updates the database)
-
-Using Google Colab, we updated a table in the PostgreSQL database to add a new column.
+- Using Google Colab, we updated a table in the PostgreSQL database to add a new column.
 
 ```
 area_df = spark.read.jdbc(url = "jdbc:postgresql://ruralsurge.cu3ibjje45e1.us-east-1.rds.amazonaws.com:5432/rural_surge_db", 
@@ -259,6 +254,6 @@ length_df.write.jdbc(url=jdbc_url, table='area_mod', mode=mode, properties=confi
 ```
   
 ### Visualize the Data
-   - [Google Slides](https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/Rural%20Surge.pptx)
+   - [Google Slides](https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvPlYY/edit?usp=sharing)
    - Tableau
-      * [Storyboard](https://github.com/Sebjet24/Rural_Surge/blob/main/Resources/Story%20board.pptx)
+      * [Our Dashboard](https://public.tableau.com/app/profile/sebastian.scholl/viz/RuralSurge/RuralSurge?publish=yes)
