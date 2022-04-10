@@ -121,6 +121,8 @@ The team acknowledges a need for additional features to gain more insight into t
 
 The team also used R-Studio, and created R scripts run for t-tests and regression analysis.
 
+Based on the null hypothesis, there is no difference in ISP availability based on the urban-rural classification. The p-value is .02897, which is less than .05, so the null hypothesis was rejected.
+
 
 **Average Available Speed**
 
@@ -136,6 +138,35 @@ Here is the [code](https://github.com/Sebjet24/Rural_Surge/blob/main/Analysis/ru
 <img src="Images/bw_max_speed.png">
 
 **Code for the t-test**
+
+The team performed an analysis using R script to determine if there is a difference between urban-rural (UR) classification. We used regression analysis and descriptive summary of the data, which suggests there is a statitical signifiance (.02897) when comparing ISP availability by the UR classification. 
+
+#### Results of linear regression and descriptive statistics
+
+```
+Call:
+lm(formula = ur_val ~ avg_0 + avg_1 + avg_2 + avg_3, data = rs_analysis_no_isp)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.5996 -0.3489 -0.3409  0.6433  0.6904 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.509e-01  4.669e-02   7.515 3.74e-12 ***
+avg_0       -1.574e-06  1.025e-05  -0.154    0.878    
+avg_1       -2.995e-06  2.173e-05  -0.138    0.891    
+avg_2        3.661e-05  5.206e-05   0.703    0.483    
+avg_3       -3.252e-05  3.993e-05  -0.814    0.417    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4735 on 161 degrees of freedom
+Multiple R-squared:  0.06447,	Adjusted R-squared:  0.04122 
+F-statistic: 2.774 on 4 and 161 DF,  p-value: 0.02897
+
+---
+
 
 ```
 ## - perform a t-test. reference USDA definition of 100 mb sufficient broadband
