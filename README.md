@@ -209,14 +209,13 @@ config = {"user":"root",
         set "state_county_code" = concat(state_code,county_code);
 ```
 
-* Includes at least two tables (or collections, if using MongoDB)
-Ten tables were initially created (see schema) and additional tables added as we explored for machine learning data. 
+
+- Ten tables were initially created (see schema) and additional tables added as we explored for machine learning data.
 
   <img src="Images/pg_admin_table_views.png" width="40%" height="20%">
 
-* Includes at least one join using the database language (not including any joins in Pandas)
 
-We created a query and subsequent data table with the below, which includes a left outer join from area_table and geo_lookup tables.
+- We created a query and subsequent data table with the below, which includes a left outer join from area_table and geo_lookup tables.
 
     ```
     -- has_0 = Population with zero providers (i.e., no broadband) given choice of technology and speed
@@ -227,8 +226,7 @@ We created a query and subsequent data table with the below, which includes a le
 
     ```
 
-* Includes at least one connection string (using SQLAlchemy or PyMongo)
-We needed to convert a string of text in a column to a count of the string characters in that column. Fernando was able to pull the data table into Google Colab and Spark to create the new column, then reload it to the shared database through AWS RDS services.
+- We needed to convert a string of text in a column to a count of the string characters in that column. Fernando was able to pull the data table into Google Colab and Spark to create the new column, then reload it to the shared database through AWS RDS services.
 
 ```
 area_df = spark.read.jdbc(url = "jdbc:postgresql://ruralsurge.cu3ibjje45e1.us-east-1.rds.amazonaws.com:5432/rural_surge_db", 
@@ -254,6 +252,7 @@ length_df.write.jdbc(url=jdbc_url, table='area_mod', mode=mode, properties=confi
 ```
   
 ### Visualize the Data
-   - [Google Slides](https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvPlYY/edit?usp=sharing)
-   - Tableau
-      * [Our Dashboard](https://public.tableau.com/app/profile/sebastian.scholl/viz/RuralSurge/RuralSurge?publish=yes)
+   - For our presentation, we used [Google Slides](https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvPlYY/edit?usp=sharing) to tell the story of our project.
+   - We also created a [Dashboard](https://public.tableau.com/app/profile/sebastian.scholl/viz/RuralSurge/RuralSurge?publish=yes) in Tableau.
+
+      
