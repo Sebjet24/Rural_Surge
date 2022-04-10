@@ -37,7 +37,7 @@ Questions the team hopes to answer with the data
 Description of the data exploration phase of the project
 Description of the analysis phase of the project
 Technologies, languages, tools, and algorithms used throughout the project
-Bookmarked: https://github.com/Sebjet24/Rural_Surge/blob/Mindy/README.md#tools-used-on-our-project
+Bookmarked <a href="https://github.com/Sebjet24/Rural_Surge#tools-used-on-our-project">here</a>.
 
 ## Slides
 
@@ -50,7 +50,7 @@ https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvP
 All code in the main branch is production-ready. All code is clean, commented, easy to read, and adheres to a coding standard (e.g., PEP8)
 
 #### Schema
-The database schema was created in SQL, along with comments describing the data tables. 
+The database schema was created in SQL, along with comments describing the data tables. Much of the initial database development, as well as some of the extraction and manipulation occurred using SQL. 
 
 The main branch should include:
 
