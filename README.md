@@ -116,21 +116,26 @@ The team acknowledges a need for additional features to gain more insight into t
 
 ![random_forest_2](https://user-images.githubusercontent.com/92836648/162632418-cee1c875-a905-41bd-861a-70fb66e15fc0.png)
 
-**Additional Analysis**
 
-The team also used R-Studio, and created R scripts run for t tests and regression analysis
+### Additional Analysis
 
-T-test sample below and average speed code <a href="Analysis/rural_surge_analysis_avg_speed_r_file.R">here</a> and max code <a href="Analysis/rural_surge_analysis_max_speeds_r_file.R">here</a>.
+The team also used R-Studio, and created R scripts run for t-tests and regression analysis.
 
-### Box and Whisker Plots
 
-Average Available Speed
+**Average Available Speed**
+
+Here is the [code](https://github.com/Sebjet24/Rural_Surge/blob/main/Analysis/rural_surge_analysis_avg_speed_r_file.R).
 
 <img src="Images/bw_avg_speed.png">
 
-Max Available Speed
+
+**Max Available Speed**
+
+Here is the [code](https://github.com/Sebjet24/Rural_Surge/blob/main/Analysis/rural_surge_analysis_max_speeds_r_file.R).
 
 <img src="Images/bw_max_speed.png">
+
+**Code for the t-test**
 
 ```
 ## - perform a t-test. reference USDA definition of 100 mb sufficient broadband
@@ -154,10 +159,10 @@ ggplot(rs_speed, aes(u_r_code, avg_speed)) +
 
 
 ### Database Integration
-The team members are expected to present a fully integrated database, including the following:
 
-* Database stores static data for use during the project
-** The data is stored in PostgreSQL and is connected to AWS RDS. Initial data tables included 10, with additions added as we developed data for the machine learing model. The process began with an ERD that has been revised, and a full schema that was used to build the initial data tables.
+- Our data is stored in PostgreSQL and is connected to [AWS RDS](https://s3.console.aws.amazon.com/s3/buckets/rural-surge-b1?region=us-east-1). 
+- We started with 10 data tables, and added several more as we developed data for the machine learing model. 
+- The process began with an ERD that has been revised, and a full schema that was used to build the initial data tables.
 
 #### ERD
 
@@ -180,9 +185,7 @@ CREATE TABLE tech_type (
 
 ```
 
-* Database interfaces with the project in some format (e.g., scraping updates the database)
-
-Using Google Colab, we updated a table in the PostgreSQL database to add a new column.
+- Using Google Colab, we updated a table in the PostgreSQL database to add a new column.
 
 ```
 area_df = spark.read.jdbc(url = "jdbc:postgresql://ruralsurge.cu3ibjje45e1.us-east-1.rds.amazonaws.com:5432/rural_surge_db", 
@@ -206,14 +209,13 @@ config = {"user":"root",
         set "state_county_code" = concat(state_code,county_code);
 ```
 
-* Includes at least two tables (or collections, if using MongoDB)
-Ten tables were initially created (see schema) and additional tables added as we explored for machine learning data. 
+
+- Ten tables were initially created (see schema) and additional tables added as we explored for machine learning data.
 
   <img src="Images/pg_admin_table_views.png" width="40%" height="20%">
 
-* Includes at least one join using the database language (not including any joins in Pandas)
 
-We created a query and subsequent data table with the below, which includes a left outer join from area_table and geo_lookup tables.
+- We created a query and subsequent data table with the below, which includes a left outer join from area_table and geo_lookup tables.
 
     ```
     -- has_0 = Population with zero providers (i.e., no broadband) given choice of technology and speed
@@ -224,8 +226,7 @@ We created a query and subsequent data table with the below, which includes a le
 
     ```
 
-* Includes at least one connection string (using SQLAlchemy or PyMongo)
-We needed to convert a string of text in a column to a count of the string characters in that column. Fernando was able to pull the data table into Google Colab and Spark to create the new column, then reload it to the shared database through AWS RDS services.
+- We needed to convert a string of text in a column to a count of the string characters in that column. Fernando was able to pull the data table into Google Colab and Spark to create the new column, then reload it to the shared database through AWS RDS services.
 
 ```
 area_df = spark.read.jdbc(url = "jdbc:postgresql://ruralsurge.cu3ibjje45e1.us-east-1.rds.amazonaws.com:5432/rural_surge_db", 
@@ -251,7 +252,7 @@ length_df.write.jdbc(url=jdbc_url, table='area_mod', mode=mode, properties=confi
 ```
   
 ### Visualize the Data
-   - [Google Slides](https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvPlYY/edit?usp=sharing)
-   - Tableau
-      * [Our Dashboard](https://public.tableau.com/app/profile/sebastian.scholl/viz/RuralSurge/RuralSurge?publish=yes)
-      
+   - For our presentation, we used [Google Slides](https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvPlYY/edit?usp=sharing) to tell the story of our project.
+   - We also created a [Dashboard](https://public.tableau.com/app/profile/sebastian.scholl/viz/RuralSurge/RuralSurge?publish=yes) in Tableau.
+
+ 
