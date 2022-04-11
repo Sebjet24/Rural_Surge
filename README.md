@@ -166,10 +166,6 @@ Residual standard error: 0.4735 on 161 degrees of freedom
 Multiple R-squared:  0.06447,	Adjusted R-squared:  0.04122 
 F-statistic: 2.774 on 4 and 161 DF,  p-value: 0.02897
 
----
-
-
-```
 ## - perform a t-test. reference USDA definition of 100 mb sufficient broadband
 t.test(rs_speed$avg_speed)
 
@@ -181,9 +177,9 @@ rs_speed_u <- subset(rs_speed, u_r_code=="U")
 t.test(rs_speed_r$avg_speed)
 t.test(rs_speed_u$avg_speed)
 
-## deeper dive - create box and whisker plot by ur_code
-## sample code: p <- ggplot(df, aes(carat, price)) +geom_point() +
-## labs(title = "Diamonds", x = "x-axis -> Carat", y = "y-axis -> Price")
+deeper dive - create box and whisker plot by ur_code
+sample code: p <- ggplot(df, aes(carat, price)) +geom_point() +
+labs(title = "Diamonds", x = "x-axis -> Carat", y = "y-axis -> Price")
 ggplot(rs_speed, aes(u_r_code, avg_speed)) +
   geom_boxplot() + labs(title = "Average Available Download Rate by Rural-Urban Classification", x="Rural-Urban",y="Avg Available Speed")
   
