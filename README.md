@@ -80,6 +80,7 @@ Our group decided to dive into this topic, and research internet availability an
    - [United States Department of Agriculture (USDA)](https://www.usda.gov/reconnect)
      * The USDA provides grants and loans to improve internet infrastructure across the nation. 
      * Through this website, we found useful links to datasets from the US Census Bureau.
+     * The website provides information about Federal grant loan eligibility definitions <a href="https://www.usda.gov/reconnect/service-area-eligibility-requirements">here</a>.
     
    - [US Census Bureau](https://www.census.gov/programs-surveys/geography/guidance/geo-areas/urban-rural/2010-urban-rural.html)
      * We struggled to find data relevant to our project until we stumbled onto a link to the data from the [USDA ReConnect site](https://www.usda.gov/reconnect).
