@@ -122,7 +122,7 @@ The team acknowledges a need for additional features to gain more insight into t
 
 The team also used R-Studio, and created R scripts run for t-tests and regression analysis.
 
-Based on the null hypothesis, there is no difference in ISP availability based on the urban-rural classification. The p-value is .02897, which is less than .05, so the null hypothesis was rejected.
+Our null hypothesis states "There is no difference in ISP availability based on the urban-rural classification." During the analysis of the data, we found the p-value is .02897, which is less than .05, so the null hypothesis was rejected. The data analysis indicates a relationship between urban-rural classification and available ISP providers.
 
 
 **Average Available Speed**
