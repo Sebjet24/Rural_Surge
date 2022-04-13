@@ -131,7 +131,10 @@ Here is the [code](https://github.com/Sebjet24/Rural_Surge/blob/main/Analysis/ru
 
 ![image](https://user-images.githubusercontent.com/93055450/163216878-999a7025-6564-40b5-90f7-cd2480a67efd.png)
 
+**ISP Options**
+Code is available <a href="Analysis/rural_surge_analysis_has_zero.R">here</a>. Mean perentage for overall dataset is .61, which is validated when analyzing in Excel. See the bar chart below:
 
+<img src="Analysis/isp_available_by_ru_class.png" width="50%" height="30%">
 
 **Code for the t-test**
 
@@ -291,7 +294,6 @@ Urban Mean: 78.8MB
 
 
 ![image](https://user-images.githubusercontent.com/93055450/163215486-6e90ca4c-9d1e-4d49-afe6-e67d63451a75.png)
-
 
 
  ### Recommendation for future analysis
