@@ -39,11 +39,15 @@ t.test(rs_speed_u$avg_speed,mu=100)
 ## labs(title = "Diamonds", x = "x-axis -> Carat", y = "y-axis -> Price")
 
 
-ggplot(rs_speed, aes(x=u_r_code, y=avg_speed)) +
+ggplot(rs_speed, aes(u_r_code, avg_speed)) +
   geom_boxplot() +
+  theme_classic() +
   scale_fill_manual(values = c("#0099f8", "#e74c3c")) +
-  labs(title = "Average Available Download Rate by Rural-Urban Classification",
+  labs(title = "Average Available Speeds by Rural-Urban Classification",
        caption = "Source: ML Has 0 Dataset",
        x = 'Rural-Urban Classification', 
-       y= 'Average Available Speed')+
-  theme_classic()
+       y= 'Average Available Speed') +
+  labels()
+  
+ 
+  
