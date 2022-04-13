@@ -283,4 +283,34 @@ length_df.write.jdbc(url=jdbc_url, table='area_mod', mode=mode, properties=confi
    - For our presentation, we used [Google Slides](https://docs.google.com/presentation/d/1s3hrkMdUn2UQK7V6L73jDXKZyd1Sj-ZztJQ3GYvPlYY/edit?usp=sharing) to tell the story of our project.
    - We also created a [Dashboard](https://public.tableau.com/app/profile/sebastian.scholl/viz/RuralSurge/RuralSurge?publish=yes) in Tableau.
 
+
+ ### Result of the analysis
+ 
+ #### Does Geographic Location Impact Download Speeds?
+ 
+Per our findings, if there are ISPs present, rural and urban average download speeds are very similar in the state of Kansas.
+ 
+Rural Mean: 82 MB 
+Urban Mean: 78.8MB
+
+![image](https://user-images.githubusercontent.com/93055450/163207821-a0094d13-8368-4bdb-80c7-d90469bfe423.png)
+
+
+#### Does Geographic Location Impact Internet Service Availability?
+
+
+
+
+
+
+ ### Recommendation for future analysis
+
+- Why do some areas have 0 ISP options?
+- Is there a link between poverty rate and quality internet access?
+- Is there a link between school district success and quality internet access?
+
+
+ ### Anything we would have done differently?
+ 
+ 
  
