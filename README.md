@@ -129,14 +129,9 @@ Our null hypothesis states "There is no difference in ISP availability based on 
 
 Here is the [code](https://github.com/Sebjet24/Rural_Surge/blob/main/Analysis/rural_surge_analysis_avg_speed_r_file.R).
 
-<img src="Images/bw_avg_speed.png">
+![image](https://user-images.githubusercontent.com/93055450/163216878-999a7025-6564-40b5-90f7-cd2480a67efd.png)
 
 
-**Max Available Speed**
-
-Here is the [code](https://github.com/Sebjet24/Rural_Surge/blob/main/Analysis/rural_surge_analysis_max_speeds_r_file.R).
-
-<img src="Images/bw_max_speed.png">
 
 **Code for the t-test**
 
@@ -286,9 +281,8 @@ length_df.write.jdbc(url=jdbc_url, table='area_mod', mode=mode, properties=confi
 
  ### Result of the analysis
  
- #### Does Geographic Location Impact Download Speeds?
- 
 Per our findings, if there are ISPs present, rural and urban average download speeds are very similar in the state of Kansas.
+However, approximately 60% of rural areas, and 40% of urban areas in Kansas have no ISPs.
  
 Rural Mean: 82 MB 
 Urban Mean: 78.8MB
@@ -296,10 +290,7 @@ Urban Mean: 78.8MB
 ![image](https://user-images.githubusercontent.com/93055450/163207821-a0094d13-8368-4bdb-80c7-d90469bfe423.png)
 
 
-#### Does Geographic Location Impact Internet Service Availability?
-
-
-
+![image](https://user-images.githubusercontent.com/93055450/163215486-6e90ca4c-9d1e-4d49-afe6-e67d63451a75.png)
 
 
 
@@ -312,5 +303,6 @@ Urban Mean: 78.8MB
 
  ### Anything we would have done differently?
  
- 
- 
+- Polled for team strengths first
+- Less structured data
+- ETL is your friend - use it!
